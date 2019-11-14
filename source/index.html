@@ -9,6 +9,7 @@
       <a class="page-header__header-logo">
         <img src="/" width="75" height="22" alt="Сайт приложения Pink">
       </a>
+
       <nav class="main-nav">
         <ul  class="main-nav__list site-list">
           <li class="site-list__item--active"><a>Главная</a></li>
@@ -16,98 +17,158 @@
           <li class="site-list__item"><a href="form.html">Конкурс</a></li>
           <li class="site-list__item"><a href="#">HTML Academy</a></li>
         </ul>
+
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
       </nav>
     </header>
 
     <main class="page-main">
-      <h1 class="visually-hidden">Сайт приложения "Pink" для редактирования фотографий</h1>
+      <h1 class="visually-hidden">Сайт приложения для редактирования фотографий "Pink"</h1>
 
       <section class="product-load">
         <p class="product-load__lead-in">Взгляните на жизнь иначе!</p>
-        <p class="product-load__default-link"><a href="#">Скачать приложение</a></p>
-        <div class="product-load__wrapper">
-          <ul class="product-load__list">
-            <li class="product-load__item">
+
+        <div class="product-load__wrapper"></div>
+          <p class="product-load__default-link"><a href="#">Скачать приложение</a></p>
+
+          <ul class="product-load__list product-links-list">
+            <li class="product-links-list__item">
               <a href="#">
                 <span class="visually-hidden">Скачать приложение для iOS</span>
               </a>
             </li>
-            <li class="product-load__item">
+
+            <li class="product-links-list__item">
               <a href="#">
                 <span class="visually-hidden">Скачать приложение для Android</span>
               </a>
             </li>
-            <li class="product-load__item">
+
+            <li class="product-links-list__item">
               <a href="#">
                 <span class="visually-hidden">Скачать приложение для Windows</span>
               </a>
             </li>
           </ul>
+
           <p class="product-load__version-description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </section>
 
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества приложения "Pink"</h2>
+
         <p class="advantages__lead-in">Устали от серости мегаполиса? Нам есть, что вам предложить!</p>
+
         <ul class="advantages__list">
-          <li class="advantages__list__item">
-            <h3 class="advantages__list__item__header">Поднимает настроение</h3>
-            <p class="advantages__list__item__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          <li class="advantages__list-item">
+            <h3 class="advantages__list-item-header">Поднимает настроение</h3>
+            <p class="advantages__list-item-description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </li>
-          <li class="advantages__list__item">
-            <h3 class="advantages__list__item__header">Меняет мир вокруг</h3>
-            <p class="advantages__list__item__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+
+          <li class="advantages__list-item">
+            <h3 class="advantages__list-item-header">Меняет мир вокруг</h3>
+            <p class="advantages__list-item-description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
           </li>
-          <li class="advantages__list__item">
-            <h3 class="advantages__list__item__header">Заводит новых друзей</h3>
-            <p class="advantages__list__item__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+
+          <li class="advantages__list-item">
+            <h3 class="advantages__list-item-header">Заводит новых друзей</h3>
+            <p class="advantages__list-tem-description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
+      </section>
+
+      <section class="users-review">
         <h2 class="visually-hidden">Отзывы пользователей о приложении "Pink"</h2>
-        <ul class="users-reveiw-list">
-          <li class="users-reveiw-list__item">
-            <p class="users-reveiw-list__item__user-name">Николай Петров</p>
-            <p class="users-reveiw-list__item__user-reveiw">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </li>
-        </ul>
+
+        <div class="users-review__slider">
+          <div class="slider">
+            <input class="slider__toggle-input" type="radio" id="review-btn-1" name="reviews-toggle" checked>
+            <input class="slider__toggle-input" type="radio" id="review-btn-2" name="reviews-toggle">
+            <input class="slider__toggle-input" type="radio" id="review-btn-3" name="reviews-toggle">
+
+            <div class="slider__controls">
+              <label class="slider__control-label" for="review-btn-1"></label>
+              <label class="slider__control-label" for="review-btn-2"></label>
+              <label class="slider__control-label" for="review-btn-3"></label>
+            </div>
+          </div>
+
+          <div class="users-review__slides slides">
+            <div class="slides__review-slide">
+              <p class="slides__reveiw-user-name">Николай Петров</p>
+              <p class="slides__reveiw-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </div>
+
+            <div class="slides__review-slide">
+              <p class="slides__reveiw-user-name"></p>
+              <p class="slides__reveiw-text"></p>
+            </div>
+
+            <div class="slides__review-slide">
+              <p class="slides__reveiw-user-name"></p>
+              <p class="slides__reveiw-text"></p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="product-rates">
         <h2 class="visually-hidden">Тарифы приложения "Pink"</h2>
-        <ul class="product-rates__list">
-          <li class="product-rates__list__item">
-            <span class="product-rates__list__item rate-name">Стандарт</span>
-            <span class="product-rates__list__item rate-price">3,99 USD</span>
-            <ul class="product-rates__list__item rate-features-list">
-              <li class="rate-features-list__item">Розовый фильтр</li>
-              <li class="rate-features-list__item">Смайлики</li>
-              <li class="rate-features-list__item">Комментарии</li>
-            </ul>
-          </li>
-        </ul>
+
+        <div class="product-rates__slider slider">
+          <div class="slider">
+            <input class="slider__toggle-input" type="radio" id="rates-btn-1" name="rates-toggle" checked>
+            <input class="slider__toggle-input" type="radio" id="rates-btn-2" name="rates-toggle">
+            <input class="slider__toggle-input" type="radio" id="rates-btn-3" name="rates-toggle">
+
+            <div class="slider__controls">
+              <label class="slider__control-label" for="rates-btn-1"></label>
+              <label class="slider__control-label" for="rates-btn-2"></label>
+              <label class="slider__control-label" for="rates-btn-3"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-rates__slides slides">
+          <div class="slides__rate-slide">
+            <p class="slides__rate-name"><b>Стандарт</b></p>
+            <p class="slides__rate-price">3,99 USD</p>
+
+            <div class="slides__rate-features">
+              <input class="slides__rate-features-item" type="checkbox" id="pink-filter" name="pink-filter">
+              <label for="pink-filter">Розовый фильтр</label>
+              <input class="slides__rate-features-item" type="checkbox" id="smiles" name="smiles">
+              <label for="smiles">Смайлики</label>
+              <input class="slides__rate-features-item" type="checkbox" id="comments" name="comments">
+              <label for="comments">Комментарии</label>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer class="footer-main">
-      <p class="footer-main__lead-in">Остались вопросы? Свяжитесь с нами!</p>
+    <footer class="page-footer">
+      <p class="page-footer__lead-in">Остались вопросы? Свяжитесь с нами!</p>
 
-      <div class="footer-main__list contacts-list">
-        <p class="contacts-list__item">
-          <span class="contacts-list__item__header">Звоните:</span>
-          <span class="contacts-list__item__description phone">+7 (812) 555-66-66</span>
+      <div class="page-footer__contacts contacts">
+        <p class="contacts__item">
+          <span class="contacts__item-header">Звоните:</span>
+          <a class="contacts__item-contact-phone" href="#">+7 (812) 555-66-66</a>
         </p>
-        <p class="contacts-list__item">
-          <span class="contacts-list__item__header">Пишите:</span>
-          <span class="contacts-list__item__description email">mail@htmlacademy.ru</span>
+
+        <p class="contacts__item">
+          <span class="contacts__item-header">Пишите:</span>
+          <a class="contacts__item-contact-email" href="#">mail@htmlacademy.ru</a>
         </p>
-        <p class="contacts-list__item">
-          <span class="contacts-list__item__header">Приезжайте в гости:</span>
-          <span class="contacts-list__item__description address">ул. Большая Конюшенная, 19/8</span>
+
+        <p class="contacts__item">
+          <span class="contacts__item-header">Приезжайте в гости:</span>
+          <a class="contacts__item-contact-address" href="#">ул. Большая Конюшенная, 19/8</a>
         </p>
       </div>
 
-      <div class="footer-main__map">
+      <div class="page-footer__map">
         <!--Здесь будет карта-->
       </div>
     </footer>
