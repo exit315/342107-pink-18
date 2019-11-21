@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__header-logo">
-        <img src="/" width="75" height="22" alt="Сайт приложения Pink">
+        <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Сайт приложения Pink">
       </a>
 
       <nav class="main-nav">
@@ -26,10 +27,14 @@
       <h1 class="visually-hidden">Сайт приложения для редактирования фотографий "Pink"</h1>
 
       <section class="product-load">
-        <p class="product-load__lead-in">Взгляните на жизнь иначе!</p>
+        <div class="product-load__background-logo">
+          <p class="product-load__lead-in">Взгляните на жизнь иначе!</p>
+        </div>
 
-        <div class="product-load__wrapper"></div>
-          <p class="product-load__default-link"><a href="#">Скачать приложение</a></p>
+        <div class="product-load__wrapper">
+          <div class="product-load__default-btn">
+            <a  class="product-load__default-link" href="#">Скачать приложение</a>
+          </div>
 
           <ul class="product-load__list product-links-list">
             <li class="product-links-list__item">
@@ -58,7 +63,10 @@
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества приложения "Pink"</h2>
 
-        <p class="advantages__lead-in">Устали от серости мегаполиса? Нам есть, что вам предложить!</p>
+        <div class="advantages__lead-in-wrapper">
+          <p class="advantages__lead-in">Устали от серости мегаполиса?</p>
+          <p class="advantages__lead-in">Нам есть, что вам предложить!</p>
+        </div>
 
         <ul class="advantages__list">
           <li class="advantages__list-item">
@@ -73,7 +81,7 @@
 
           <li class="advantages__list-item">
             <h3 class="advantages__list-item-header">Заводит новых друзей</h3>
-            <p class="advantages__list-tem-description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            <p class="advantages__list-item-description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
       </section>
@@ -118,8 +126,8 @@
 
         <div class="product-rates__slider slider">
           <div class="slider">
-            <input class="slider__toggle-input" type="radio" id="rates-btn-1" name="rates-toggle" checked>
-            <input class="slider__toggle-input" type="radio" id="rates-btn-2" name="rates-toggle">
+            <input class="slider__toggle-input" type="radio" id="rates-btn-1" name="rates-toggle">
+            <input class="slider__toggle-input" type="radio" id="rates-btn-2" name="rates-toggle" checked>
             <input class="slider__toggle-input" type="radio" id="rates-btn-3" name="rates-toggle">
 
             <div class="slider__controls">
@@ -131,12 +139,31 @@
         </div>
 
         <div class="product-rates__slides slides">
+
           <div class="slides__rate-slide">
-            <p class="slides__rate-name"><b>Стандарт</b></p>
-            <p class="slides__rate-price">3,99 USD</p>
+            <div class="slides__rate-name-price-wrapper">
+              <p class="slides__rate-name"><b>Стандарт</b></p>
+              <p class="slides__rate-price">3,00 USD</p>
+            </div>
 
             <div class="slides__rate-features">
-              <input class="slides__rate-features-item" type="checkbox" id="pink-filter" name="pink-filter">
+              <input class="slides__rate-features-item" type="checkbox" id="pink-filter" name="pink-filter" checked>
+              <label for="pink-filter">Розовый фильтр</label>
+              <input class="slides__rate-features-item" type="checkbox" id="smiles" name="smiles" checked>
+              <label for="smiles">Смайлики</label>
+              <input class="slides__rate-features-item" type="checkbox" id="comments" name="comments">
+              <label for="comments">Комментарии</label>
+            </div>
+          </div>
+
+          <div class="slides__rate-slide">
+            <div class="slides__rate-name-price-wrapper">
+              <p class="slides__rate-name"><b>Стандарт</b></p>
+              <p class="slides__rate-price">3,99 USD</p>
+            </div>
+
+            <div class="slides__rate-features">
+              <input class="slides__rate-features-item" type="checkbox" id="pink-filter" name="pink-filter" checked>
               <label for="pink-filter">Розовый фильтр</label>
               <input class="slides__rate-features-item" type="checkbox" id="smiles" name="smiles">
               <label for="smiles">Смайлики</label>
@@ -144,7 +171,25 @@
               <label for="comments">Комментарии</label>
             </div>
           </div>
+
+          <div class="slides__rate-slide">
+            <div class="slides__rate-name-price-wrapper">
+              <p class="slides__rate-name"><b>Стандарт</b></p>
+              <p class="slides__rate-price">0,99 USD</p>
+            </div>
+
+            <div class="slides__rate-features">
+              <input class="slides__rate-features-item" type="checkbox" id="pink-filter" name="pink-filter" checked>
+              <label for="pink-filter">Розовый фильтр</label>
+              <input class="slides__rate-features-item" type="checkbox" id="smiles" name="smiles" checked>
+              <label for="smiles">Смайлики</label>
+              <input class="slides__rate-features-item" type="checkbox" id="comments" name="comments" checked>
+              <label for="comments">Комментарии</label>
+            </div>
+          </div>
         </div>
+
+
       </section>
     </main>
 

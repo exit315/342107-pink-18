@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__header-logo" href="index.html">
-        <img src="/" width="75" height="22" alt="Сайт приложения Pink">
+          <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Сайт приложения Pink">
       </a>
       <nav class="main-nav">
         <ul  class="main-nav__list site-list">
@@ -20,129 +21,147 @@
     </header>
 
     <main>
-      <h1 class="page-title">Фотографии пользователей</h1>
+      <div class="inner-page-header">
+        <h1 class="inner-page-header__title">Фотографии пользователей</h1>
+      </div>
 
       <section class="users-photos">
-        <p class="user-photos__lead-in">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <div class="users-photos__lead-in-wrapper">
+          <p class="users-photos__lead-in">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        </div>
 
         <ul class="users-photos__catalog users-photos-catalog">
 
         <!-- ФОТО 1 -->
 
-          <li class="users-photos-catalog__item">
-            <img class="users-photos-catalog__user-pic" src="/" alt="Фото пользователя">
-            <div class="users-photos-catalog__photo-info">
-              <span class="users-photos-catalog__user-name">Анна</span>
-              <span class="users-photos-catalog__photo-upload-time">(5 минут назад)</span>
-            </div>
-            <p class="users-photos-catalog__photo-description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои</p>
-            <div class="users-photos-catalog__photo-likes">
-              <a class="users-photos-catalog__photo-like-btn" href="#">
-                <span class="visually-hidden">Поставить лайк фотографии</span>
-              </a>
-              <p class="users-photos-catalog__photo-likes-number">Нравится: <span class="users-photos-catalog__photo-likes-count">215</span></p>
+          <li class="users-photos-catalog__item--day-photo">
+            <img class="users-photos-catalog__user-picture" src="img/panorama-mobile@1x.jpg" alt="Фото пользователя">
+            <div class="users-photos-catalog__item-wrapper">
+              <div class="users-photos-catalog__photo-info">
+                <span class="users-photos-catalog__user-name">Анна</span>
+                <span class="users-photos-catalog__photo-upload-time">(5 минут назад)</span>
+              </div>
+              <p class="users-photos-catalog__photo-description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои</p>
+              <div class="users-photos-catalog__photo-likes">
+                <a class="users-photos-catalog__photo-like-btn" href="#">
+                  <span class="visually-hidden">Поставить лайк фотографии</span>
+                </a>
+                <p class="users-photos-catalog__photo-likes-number">Нравится: <span class="users-photos-catalog__photo-likes-count">215</span></p>
+              </div>
             </div>
           </li>
 
         <!-- ФОТО 2 -->
 
           <li class="users-photos-catalog__item">
-            <img class="users-photos-catalog__user-pic" src="/" alt="Фото пользователя">
-            <p class="users-photos-catalog__photo-info">
-              <span class="users-photos-catalog__user-name">Левон</span>
-              <span class="users-photos-catalog__photo-upload-time">(5 часов назад)</span>
-            </p>
-            <p class="users-photos-catalog__photo-description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-            <div class="users-photos-catalog__photo-likes">
-              <a class="users-photos-catalog__photo-like-btn" href="#">
-                <span class="visually-hidden">Поставить лайк фотографии</span>
-              </a>
-              <p class="users-photos-catalog__photo-likes-number">Нравится: <span class="users-photos-catalog__photo-likes-count">356</span></p>
+            <img class="users-photos-catalog__user-picture" src="img/photo-car-mobile@1x.jpg" alt="Фото пользователя">
+            <div class="users-photos-catalog__item-wrapper">
+              <div class="users-photos-catalog__photo-info">
+                <span class="users-photos-catalog__user-name">Левон</span>
+                <span class="users-photos-catalog__photo-upload-time">(5 часов назад)</span>
+              </div>
+              <p class="users-photos-catalog__photo-description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <div class="users-photos-catalog__photo-likes">
+                <a class="users-photos-catalog__photo-like-btn" href="#">
+                  <span class="visually-hidden">Поставить лайк фотографии</span>
+                </a>
+                <p class="users-photos-catalog__photo-likes-number">Нравится: <span class="users-photos-catalog__photo-likes-count">356</span></p>
+              </div>
             </div>
           </li>
 
         <!-- ФОТО 3 -->
 
           <li class="users-photos-catalog__item">
-            <img class="users-photos-catalog__user-pic" src="/" alt="Фото пользователя">
-            <p class="users-photos-catalog__photo-info">
-              <span class="users-photos-catalog__user-name">Антон</span>
-              <span class="users-photos-catalog__photo-upload-time">(12 часов назад)</span>
-            </p>
-            <p class="users-photos-catalog__photo-description">Соседи будут рады!</p>
-            <div class="users-photos-catalog__photo-likes">
-              <a class="users-photos-catalog__photo-like-btn" href="#">
-                <span class="visually-hidden">Поставить лайк фотографии</span>
-              </a>
-              <p class="users-photos-catalog__photo-likes-number">Нравится: <span class="users-photos-catalog__photo-likes-count">666</span></p>
+            <img class="users-photos-catalog__user-picture" src="img/photo-drumset-mobile@1x.jpg" alt="Фото пользователя">
+            <div class="users-photos-catalog__item-wrapper">
+              <div class="users-photos-catalog__photo-info">
+                <span class="users-photos-catalog__user-name">Антон</span>
+                <span class="users-photos-catalog__photo-upload-time">(12 часов назад)</span>
+              </div>
+              <p class="users-photos-catalog__photo-description">Соседи будут рады!</p>
+              <div class="users-photos-catalog__photo-likes">
+                <a class="users-photos-catalog__photo-like-btn" href="#">
+                  <span class="visually-hidden">Поставить лайк фотографии</span>
+                </a>
+                <p class="users-photos-catalog__photo-likes-number">Нравится: <span class="users-photos-catalog__photo-likes-count">666</span></p>
+              </div>
             </div>
           </li>
 
         <!-- ФОТО 4 -->
 
           <li class="users-photos-catalog__item">
-            <img class="users-photos-catalog__user-pic" src="/" alt="Фото пользователя">
-            <p class="users-photos-catalog__photo-info">
-              <span class="users-photos-catalog__user-name">Борис</span>
-              <span class="users-photos-catalog__photo-upload-time">(20 часов назад)</span>
-            </p>
-            <p class="users-photos-catalog__photo-description">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <div class="users-photos-catalog__photo-likes">
-              <a class="users-photos-catalog__photo-like-btn" href="#">
-                <span class="visually-hidden">Поставить лайк фотографии</span>
-              </a>
-              <p class="users-photos-catalog__photo-likes-number">Нравится: <span class="users-photos-catalog__photo-likes-count">215</span></p>
+            <img class="users-photos-catalog__user-picture" src="img/photo-window-mobile@1x.jpg" alt="Фото пользователя">
+            <div class="users-photos-catalog__item-wrapper">
+              <div class="users-photos-catalog__photo-info">
+                <span class="users-photos-catalog__user-name">Борис</span>
+                <span class="users-photos-catalog__photo-upload-time">(20 часов назад)</span>
+              </div>
+              <p class="users-photos-catalog__photo-description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <div class="users-photos-catalog__photo-likes">
+                <a class="users-photos-catalog__photo-like-btn" href="#">
+                  <span class="visually-hidden">Поставить лайк фотографии</span>
+                </a>
+                <p class="users-photos-catalog__photo-likes-number">Нравится: <span class="users-photos-catalog__photo-likes-count">215</span></p>
+              </div>
             </div>
           </li>
 
         <!-- ФОТО 5 -->
 
           <li class="users-photos-catalog__item">
-            <img class="users-photos-catalog__user-pic" src="/" alt="Фото пользователя">
-            <p class="users-photos-catalog__photo-info">
-              <span class="users-photos-catalog__user-name">Сергей</span>
-              <span class="users-photos-catalog__photo-upload-time">(25 часов назад)</span>
-            </p>
-            <p class="users-photos-catalog__photo-description">Самая кубанская в мире!</p>
-            <div class="users-photos-catalog__photo-likes">
-              <a class="users-photos-catalog__photo-like-btn" href="#">
-                <span class="visually-hidden">Поставить лайк фотографии</span>
-              </a>
-              <p class="users-photos-catalog__photo-likes-number">Нравится: <span class="users-photos-catalog__photo-likes-count">4</span></p>
+            <img class="users-photos-catalog__user-picture" src="img/photo-fair-mobile@1x.jpg" alt="Фото пользователя">
+            <div class="users-photos-catalog__item-wrapper">
+              <div class="users-photos-catalog__photo-info">
+                <span class="users-photos-catalog__user-name">Сергей</span>
+                <span class="users-photos-catalog__photo-upload-time">(25 часов назад)</span>
+              </div>
+              <p class="users-photos-catalog__photo-description">Самая кубанская в мире!</p>
+              <div class="users-photos-catalog__photo-likes">
+                <a class="users-photos-catalog__photo-like-btn" href="#">
+                  <span class="visually-hidden">Поставить лайк фотографии</span>
+                </a>
+                <p class="users-photos-catalog__photo-likes-number">Нравится: <span class="users-photos-catalog__photo-likes-count">4</span></p>
+              </div>
             </div>
           </li>
 
         <!-- ФОТО 6 -->
 
           <li class="users-photos-catalog__item">
-            <img class="users-photos-catalog__user-pic" src="/" alt="Фото пользователя">
-            <p class="users-photos-catalog__photo-info">
-              <span class="users-photos-catalog__user-name">Максим</span>
-              <span class="users-photos-catalog__photo-upload-time">(40 часов назад)</span>
-            </p>
-            <p class="users-photos-catalog__photo-description">Где снег-то?</p>
-            <div class="users-photos-catalog__photo-likes">
-              <a class="users-photos-catalog__photo-like-btn" href="#">
-                <span class="visually-hidden">Поставить лайк фотографии</span>
-              </a>
-              <p class="users-photos-catalog__photo-likes-number">Нравится: <span class="users-photos-catalog__photo-likes-count">150</span></p>
+            <img class="users-photos-catalog__user-picture" src="img/photo-pov-mobile@1x.jpg" alt="Фото пользователя">
+            <div class="users-photos-catalog__item-wrapper">
+              <div class="users-photos-catalog__photo-info">
+                <span class="users-photos-catalog__user-name">Максим</span>
+                <span class="users-photos-catalog__photo-upload-time">(40 часов назад)</span>
+              </div>
+              <p class="users-photos-catalog__photo-description">Где снег-то?</p>
+              <div class="users-photos-catalog__photo-likes">
+                <a class="users-photos-catalog__photo-like-btn" href="#">
+                  <span class="visually-hidden">Поставить лайк фотографии</span>
+                </a>
+                <p class="users-photos-catalog__photo-likes-number">Нравится: <span class="users-photos-catalog__photo-likes-count">150</span></p>
+              </div>
             </div>
           </li>
 
         <!-- ФОТО 7 -->
 
           <li class="users-photos-catalog__item">
-            <img class="users-photos-catalog__user-pic" src="/" alt="Фото пользователя">
-            <p class="users-photos-catalog__photo-info">
-              <span class="users-photos-catalog__user-name">Надежда</span>
-              <span class="users-photos-catalog__photo-upload-time">(45 часов назад)</span>
-            </p>
-            <p class="users-photos-catalog__photo-description">Всем GM и взаимные лайки!</p>
-            <div class="users-photos-catalog__photo-likes">
-              <a class="users-photos-catalog__photo-like-btn" href="#">
-                <span class="visually-hidden">Поставить лайк фотографии</span>
-              </a>
-              <p class="users-photos-catalog__photo-likes-number">Нравится: <span class="users-photos-catalog__photo-likes-count">2560</span></p>
+            <img class="users-photos-catalog__user-picture" src="img/photo-wing-mobile@1x.jpg" alt="Фото пользователя">
+            <div class="users-photos-catalog__item-wrapper">
+              <div class="users-photos-catalog__photo-info">
+                <span class="users-photos-catalog__user-name">Надежда</span>
+                <span class="users-photos-catalog__photo-upload-time">(45 часов назад)</span>
+              </div>
+              <p class="users-photos-catalog__photo-description">Всем GM и взаимные лайки!</p>
+              <div class="users-photos-catalog__photo-likes">
+                <a class="users-photos-catalog__photo-like-btn" href="#">
+                  <span class="visually-hidden">Поставить лайк фотографии</span>
+                </a>
+                <p class="users-photos-catalog__photo-likes-number">Нравится: <span class="users-photos-catalog__photo-likes-count">2560</span></p>
+              </div>
             </div>
           </li>
         </ul>
@@ -150,9 +169,13 @@
 
       <section class="upload-photo">
         <h2 class="visually-hidden">Форма загрузки фотографии</h2>
-        <p class="upload-photo__lead-in">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
 
-        <form action="https://echo.htmlacademy.ru" method="POST">
+        <div class="upload-photo__lead-in-wrapper">
+          <p class="upload-photo__lead-in">Затмите их всех!</br>
+            Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+
+        <form class="upload-photo__form" action="https://echo.htmlacademy.ru" method="POST">
           <!--Здесь будет форма для загрузки фото-->
         </form>
       </section>
@@ -160,7 +183,7 @@
 
     <footer class="page-footer">
       <a class="page-footer__logo footer-logo" href="index.html">
-        <img src="/" alt="Приложение Pink">
+          <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Приложение Pink">
       </a>
 
       <ul class="page-footer__social social-list">
@@ -178,6 +201,7 @@
         <span>Разработано</span>
         <a href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">Перейти на сайт разработчика "HTML Academy"</span>
+          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy">
         </a>
       </div>
     </footer>
