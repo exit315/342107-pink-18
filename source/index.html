@@ -125,7 +125,7 @@
         <h2 class="visually-hidden">Тарифы приложения "Pink"</h2>
 
         <div class="product-rates__slider slider">
-          <div class="slider">
+          <div class="slider__toggles">
             <input class="slider__toggle-input" type="radio" id="rates-btn-1" name="rates-toggle">
             <input class="slider__toggle-input" type="radio" id="rates-btn-2" name="rates-toggle" checked>
             <input class="slider__toggle-input" type="radio" id="rates-btn-3" name="rates-toggle">
@@ -138,99 +138,86 @@
           </div>
         </div>
 
-        <div class="product-rates__slides slides">
-
-          <div class="slides__rate-slide">
-            <div class="slides__rate-name-price-wrapper">
+        <table class="product-rates__list slides">
+          <tr>
+            <th class="slides__rate-name-price-wrapper">
               <p class="slides__rate-name"><b>Стандарт</b></p>
               <p class="slides__rate-price">3,00 USD</p>
-            </div>
-
-            <div class="slides__rate-features">
-              <div class="slides__rate-features-item">
-                <p class="slides__rate-features-name">Розовый фильтр</p>
-                <span class="slides__rate-features--toggle-on"></span>
-              </div>
-              <div class="slides__rate-features-item">
-                <p class="slides__rate-features-name">Смайлики</p>
-                <span class="slides__rate-features--toggle-off"></span>
-              </div>
-              <div class="slides__rate-features-item">
-                <p class="slides__rate-features-name">Комментарии</p>
-                <span class="slides__rate-features--toggle-off"></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="slides__rate-slide">
-            <div class="slides__rate-name-price-wrapper">
+            </th>
+            <th class="slides__rate-name-price-wrapper--hit-rate">
               <p class="slides__rate-name"><b>Стандарт</b></p>
               <p class="slides__rate-price">3,99 USD</p>
-            </div>
-
-            <div class="slides__rate-features">
-              <div class="slides__rate-features-item">
-                <p class="slides__rate-features-name">Розовый фильтр</p>
-                <span class="slides__rate-features--toggle-on"></span>
-              </div>
-              <div class="slides__rate-features-item">
-                <p class="slides__rate-features-name">Смайлики</p>
-                <span class="slides__rate-features--toggle-on"></span>
-              </div>
-              <div class="slides__rate-features-item">
-                <p class="slides__rate-features-name">Комментарии</p>
-                <span class="slides__rate-features--toggle-off"></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="slides__rate-slide">
-            <div class="slides__rate-name-price-wrapper">
+            </th>
+            <th class="slides__rate-name-price-wrapper">
               <p class="slides__rate-name"><b>Стандарт</b></p>
               <p class="slides__rate-price">0,99 USD</p>
-            </div>
-
-            <div class="slides__rate-features">
-              <div class="slides__rate-features-item">
-                <p class="slides__rate-features-name">Розовый фильтр</p>
-                <span class="slides__rate-features--toggle-on"></span>
-              </div>
-              <div class="slides__rate-features-item">
-                <p class="slides__rate-features-name">Смайлики</p>
-                <span class="slides__rate-features--toggle-on"></span>
-              </div>
-              <div class="slides__rate-features-item">
-                <p class="slides__rate-features-name">Комментарии</p>
-                <span class="slides__rate-features--toggle-on"></span>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-
-
+            </th>
+          </tr>
+          <tr>
+            <td class="slides__rate-feature">
+              <p class="slides__rate-feature-name">Розовый фильтр</p>
+              <span class="slides__rate-feature--toggle-on"></span>
+            </td>
+            <td class="slides__rate-feature">
+              <p class="slides__rate-feature-name">Розовый фильтр</p>
+              <span class="slides__rate-feature--toggle-off"></span>
+            </td>
+            <td class="slides__rate-feature">
+              <p class="slides__rate-feature-name">Розовый фильтр</p>
+              <span class="slides__rate-feature--toggle-on"></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="slides__rate-feature">
+              <p class="slides__rate-feature-name">Смайлики</p>
+              <span class="slides__rate-feature--toggle-on"></span>
+            </td>
+            <td class="slides__rate-feature">
+              <p class="slides__rate-feature-name">Смайлики</p>
+              <span class="slides__rate-feature--toggle-on"></span>
+            </td>
+            <td class="slides__rate-feature">
+              <p class="slides__rate-feature-name">Смайлики</p>
+              <span class="slides__rate-feature--toggle-off"></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="slides__rate-feature">
+              <p class="slides__rate-feature-name">Комментарии</p>
+              <span class="slides__rate-feature--toggle-on"></span>
+            </td>
+            <td class="slides__rate-feature">
+              <p class="slides__rate-feature-name">Комментарии</p>
+              <span class="slides__rate-feature--toggle-off"></span>
+            </td>
+            <td class="slides__rate-feature">
+              <p class="slides__rate-feature-name">Комментарии</p>
+              <span class="slides__rate-feature--toggle-off"></span>
+            </td>
+          </tr>
+        </table>
       </section>
     </main>
 
     <footer class="page-footer">
       <p class="page-footer__lead-in">Остались вопросы? Свяжитесь с нами!</p>
 
-      <div class="page-footer__contacts contacts">
-        <p class="contacts__item">
-          <span class="contacts__item-header">Звоните:</span>
+      <section class="page-footer__contacts contacts">
+        <div class="contacts__item">
+          <p class="contacts__item-header">Звоните:</p>
           <a class="contacts__item-contact-phone" href="#">+7 (812) 555-66-66</a>
-        </p>
+        </div>
 
-        <p class="contacts__item">
-          <span class="contacts__item-header">Пишите:</span>
+        <div class="contacts__item">
+          <p class="contacts__item-header">Пишите:</p>
           <a class="contacts__item-contact-email" href="#">mail@htmlacademy.ru</a>
-        </p>
+        </div>
 
-        <p class="contacts__item">
-          <span class="contacts__item-header">Приезжайте в гости:</span>
+        <div class="contacts__item">
+          <p class="contacts__item-header">Приезжайте в гости:</p>
           <a class="contacts__item-contact-address" href="#">ул. Большая Конюшенная, 19/8</a>
-        </p>
-      </div>
+        </div>
+      </section>
 
       <div class="page-footer__map">
         <!--Здесь будет карта-->
