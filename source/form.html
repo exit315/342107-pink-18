@@ -8,11 +8,16 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__header-logo" href="index.html">
-        <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Сайт приложения Pink">
-      </a>
+      <div class="page-header__header-logo-wrapper">
+        <a class="page-header__header-logo">
+          <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Сайт приложения Pink">
+        </a>
+      </div>
+
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+
       <nav class="main-nav">
-        <ul  class="main-nav__list site-list">
+        <ul  class="main-nav__list site-list hidden">
           <li class="site-list__item"><a href="index.html">Главная</a></li>
           <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
           <li class="site-list__item--active"><a>Конкурс</a></li>
@@ -34,28 +39,29 @@
     </main>
 
     <footer class="page-footer--inner">
-        <a class="page-footer__logo footer-logo" href="index.html">
-            <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Приложение Pink">
-        </a>
+      <a class="page-footer__logo footer-logo" href="index.html">
+          <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Приложение Pink">
+      </a>
 
-        <ul class="page-footer__social social-list">
-          <li class="social-list__item">
-            <a href="#"><span class="visually-hidden">Перейти на страницу приложения Pink в социальной сети Твиттер</span></a>
-          </li>
-          <li class="social-list__item">
-            <a href="#"><span class="visually-hidden">Перейти на страницу приложения Pink в социальной сети Фейсбук</span></a>
-          </li>
-          <li class="social-list__item">
-            <a href="#"><span class="visually-hidden">Перейти на канал приложения Pink на сайте Ютьюб</span></a>
-          </li>
-        </ul>
-        <div class="page-footer__copyright">
-          <span>Разработано</span>
-          <a href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="visually-hidden">Перейти на сайт разработчика "HTML Academy"</span>
-            <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy">
-          </a>
-        </div>
-      </footer>
+      <ul class="page-footer__social social-list">
+        <li class="social-list__item">
+          <a href="#"><span class="visually-hidden">Перейти на страницу приложения Pink в социальной сети Твиттер</span></a>
+        </li>
+        <li class="social-list__item">
+          <a href="#"><span class="visually-hidden">Перейти на страницу приложения Pink в социальной сети Фейсбук</span></a>
+         </li>
+         <li class="social-list__item">
+          <a href="#"><span class="visually-hidden">Перейти на канал приложения Pink на сайте Ютьюб</span></a>
+        </li>
+      </ul>
+      <div class="page-footer__copyright">
+        <span>Разработано</span>
+        <a href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">Перейти на сайт разработчика "HTML Academy"</span>
+          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+        </a>
+      </div>
+    </footer>
+    <script src="js/util.js"></script>
   </body>
 </html>
