@@ -74,6 +74,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .product-load__wrapper,
+  .product-load__lead-in {
+    width: 300px;
+  }
+
   .product-load__background-logo {
     width: @tablet-width;
 
@@ -83,6 +88,15 @@
       url("../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position: center top, center top;
+  }
+
+  .product-load__lead-in {
+    margin: 0;
+    padding: 0;
+    padding-top: 210px;
+
+    font-size: 40px;
+    font-weight: 200;
   }
 }
 
