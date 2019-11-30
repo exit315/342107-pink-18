@@ -14,15 +14,15 @@
         </a>
       </div>
 
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-
       <nav class="main-nav">
-        <ul  class="main-nav__list site-list hidden">
+        <ul class="main-nav__list site-list hidden">
           <li class="site-list__item--active"><a>Главная</a></li>
           <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
           <li class="site-list__item"><a href="form.html">Конкурс</a></li>
           <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
         </ul>
+
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
       </nav>
     </header>
 
@@ -91,18 +91,6 @@
         <h2 class="visually-hidden">Отзывы пользователей о приложении "Pink"</h2>
 
         <div class="users-review__slider">
-          <div class="slider">
-            <input class="slider__toggle-input" type="radio" id="review-btn-1" name="reviews-toggle" checked>
-            <input class="slider__toggle-input" type="radio" id="review-btn-2" name="reviews-toggle">
-            <input class="slider__toggle-input" type="radio" id="review-btn-3" name="reviews-toggle">
-
-            <div class="slider__controls">
-              <label class="slider__control-label" for="review-btn-1"></label>
-              <label class="slider__control-label" for="review-btn-2"></label>
-              <label class="slider__control-label" for="review-btn-3"></label>
-            </div>
-          </div>
-
           <div class="users-review__slides slides">
             <div class="slides__review-slide">
               <p class="slides__reveiw-user-name">Николай Петров</p>
@@ -119,11 +107,86 @@
               <p class="slides__reveiw-text"></p>
             </div>
           </div>
+
+          <div class="users-review__slider slider">
+            <div class="slider__toggles">
+              <input class="slider__toggle-input" type="radio" id="review-btn-1" name="reviews-toggle" checked>
+              <input class="slider__toggle-input" type="radio" id="review-btn-2" name="reviews-toggle">
+              <input class="slider__toggle-input" type="radio" id="review-btn-3" name="reviews-toggle">
+
+              <div class="slider__controls">
+                <label class="slider__control-label" for="review-btn-1"></label>
+                <label class="slider__control-label" for="review-btn-2"></label>
+                <label class="slider__control-label" for="review-btn-3"></label>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="product-rates">
         <h2 class="visually-hidden">Тарифы приложения "Pink"</h2>
+
+        <div class="product-rates__list slides">
+          <table class="product-rates__list slides__wrapper">
+            <tr>
+              <th class="slides__rate-name-price-wrapper--hit-rate">
+                <p class="slides__rate-name"><b>Стандарт</b></p>
+                <p class="slides__rate-price">3,99 USD</p>
+              </th>
+              <th class="slides__rate-name-price-wrapper--hit-rate">
+                <p class="slides__rate-name"><b>Стандарт</b></p>
+                <p class="slides__rate-price">3,99 USD</p>
+              </th>
+              <th class="slides__rate-name-price-wrapper--hit-rate">
+                <p class="slides__rate-name"><b>Стандарт</b></p>
+                <p class="slides__rate-price">3,99 USD</p>
+              </th>
+            </tr>
+            <tr>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Розовый фильтр</p>
+                <span class="slides__rate-feature--toggle-off"></span>
+              </td>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Розовый фильтр</p>
+                <span class="slides__rate-feature--toggle-off"></span>
+              </td>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Розовый фильтр</p>
+                <span class="slides__rate-feature--toggle-off"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Смайлики</p>
+                <span class="slides__rate-feature--toggle-on"></span>
+              </td>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Смайлики</p>
+                <span class="slides__rate-feature--toggle-on"></span>
+              </td>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Смайлики</p>
+                <span class="slides__rate-feature--toggle-on"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Комментарии</p>
+                <span class="slides__rate-feature--toggle-off"></span>
+              </td>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Комментарии</p>
+                <span class="slides__rate-feature--toggle-off"></span>
+              </td>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Комментарии</p>
+                <span class="slides__rate-feature--toggle-off"></span>
+              </td>
+            </tr>
+          </table>
+        </div>
 
         <div class="product-rates__slider slider">
           <div class="slider__toggles">
@@ -138,70 +201,6 @@
             </div>
           </div>
         </div>
-
-        <div class="slides">
-
-
-        <table class="product-rates__list slides__wrapper">
-          <tr>
-            <th class="slides__rate-name-price-wrapper--hit-rate">
-              <p class="slides__rate-name"><b>Стандарт</b></p>
-              <p class="slides__rate-price">3,99 USD</p>
-            </th>
-            <th class="slides__rate-name-price-wrapper--hit-rate">
-              <p class="slides__rate-name"><b>Стандарт</b></p>
-              <p class="slides__rate-price">3,99 USD</p>
-            </th>
-            <th class="slides__rate-name-price-wrapper--hit-rate">
-              <p class="slides__rate-name"><b>Стандарт</b></p>
-              <p class="slides__rate-price">3,99 USD</p>
-            </th>
-          </tr>
-          <tr>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Розовый фильтр</p>
-              <span class="slides__rate-feature--toggle-off"></span>
-            </td>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Розовый фильтр</p>
-              <span class="slides__rate-feature--toggle-off"></span>
-            </td>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Розовый фильтр</p>
-              <span class="slides__rate-feature--toggle-off"></span>
-            </td>
-          </tr>
-          <tr>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Смайлики</p>
-              <span class="slides__rate-feature--toggle-on"></span>
-            </td>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Смайлики</p>
-              <span class="slides__rate-feature--toggle-on"></span>
-            </td>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Смайлики</p>
-              <span class="slides__rate-feature--toggle-on"></span>
-            </td>
-          </tr>
-          <tr>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Комментарии</p>
-              <span class="slides__rate-feature--toggle-off"></span>
-            </td>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Комментарии</p>
-              <span class="slides__rate-feature--toggle-off"></span>
-            </td>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Комментарии</p>
-              <span class="slides__rate-feature--toggle-off"></span>
-            </td>
-          </tr>
-
-        </table>
-      </div>
       </section>
     </main>
 
