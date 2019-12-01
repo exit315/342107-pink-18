@@ -7,10 +7,8 @@
 }
 
 .slides__review-slide {
-  width: 276px;
-
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   text-align: center;
 }
@@ -29,8 +27,15 @@
   line-height: 30px;
 }
 
+.slides__reveiw-user-info {
+  display: none;
+}
+
 .slides__reveiw-text {
+  margin-bottom: 30px;
+
   font-size: 14px;
+  font-weight: normal;
   color: #283645;
   line-height: 30px;
 }
@@ -78,7 +83,7 @@
 }
 
 .slides__rate-feature {
-
+  background-color: #ffffff;
   border-left: 2px solid #e5e5e5;
   border-right: 2px solid #e5e5e5;
   border-bottom: 2px solid #e5e5e5;
@@ -95,3 +100,30 @@
   line-height: 30px;
   text-transform: uppercase;
 }
+
+@media (min-width: @tablet-width) {
+  .slides__review-slide {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slides__reveiw-user-info {
+    display: inline-block;
+
+    font-size: 14px;
+    font-weight: normal;
+    color: #283645;
+    line-height: 30px;
+  }
+
+  .slides__reveiw-text {
+    order: -1;
+
+    font-size: 18px;
+    font-weight: normal;
+    color: #283645;
+    line-height: 30px;
+  }
+
+}
+
