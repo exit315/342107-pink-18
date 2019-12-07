@@ -1,7 +1,3 @@
-.slides {
-  overflow: hidden;
-}
-
 .slides__wrapper {
   width: 300%;
 }
@@ -40,18 +36,16 @@
   line-height: 30px;
 }
 
-.product-rates__list {
-  width: 276px;
-  border-collapse: collapse;
+.slides__rate-feature--hidden,
+.slides__rate-feature-name--hidden,
+.slides__rate-name-price--hidden {
+  display: none;
 }
 
-.slides__rate-name-price-wrapper,
-.slides__rate-name-price-wrapper--hit-rate {
+.slides__rate-name-price,
+.slides__rate-name-price--hit-rate {
   margin: 0;
-  padding-top: 19px;
-  padding-bottom: 19px;
-  padding-left: 90px;
-  padding-right: 90px;
+  padding: 19px 90px;
 
   text-align: center;
 
@@ -102,13 +96,29 @@
 }
 
 @media (min-width: @tablet-width) {
+  .slides__wrapper {
+    width: 620px;
+  }
+
   .slides__review-slide {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .slides__reveiw-user-name {
+    margin-bottom: 5px;
+
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
   }
 
   .slides__reveiw-user-info {
-    display: inline-block;
+    display: block;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
 
     font-size: 14px;
     font-weight: normal;
@@ -121,6 +131,89 @@
 
     font-size: 18px;
     font-weight: normal;
+    color: #283645;
+    line-height: 30px;
+  }
+
+  .slides__rate-feature--hidden,
+  .slides__rate-name-price--hidden,
+  .slides__rate-feature-name--hidden {
+    display: block;
+  }
+
+  .slides__rate-name-price--hidden {
+    margin: 0;
+    padding: 0;
+  }
+
+  .slides__rate-name-price-wrapper {
+    border-right: 2px solid #283645;
+  }
+
+  .slides__rate-name-price {
+    padding: 8px 37px 8px;
+
+    border-top: 2px solid #283645;
+    border-bottom: 2px solid #283645;
+    border-left: 2px solid #e5e5e5;
+    border-right: none;
+  }
+
+  .slides__rate-name {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+  .slides__rate-price {
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  .slides__rate-feature-name {
+    display: none;
+  }
+
+  .slides__rate-feature--hidden {
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 20px;
+
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+  }
+
+  .slides__rate-feature-name--hidden {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #283645;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slides__review-slide {
+    width: 760px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  .slides__rate-price {
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  .slides__rate-feature-name {
+    display: none;
+  }
+
+  .slides__rate-feature-name--hidden {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
     color: #283645;
     line-height: 30px;
   }

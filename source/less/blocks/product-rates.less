@@ -1,10 +1,39 @@
 .product-rates {
-  padding-bottom: 40px;
-  background-color: #f2f2f2;
+  margin-bottom: 40px;
 }
 
 .product-rates__list {
+  width: 276px;
   margin: 0;
-  margin-bottom: 15px;
   padding: 0;
+
+  border-collapse: collapse;
+}
+
+@media (min-width: @tablet-width) {
+  .product-rates {
+    margin: 0;
+    padding-top: 90px;
+    padding-bottom: 68px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    background-color: #f2f2f2;
+  }
+
+  .product-rates__list {
+    width: 620px;
+  }
+
+  .product-rates__slider {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-rates__list {
+    width: 840px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
