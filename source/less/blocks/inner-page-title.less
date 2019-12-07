@@ -1,7 +1,9 @@
 .inner-page-title {
-  min-height: 171px;
   margin: 0;
-  padding: 0;
+  padding-top: 35px;
+  padding-bottom: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
 
   background-color: #283645;
   background-image: url("../img/bg-back-mobile@1x.jpg");
@@ -11,12 +13,50 @@
 
 .inner-page-title__title {
   margin: 0;
-  padding-top: 33px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 0;
 
   font-size: 24px;
   font-weight: 200;
   color: #ffffff;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .inner-page-title {
+    padding-top: 75px;
+    padding-bottom: 135px;
+
+    background-color: #283645;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  .inner-page-title__title {
+    margin: 0;
+    padding: 0;
+
+    font-size: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .inner-page-title {
+    padding-top: 65px;
+    padding-bottom: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+
+    background-color: #283645;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  .inner-page-title__title {
+    margin: 0;
+    padding: 0;
+
+    font-size: 50px;
+  }
 }

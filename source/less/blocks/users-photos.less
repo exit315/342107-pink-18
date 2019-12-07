@@ -1,15 +1,39 @@
 .users-photos__lead-in-wrapper {
   margin: 0;
+  padding-top: 50px;
+  padding-bottom: 55px;
   padding-left: 40px;
   padding-right: 40px;
 }
 
 .users-photos__lead-in {
   margin: 0;
-  margin-top: 50px;
-  margin-bottom: 55px;
+  padding: 0;
 
   font-size: 14px;
+  color: #283645;
   line-height: 30px;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .users-photos__lead-in-wrapper {
+    padding-top: 95px;
+    padding-bottom: 75px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .users-photos__lead-in {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .users-photos__lead-in-wrapper {
+    padding-top: 95px;
+    padding-bottom: 90px;
+    padding-left: 300px;
+    padding-right: 300px;
+  }
 }
