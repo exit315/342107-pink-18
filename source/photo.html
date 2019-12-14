@@ -14,23 +14,27 @@
         </a>
       </div>
 
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--opened">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+            <span class="main-nav__toggle--burger"></span>
+          </button>
+
         <ul class="main-nav__list site-list hidden">
           <li class="site-list__item"><a href="index.html">Главная</a></li>
           <li class="site-list__item--active"><a>Фотографии</a></li>
           <li class="site-list__item"><a href="form.html">Конкурс</a></li>
           <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
         </ul>
-
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
       </nav>
+
+      <div class="inner-page-title">
+        <h1 class="inner-page-title__title">Фотографии</br> пользователей</h1>
+        <p class="inner-page-title__bg"></p>
+      </div>
     </header>
 
     <main class="page-main">
-      <div class="inner-page-title">
-        <h1 class="inner-page-title__title">Фотографии</br> пользователей</h1>
-      </div>
-
       <section class="users-photos">
         <div class="users-photos__lead-in-wrapper">
           <p class="users-photos__lead-in">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>

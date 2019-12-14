@@ -6,24 +6,6 @@
   color: #ffffff;
 
   background-color: #1d2631;
-  background-image:
-    url("../img/iphone-hand-mobile@1x.png"),
-    url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: left 110px, center -65px;
-}
-
-.product-load__lead-in {
-  width: 230px;
-
-  margin: 0;
-  padding-top: 23px;
-  padding-bottom: 310px;
-  padding-left: 45px;
-  padding-right: 45px;
-
-  font-size: 24px;
-  font-weight: 200;
 }
 
 .product-load__wrapper {
@@ -32,15 +14,14 @@
   padding-bottom: 30px;
 
   text-align: center;
-  background-color: #1d2631;
 
   list-style: none;
 }
 
 .product-load__default-btn {
   margin-bottom: 32px;
-  padding-top: 10px;
-  padding-bottom: 17px;
+  padding-top: 11px;
+  padding-bottom: 16px;
   padding-left: 34px;
   padding-right: 34px;
 
@@ -60,6 +41,11 @@
   text-decoration: none;
 }
 
+.product-load__list {
+  margin-bottom: 30px;
+  padding-top: 59px;
+}
+
 .product-load__version-description {
   width: 280px;
   padding: 0;
@@ -69,65 +55,43 @@
   line-height: 24px;
 }
 
-.product-load__list {
-  margin-bottom: 25px;
-}
-
 @media (min-width: @tablet-width) {
   .product-load {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
-    padding-top: 90px;
-    padding-bottom: 109px;
+    padding-top: 0;
     padding-left: 20px;
     padding-right: 20px;
-
-    background-image:
-      url("../img/iphone-hand-tablet@1x.png"),
-      url("../img/bg-back-tablet@1x.jpg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: right bottom, center top;
-  }
-
-  .product-load__lead-in-wrapper {
-    width: 210px;
-    padding-left: 45px;
-    padding-right: 45px;
-    margin-bottom: 30px;
+    background: transparent;
   }
 
   .product-load__wrapper {
     width: 300px;
     padding: 0;
+    margin: 0;
 
     text-align: center;
-    background-color: transparent;
-  }
-
-  .product-load__lead-in {
-    padding: 0;
-
-    font-size: 40px;
-    font-weight: 300;
+    background: transparent;
   }
 
   .product-load__default-btn {
-    margin-bottom: 32px;
-    padding-top: 10px;
-    padding-bottom: 17px;
+    margin: 0;
+    margin-bottom: 46px;
     padding-left: 42px;
     padding-right: 42px;
+  }
 
-    border: 3px #ffffff solid;
-    border-radius: 24px;
+  .product-load__list {
+    margin-bottom: 40px;
   }
 
   .product-load__version-description {
     width: 300px;
     padding: 0;
     margin: 0;
+    margin-bottom: 105px;
 
     font-size: 18px;
     font-weight: 300;
@@ -139,11 +103,25 @@
   .product-load {
     padding-left: 120px;
     padding-right: 120px;
+  }
 
-    background-image:
-      url("../img/iphone-hand-desktop@1x.png"),
-      url("../img/bg-back-desktop@1x.jpg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: right bottom, center top;
+  .product-load__default-btn {
+    margin-bottom: 67px;
+    padding-top: 11px;
+    padding-bottom: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .product-load__default-link {
+    font-size: 21px;
+  }
+
+  .product-load__list {
+    margin-bottom: 60px;
+  }
+
+  .product-load__version-description {
+    margin-bottom: 115px;
   }
 }

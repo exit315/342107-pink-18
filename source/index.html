@@ -8,60 +8,68 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__header-logo-wrapper">
-        <a class="page-header__header-logo">
-          <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Сайт приложения Pink">
-        </a>
+      <div class="page-header__bg-wrapper">
+        <div class="page-header__bg-wrapper--mobile">
+          <div class="page-header__header-logo-wrapper">
+            <a class="page-header__header-logo">
+              <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Сайт приложения Pink">
+            </a>
+          </div>
+
+          <nav class="main-nav main-nav--closed">
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+              <span class="main-nav__toggle--burger"></span>
+            </button>
+
+            <ul class="main-nav__list site-list hidden">
+              <li class="site-list__item--active"><a>Главная</a></li>
+              <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
+              <li class="site-list__item"><a href="form.html">Конкурс</a></li>
+              <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+            </ul>
+          </nav>
+
+          <div class="page-header__load-lead-in-wrapper">
+            <p class="page-header__load-lead-in">Взгляните на жизнь иначе!</p>
+          </div>
+        </div>
+
+        <section class="product-load">
+          <h2 class="visually-hidden">Скачать приложение Pink</h2>
+
+          <div class="product-load__wrapper">
+            <div class="product-load__default-btn">
+              <a class="product-load__default-link" href="#">Скачать приложение</a>
+            </div>
+            <ul class="product-load__list product-links-list">
+              <li class="product-links-list__item-ios">
+                <a href="#">
+                  <span class="visually-hidden">Скачать приложение для iOS</span>
+                </a>
+              </li>
+
+              <li class="product-links-list__item-android">
+                <a href="#">
+                  <span class="visually-hidden">Скачать приложение для Android</span>
+                </a>
+              </li>
+
+              <li class="product-links-list__item-windows">
+                <a href="#">
+                  <span class="visually-hidden">Скачать приложение для Windows</span>
+                </a>
+              </li>
+            </ul>
+
+            <p class="product-load__version-description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
+        </section>
       </div>
-
-      <nav class="main-nav">
-        <ul class="main-nav__list site-list hidden">
-          <li class="site-list__item--active"><a>Главная</a></li>
-          <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
-          <li class="site-list__item"><a href="form.html">Конкурс</a></li>
-          <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-        </ul>
-
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-      </nav>
     </header>
 
     <main class="page-main">
       <h1 class="visually-hidden">Сайт приложения для редактирования фотографий "Pink"</h1>
-
-      <section class="product-load">
-        <h2 class="visually-hidden">Скачать приложение Pink</h2>
-        <div class="product-load__lead-in-wrapper">
-          <p class="product-load__lead-in">Взгляните на жизнь иначе!</p>
-        </div>
-
-        <div class="product-load__wrapper">
-          <div class="product-load__default-btn">
-            <a class="product-load__default-link" href="#">Скачать приложение</a>
-          </div>
-
-          <ul class="product-load__list product-links-list">
-            <li class="product-links-list__item">
-              <a href="#">
-                <span class="visually-hidden">Скачать приложение для iOS</span>
-              </a>
-            </li>
-
-            <li class="product-links-list__item">
-              <a href="#">
-                <span class="visually-hidden">Скачать приложение для Android</span>
-              </a>
-            </li>
-
-            <li class="product-links-list__item">
-              <a href="#">
-                <span class="visually-hidden">Скачать приложение для Windows</span>
-              </a>
-            </li>
-          </ul>
-
-          <p class="product-load__version-description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-      </section>
 
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества приложения "Pink"</h2>

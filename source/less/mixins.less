@@ -1,6 +1,19 @@
-.bg-image(@img-source, @img-position) {
-  background-color: #283645;
+.bg-image(@img-source; @img-position) {
   background-image: @img-source;
   background-repeat: no-repeat;
   background-position: @img-position;
+}
+
+.load-icon(@logo-source; @logo-width; @logo-height; @logo-position-top; @logo-position-left) {
+  content: "";
+  position: absolute;
+  top: @logo-position-top;
+  left: @logo-position-left;
+
+  width: @logo-width;
+  height: @logo-height;
+
+  background-image: @logo-source;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
