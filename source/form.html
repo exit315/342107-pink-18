@@ -8,29 +8,35 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__header-logo-wrapper">
-        <a class="page-header__header-logo">
-          <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Сайт приложения Pink">
-        </a>
+      <div class="page-header__bg-wrapper">
+        <div class="page-header__bg-inner-wrapper--mobile">
+          <div class="page-header__header-logo-wrapper">
+            <a class="page-header__header-logo" href="index.html">
+              <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Сайт приложения Pink">
+            </a>
+          </div>
+
+          <nav class="main-nav main-nav--closed">
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+              <span class="main-nav__toggle--burger"></span>
+            </button>
+
+            <ul class="main-nav__list site-list hidden">
+              <li class="site-list__item"><a href="index.html">Главная</a></li>
+              <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
+              <li class="site-list__item--active"><a>Конкурс</a></li>
+              <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+            </ul>
+          </nav>
+
+          <div class="inner-page-title">
+            <h1 class="inner-page-title__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+          </div>
+        </div>
       </div>
 
-      <nav class="main-nav main-nav--opened">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-            <span class="main-nav__toggle--burger"></span>
-          </button>
 
-        <ul class="main-nav__list site-list hidden">
-          <li class="site-list__item"><a href="index.html">Главная</a></li>
-          <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
-          <li class="site-list__item--active"><a>Конкурс</a></li>
-          <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-        </ul>
-      </nav>
-
-      <div class="inner-page-title">
-        <h1 class="inner-page-title__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-      </div>
     </header>
 
     <main class="page-main">
