@@ -1,13 +1,13 @@
 .site-list {
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: @font-bold;
+  font-size: @font-size-nav-menu;
   line-height: 32px;
   text-transform: uppercase;
   text-align: center;
-  color: #ffffff;
-  list-style: none;
+  color: @white;
+  .no-list();
 
-  background-color: #283645;
+  background-color: @dark-blue;
 
   a {
     text-decoration: none;
@@ -30,6 +30,6 @@
 .site-list__item--active {
   a {
     padding-bottom: 8px;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid @white;
   }
 }

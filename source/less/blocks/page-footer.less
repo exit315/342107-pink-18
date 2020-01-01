@@ -5,18 +5,17 @@
 .page-footer__lead-in {
   margin: 0;
   margin-bottom: 40px;
-  padding: 0;
+  padding: 0 20px;
 
-  font-size: 24px;
-  font-weight: 300;
-  color: #283645;
+  font-size: @font-size-title-mobile;
+  font-weight: @font-light;
+  color: @dark-blue;
   text-align: center;
 }
 
 .page-footer__contacts {
   margin-bottom: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 0 40px;
 
   text-align: center;
 }
@@ -41,7 +40,7 @@
 
 .page-footer__copyright {
   font-size: 14px;
-  color: #283645;
+  color: @dark-blue;
   line-height: 18px;
 }
 
@@ -52,18 +51,15 @@
 
 @media (min-width: @tablet-width) {
   .page-footer {
-    padding-top: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 50px 20px 0;
   }
 
   .page-footer__lead-in {
     margin: 0;
     margin-bottom: 40px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 0 100px;
 
-    font-size: 40px;
+    font-size: @font-size-title-tablet;
     text-align: center;
   }
 
@@ -84,7 +80,7 @@
   }
 
   .page-footer__map {
-    width: 660px;
+    width: @tablet-width;
   }
 }
 
@@ -99,10 +95,7 @@
     justify-content: space-between;
     align-items: baseline;
 
-    padding-top: 35px;
-    padding-bottom: 40px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 35px 100px 40px;
   }
 
   .page-footer__logo,
@@ -112,9 +105,12 @@
 
   .page-footer__lead-in {
     margin-bottom: 55px;
+    padding: 0 300px;
+
+    font-size: @font-size-title-desktop;
   }
 
   .page-footer__map {
-    width: 1200px;
+    width: @desktop-width;
   }
 }
