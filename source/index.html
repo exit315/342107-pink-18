@@ -2,70 +2,81 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__header-logo">
-        <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Сайт приложения Pink">
-      </a>
+      <div class="page-header__bg-wrapper">
+        <div class="page-header__bg-wrapper page-header__bg-wrapper--mobile">
+          <div class="page-header__header-logo-wrapper">
+            <a class="page-header__header-logo">
+              <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Сайт приложения Pink">
+            </a>
+          </div>
 
-      <nav class="main-nav">
-        <ul  class="main-nav__list site-list">
-          <li class="site-list__item--active"><a>Главная</a></li>
-          <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
-          <li class="site-list__item"><a href="form.html">Конкурс</a></li>
-          <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-        </ul>
+          <nav class="main-nav main-nav--closed">
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+              <span class="main-nav__toggle--burger"></span>
+            </button>
 
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-      </nav>
+            <ul class="main-nav__list site-list hidden">
+              <li class="site-list__item--active"><a>Главная</a></li>
+              <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
+              <li class="site-list__item"><a href="contest.html">Конкурс</a></li>
+              <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+            </ul>
+          </nav>
+
+          <div class="page-header__load-lead-in-wrapper">
+            <p class="page-header__load-lead-in">Взгляните на жизнь иначе!</p>
+          </div>
+        </div>
+
+        <section class="product-load">
+          <h2 class="visually-hidden">Скачать приложение Pink</h2>
+
+          <div class="product-load__wrapper">
+            <div class="product-load__default-btn">
+              <a class="product-load__default-link" href="#">Скачать приложение</a>
+            </div>
+            <ul class="product-load__list product-links-list">
+              <li class="product-links-list__item-ios">
+                <a href="#">
+                  <span class="visually-hidden">Скачать приложение для iOS</span>
+                </a>
+              </li>
+
+              <li class="product-links-list__item-android">
+                <a href="#">
+                  <span class="visually-hidden">Скачать приложение для Android</span>
+                </a>
+              </li>
+
+              <li class="product-links-list__item-windows">
+                <a href="#">
+                  <span class="visually-hidden">Скачать приложение для Windows</span>
+                </a>
+              </li>
+            </ul>
+
+            <p class="product-load__version-description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
+        </section>
+      </div>
     </header>
 
     <main class="page-main">
       <h1 class="visually-hidden">Сайт приложения для редактирования фотографий "Pink"</h1>
-
-      <section class="product-load">
-        <div class="product-load__background-logo">
-          <p class="product-load__lead-in">Взгляните на жизнь иначе!</p>
-        </div>
-
-        <div class="product-load__wrapper">
-          <div class="product-load__default-btn">
-            <a  class="product-load__default-link" href="#">Скачать приложение</a>
-          </div>
-
-          <ul class="product-load__list product-links-list">
-            <li class="product-links-list__item">
-              <a href="#">
-                <span class="visually-hidden">Скачать приложение для iOS</span>
-              </a>
-            </li>
-
-            <li class="product-links-list__item">
-              <a href="#">
-                <span class="visually-hidden">Скачать приложение для Android</span>
-              </a>
-            </li>
-
-            <li class="product-links-list__item">
-              <a href="#">
-                <span class="visually-hidden">Скачать приложение для Windows</span>
-              </a>
-            </li>
-          </ul>
-
-          <p class="product-load__version-description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-        </div>
-      </section>
 
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества приложения "Pink"</h2>
 
         <div class="advantages__lead-in-wrapper">
           <p class="advantages__lead-in">Устали от серости мегаполиса?</p>
-          <p class="advantages__lead-in">Нам есть, что вам предложить!</p>
+          <p class="advantages__lead-in">Нам есть, что вам</br> предложить!</p>
         </div>
 
         <ul class="advantages__list">
@@ -84,38 +95,37 @@
             <p class="advantages__list-item-description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
+
+        <div class="advantages__feature">
+          <p class="advantages__feature-header">Эффект на 24 часа!</p>
+          <p class="advantages__feature-description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <a class="advantages__feature-research-link" href="#">Узнать больше об исследовании</a>
+        </div>
       </section>
 
       <section class="users-review">
         <h2 class="visually-hidden">Отзывы пользователей о приложении "Pink"</h2>
 
         <div class="users-review__slider">
-          <div class="slider">
-            <input class="slider__toggle-input" type="radio" id="review-btn-1" name="reviews-toggle" checked>
-            <input class="slider__toggle-input" type="radio" id="review-btn-2" name="reviews-toggle">
-            <input class="slider__toggle-input" type="radio" id="review-btn-3" name="reviews-toggle">
-
-            <div class="slider__controls">
-              <label class="slider__control-label" for="review-btn-1"></label>
-              <label class="slider__control-label" for="review-btn-2"></label>
-              <label class="slider__control-label" for="review-btn-3"></label>
-            </div>
-          </div>
-
           <div class="users-review__slides slides">
             <div class="slides__review-slide">
               <p class="slides__reveiw-user-name">Николай Петров</p>
+              <p class="slides__reveiw-user-info">25 лет, водитель трамвая</p>
               <p class="slides__reveiw-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </div>
+          </div>
 
-            <div class="slides__review-slide">
-              <p class="slides__reveiw-user-name"></p>
-              <p class="slides__reveiw-text"></p>
-            </div>
+          <div class="users-review__slider slider">
+            <div class="slider__toggles">
+              <input class="slider__toggle-input" type="radio" id="review-btn-1" name="reviews-toggle" checked>
+              <input class="slider__toggle-input" type="radio" id="review-btn-2" name="reviews-toggle">
+              <input class="slider__toggle-input" type="radio" id="review-btn-3" name="reviews-toggle">
 
-            <div class="slides__review-slide">
-              <p class="slides__reveiw-user-name"></p>
-              <p class="slides__reveiw-text"></p>
+              <div class="slider__controls">
+                <label class="slider__control-label" for="review-btn-1"></label>
+                <label class="slider__control-label" for="review-btn-2"></label>
+                <label class="slider__control-label" for="review-btn-3"></label>
+              </div>
             </div>
           </div>
         </div>
@@ -123,6 +133,75 @@
 
       <section class="product-rates">
         <h2 class="visually-hidden">Тарифы приложения "Pink"</h2>
+
+          <table class="product-rates__list slides__wrapper">
+            <tr class="slides__rate-name-price-wrapper">
+              <th class="slides__rate-name-price slides__rate-name-price--hidden"></th>
+              <th class="slides__rate-name-price">
+                <p class="slides__rate-name"><b>База</b></p>
+                <p class="slides__rate-price">1,99 USD</p>
+              </th>
+              <th class="slides__rate-name-price">
+                <p class="slides__rate-name"><b>Стандарт</b></p>
+                <p class="slides__rate-price">3,99 USD</p>
+              </th>
+              <th class="slides__rate-name-price">
+                <p class="slides__rate-name"><b>Анлим</b></p>
+                <p class="slides__rate-price">9,99 USD</p>
+              </th>
+            </tr>
+            <tr>
+              <td class="slides__rate-feature--hidden">
+                <p class="slides__rate-feature-name--hidden">Розовый фильтр</p>
+              </td>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Розовый фильтр</p>
+                <span class="slides__rate-feature-toggle slides__rate-feature-toggle--toggle-off"></span>
+              </td>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Розовый фильтр</p>
+                <span class="slides__rate-feature-toggle slides__rate-feature-toggle--toggle-off"></span>
+              </td>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Розовый фильтр</p>
+                <span class="slides__rate-feature-toggle slides__rate-feature-toggle--toggle-off"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="slides__rate-feature--hidden">
+                <p class="slides__rate-feature-name--hidden">Смайлики</p>
+              </td>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Смайлики</p>
+                <span class="slides__rate-feature-toggle slides__rate-feature-toggle--toggle-on"></span>
+              </td>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Смайлики</p>
+                <span class="slides__rate-feature-toggle slides__rate-feature-toggle--toggle-on"></span>
+              </td>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Смайлики</p>
+                <span class="slides__rate-feature-toggle slides__rate-feature-toggle--toggle-on"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="slides__rate-feature--hidden">
+                <p class="slides__rate-feature-name--hidden">Комментарии</p>
+              </td>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Комментарии</p>
+                <span class="slides__rate-feature-toggle slides__rate-feature-toggle--toggle-off"></span>
+              </td>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Комментарии</p>
+                <span class="slides__rate-feature-toggle slides__rate-feature-toggle--toggle-off"></span>
+              </td>
+              <td class="slides__rate-feature">
+                <p class="slides__rate-feature-name">Комментарии</p>
+                <span class="slides__rate-feature-toggle slides__rate-feature-toggle--toggle-off"></span>
+              </td>
+            </tr>
+          </table>
 
         <div class="product-rates__slider slider">
           <div class="slider__toggles">
@@ -137,65 +216,6 @@
             </div>
           </div>
         </div>
-
-        <table class="product-rates__list slides">
-          <tr>
-            <th class="slides__rate-name-price-wrapper">
-              <p class="slides__rate-name"><b>Стандарт</b></p>
-              <p class="slides__rate-price">3,00 USD</p>
-            </th>
-            <th class="slides__rate-name-price-wrapper--hit-rate">
-              <p class="slides__rate-name"><b>Стандарт</b></p>
-              <p class="slides__rate-price">3,99 USD</p>
-            </th>
-            <th class="slides__rate-name-price-wrapper">
-              <p class="slides__rate-name"><b>Стандарт</b></p>
-              <p class="slides__rate-price">0,99 USD</p>
-            </th>
-          </tr>
-          <tr>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Розовый фильтр</p>
-              <span class="slides__rate-feature--toggle-on"></span>
-            </td>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Розовый фильтр</p>
-              <span class="slides__rate-feature--toggle-off"></span>
-            </td>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Розовый фильтр</p>
-              <span class="slides__rate-feature--toggle-on"></span>
-            </td>
-          </tr>
-          <tr>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Смайлики</p>
-              <span class="slides__rate-feature--toggle-on"></span>
-            </td>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Смайлики</p>
-              <span class="slides__rate-feature--toggle-on"></span>
-            </td>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Смайлики</p>
-              <span class="slides__rate-feature--toggle-off"></span>
-            </td>
-          </tr>
-          <tr>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Комментарии</p>
-              <span class="slides__rate-feature--toggle-on"></span>
-            </td>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Комментарии</p>
-              <span class="slides__rate-feature--toggle-off"></span>
-            </td>
-            <td class="slides__rate-feature">
-              <p class="slides__rate-feature-name">Комментарии</p>
-              <span class="slides__rate-feature--toggle-off"></span>
-            </td>
-          </tr>
-        </table>
       </section>
     </main>
 
@@ -208,20 +228,48 @@
           <a class="contacts__item-contact-phone" href="#">+7 (812) 555-66-66</a>
         </div>
 
-        <div class="contacts__item">
+        <div class="contacts__item contacts__item--rearranged">
           <p class="contacts__item-header">Пишите:</p>
           <a class="contacts__item-contact-email" href="#">mail@htmlacademy.ru</a>
         </div>
 
-        <div class="contacts__item">
+        <div class="contacts__item contacts__item--rearranged">
           <p class="contacts__item-header">Приезжайте в гости:</p>
           <a class="contacts__item-contact-address" href="#">ул. Большая Конюшенная, 19/8</a>
         </div>
       </section>
 
       <div class="page-footer__map">
-        <!--Здесь будет карта-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6113990503127!2d30.321792124568017!3d59.938590184340384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575623120946!5m2!1sru!2sru" style="border:0;" allowfullscreen></iframe>
       </div>
+
+      <div class="page-footer--inner--hidden">
+        <a class="page-footer__logo footer-logo" href="index.html">
+          <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Приложение Pink">
+        </a>
+
+        <ul class="page-footer__social social-list">
+          <li class="social-list__item">
+            <a href="#"><span class="visually-hidden">Перейти на страницу приложения Pink в социальной сети Твиттер</span></a>
+          </li>
+          <li class="social-list__item">
+            <a href="#"><span class="visually-hidden">Перейти на страницу приложения Pink в социальной сети Фейсбук</span></a>
+          </li>
+          <li class="social-list__item">
+            <a href="#"><span class="visually-hidden">Перейти на канал приложения Pink на сайте Ютьюб</span></a>
+          </li>
+        </ul>
+
+        <div class="page-footer__copyright">
+          <span>Разработано</span>
+          <a href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">Перейти на сайт разработчика "HTML Academy"</span>
+            <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+          </a>
+        </div>
+      </div>
+
     </footer>
+    <script src="js/util.js"></script>
   </body>
 </html>

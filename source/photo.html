@@ -2,29 +2,42 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__header-logo" href="index.html">
-          <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Сайт приложения Pink">
-      </a>
-      <nav class="main-nav">
-        <ul  class="main-nav__list site-list">
-          <li class="site-list__item"><a href="index.html">Главная</a></li>
-          <li class="site-list__item--active"><a>Фотографии</a></li>
-          <li class="site-list__item"><a href="form.html">Конкурс</a></li>
-          <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-        </ul>
-      </nav>
+      <div class="page-header__bg-wrapper">
+        <div class="page-header__bg-inner-wrapper page-header__bg-inner-wrapper--mobile">
+          <div class="page-header__header-logo-wrapper">
+            <a class="page-header__header-logo" href="index.html">
+              <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Сайт приложения Pink">
+            </a>
+          </div>
+
+          <nav class="main-nav main-nav--closed">
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+              <span class="main-nav__toggle--burger"></span>
+            </button>
+
+            <ul class="main-nav__list site-list hidden">
+              <li class="site-list__item"><a href="index.html">Главная</a></li>
+              <li class="site-list__item--active"><a>Фотографии</a></li>
+              <li class="site-list__item"><a href="contest.html">Конкурс</a></li>
+              <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+            </ul>
+          </nav>
+
+          <div class="inner-page-title">
+            <h1 class="inner-page-title__title">Фотографии</br> пользователей</h1>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <main>
-      <div class="inner-page-header">
-        <h1 class="inner-page-header__title">Фотографии пользователей</h1>
-      </div>
-
+    <main class="page-main">
       <section class="users-photos">
         <div class="users-photos__lead-in-wrapper">
           <p class="users-photos__lead-in">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
@@ -34,7 +47,7 @@
 
         <!-- ФОТО 1 -->
 
-          <li class="users-photos-catalog__item--day-photo">
+          <li class="users-photos-catalog__item users-photos-catalog__item--day-photo">
             <img class="users-photos-catalog__user-picture" src="img/panorama-mobile@1x.jpg" alt="Фото пользователя">
             <div class="users-photos-catalog__item-wrapper">
               <div class="users-photos-catalog__photo-info">
@@ -181,7 +194,7 @@
       </section>
     </main>
 
-    <footer class="page-footer--inner">
+    <footer class="page-footer page-footer--inner">
       <a class="page-footer__logo footer-logo" href="index.html">
           <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Приложение Pink">
       </a>
@@ -205,5 +218,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/util.js"></script>
   </body>
 </html>

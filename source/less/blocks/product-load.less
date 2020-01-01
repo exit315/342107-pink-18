@@ -1,51 +1,28 @@
 .product-load {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  color: #ffffff;
-}
+  color: @white;
 
-.product-load__background-logo {
-  width: 320px;
-
-  background-color: #283645;
-  background-image:
-    url("../img/iphone-hand-mobile@1x.png"),
-    url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: left 180px, center top;
-}
-
-.product-load__lead-in {
-  margin: 0;
-  padding-top: 90px;
-  padding-bottom: 310px;
-  padding-left: 45px;
-  padding-right: 45px;
-
-  font-size: 24px;
-  font-weight: lighter;
+  background-color: @load-bg-darker-blue;
 }
 
 .product-load__wrapper {
   margin: 0;
   padding-top: 28px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 30px;
 
   text-align: center;
-  background-color: #283645;
 
-  list-style: none;
+  .no-list();
 }
 
 .product-load__default-btn {
   margin-bottom: 32px;
-  padding-top: 12px;
-  padding-bottom: 15px;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding: 11px 34px 16px;
 
-  border: 3px #ffffff solid;
+  border: 3px @white solid;
   border-radius: 24px;
 }
 
@@ -54,14 +31,20 @@
   padding: 0;
 
   font-size: 18px;
-  font-weight: bold;
+  font-weight: @font-bold;
   color: inherit;
   vertical-align: middle;
   line-height: 18px;
   text-decoration: none;
 }
 
+.product-load__list {
+  margin-bottom: 30px;
+  padding-top: 59px;
+}
+
 .product-load__version-description {
+  width: 280px;
   padding: 0;
   margin: 0;
 
@@ -69,6 +52,68 @@
   line-height: 24px;
 }
 
-.product-load__list {
-  margin-bottom: 25px;
+@media (min-width: @tablet-width) {
+  .product-load {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 0 20px;
+    background: transparent;
+  }
+
+  .product-load__wrapper {
+    width: 300px;
+    padding: 0;
+    margin: 0;
+
+    text-align: center;
+    background: transparent;
+  }
+
+  .product-load__default-btn {
+    margin: 0;
+    margin-bottom: 46px;
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  .product-load__list {
+    margin-bottom: 40px;
+  }
+
+  .product-load__version-description {
+    width: 300px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 105px;
+
+    font-size: 18px;
+    font-weight: @font-light;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-load {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .product-load__default-btn {
+    margin-bottom: 67px;
+    padding: 11px 10px 16px;
+  }
+
+  .product-load__default-link {
+    font-size: 21px;
+  }
+
+  .product-load__list {
+    margin-bottom: 60px;
+  }
+
+  .product-load__version-description {
+    margin-bottom: 115px;
+  }
 }

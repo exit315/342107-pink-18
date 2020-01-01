@@ -1,8 +1,12 @@
-.slides__review-slide {
-  width: 276px;
+.slides__wrapper {
+  width: 300%;
 
-  padding-left: 25px;
-  padding-right: 25px;
+  border-collapse: collapse;
+}
+
+.slides__review-slide {
+  padding-left: 20px;
+  padding-right: 20px;
 
   text-align: center;
 }
@@ -17,33 +21,39 @@
   margin-bottom: 15px;
 
   font-size: 18px;
-  font-weight: bold;
+  font-weight: @font-bold;
   line-height: 30px;
+}
+
+.slides__reveiw-user-info {
+  display: none;
 }
 
 .slides__reveiw-text {
+  margin-bottom: 30px;
+
   font-size: 14px;
-  color: #283645;
+  font-weight: @font-normal;
+  color: @dark-blue;
   line-height: 30px;
 }
 
-.product-rates__list {
-  width: 276px;
-  border-collapse: collapse;
+.slides__rate-feature--hidden,
+.slides__rate-feature-name--hidden,
+.slides__rate-name-price--hidden {
+  display: none;
 }
 
-.slides__rate-name-price-wrapper,
-.slides__rate-name-price-wrapper--hit-rate {
+.slides__rate-name-price,
+.slides__rate-name-price--hit-rate {
   margin: 0;
-  padding-top: 19px;
-  padding-bottom: 19px;
-  padding-left: 90px;
-  padding-right: 90px;
+  padding: 19px 90px;
 
   text-align: center;
-  background-color: #283645;
-  border-left: 2px solid #e5e5e5;
-  border-right: 2px solid #e5e5e5;
+
+  background-color: @dark-blue;
+
+  .rate-border(@border-grey; @border-grey; @border-grey; @border-grey);
 }
 
 .slides__rate-name {
@@ -51,8 +61,8 @@
   padding: 0;
 
   font-size: 18px;
-  font-weight: bold;
-  color: #ffffff;
+  font-weight: @font-bold;
+  color: @white;
   line-height: 30px;
   text-transform: uppercase;
 }
@@ -62,17 +72,16 @@
   padding: 0;
 
   font-size: 24px;
-  font-weight: normal;
-  color: #ffffff;
+  font-weight: @font-normal;
+  color: @white;
   line-height: 30px;
   white-space: nowrap;
 }
 
 .slides__rate-feature {
+  background-color: @white;
 
-  border-left: 2px solid #e5e5e5;
-  border-right: 2px solid #e5e5e5;
-  border-bottom: 2px solid #e5e5e5;
+  .rate-border(@border-grey; @border-grey; @border-grey; @border-grey);
 }
 
 .slides__rate-feature-name {
@@ -82,7 +91,112 @@
   padding-left: 22px;
 
   font-size: 14px;
-  color: #283645;
+  color: @dark-blue;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .slides__wrapper {
+    width: 620px;
+  }
+
+  .slides__review-slide {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .slides__reveiw-user-name {
+    margin-bottom: 5px;
+
+    font-size: 20px;
+    font-weight: @font-bold;
+    line-height: 30px;
+  }
+
+  .slides__reveiw-user-info {
+    display: block;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+
+    font-size: 14px;
+    font-weight: @font-normal;
+    color: @dark-blue;
+    line-height: 30px;
+  }
+
+  .slides__reveiw-text {
+    order: -1;
+
+    font-size: 18px;
+    font-weight: @font-normal;
+    color: @dark-blue;
+    line-height: 30px;
+  }
+
+  .slides__rate-feature--hidden,
+  .slides__rate-name-price--hidden,
+  .slides__rate-feature-name--hidden {
+    display: table-cell;
+  }
+
+  .slides__rate-name-price--hidden {
+    margin: 0;
+    padding: 0;
+  }
+
+  .slides__rate-name-price-wrapper {
+    border-right: 2px solid @dark-blue;
+  }
+
+  .slides__rate-name-price {
+    padding: 8px 37px 8px;
+
+    .rate-border(@dark-blue; @dark-blue; @border-grey; @border-grey);
+  }
+
+  .slides__rate-name {
+    margin: 0;
+    font-size: 16px;
+    color: @white;
+  }
+
+  .slides__rate-price {
+    font-size: 18px;
+    font-weight: @font-light;
+  }
+
+  .slides__rate-feature-name {
+    display: none;
+  }
+
+  .slides__rate-feature--hidden {
+    margin: 0;
+    padding: 8px 20px 7px 15px;
+
+    background-color: @white;
+    .rate-border(@border-grey; @border-grey; @border-grey; @border-grey);
+  }
+
+  .slides__rate-feature-name--hidden {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: @dark-blue;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slides__review-slide {
+    width: 760px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  .slides__rate-feature-name--hidden {
+    font-size: 18px;
+  }
 }

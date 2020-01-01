@@ -1,6 +1,19 @@
 .product-links-list {
+  position: relative;
   margin: 0;
   padding: 0;
 
-  list-style: none;
+  .no-list();
+}
+
+.product-links-list__item-ios::before {
+  .load-icon(url("../img/logo-apple.svg"); 47px; 56px; 1px; 37px);
+}
+
+.product-links-list__item-android::before {
+  .load-icon(url("../img/logo-android.svg"); 43px; 47px; 6px; 118px);
+}
+
+.product-links-list__item-windows::before {
+  .load-icon(url("../img/logo-microsoft.svg"); 44px; 41px; 9px; 198px);
 }
