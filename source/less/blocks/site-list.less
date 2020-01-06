@@ -12,8 +12,6 @@
   a {
     text-decoration: none;
     color: inherit;
-
-    cursor: pointer;
   }
 }
 
@@ -27,9 +25,36 @@
   border-bottom: 1px solid #000000;
 }
 
+.site-list__item {
+  cursor: pointer;
+}
+
 .site-list__item--active {
   a {
     padding-bottom: 8px;
     border-bottom: 2px solid @white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    font-weight: @font-normal;
+    line-height: 18px;
+    text-transform: none;
+    background-color: transparent;
+  }
+
+  .site-list__item,
+  .site-list__item--active {
+    padding: 0;
+    border: none;
+  }
+  .site-list__item:not(:last-of-type),
+  .site-list__item--active {
+    margin-right: 80px;
   }
 }

@@ -1,6 +1,7 @@
-.bg-image(@img-source; @img-position) {
+.bg-image(@img-source; @img-size; @img-position) {
   background-image: @img-source;
   background-repeat: no-repeat;
+  background-size: @img-size;
   background-position: @img-position;
 }
 
@@ -88,6 +89,51 @@
   background-color: @white;
 
   box-shadow: 0 @position-shadow 0 -1px rgba(255, 255, 255, 0.3);
+}
+
+.advantages-item-bg(@img-source) {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 22px;
+
+  width: 292px;
+  height: 302px;
+
+  background-image: @img-source;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.rate-feature-toggle-on(@top; @right; @height; @rotate) {
+  content: "";
+
+  position: absolute;
+  top: @top;
+  right: @right;
+
+  width: 3px;
+  height: @height;
+
+  background-color: @green;
+
+  transform: rotate(@rotate);
+}
+
+.rate-feature-toggle-off(@top; @right; @rotate) {
+  content: "";
+
+  position: absolute;
+  top: @top;
+  right: @right;
+
+  width: 3px;
+  height: 35px;
+
+  background-color: @orange;
+
+  transform: rotate(@rotate);
 }
 
 .rate-border(@color-top; @color-bottom; @color-left; @color-right) {
