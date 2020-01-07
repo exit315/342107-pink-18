@@ -25,8 +25,19 @@
   border-bottom: 1px solid #000000;
 }
 
-.site-list__item {
+.site-list__item:not(:active) {
   cursor: pointer;
+}
+
+.site-list__item {
+  &:hover,
+  &:focus {
+    color: @pink;
+  }
+
+  &:active {
+    color: @pink-translucent;
+  }
 }
 
 .site-list__item--active {
