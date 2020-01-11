@@ -1,9 +1,3 @@
-.slides__wrapper {
-  width: 300%;
-
-  border-collapse: collapse;
-}
-
 .slides__review-slide {
   padding-left: 20px;
   padding-right: 20px;
@@ -52,6 +46,7 @@
   text-align: center;
 
   background-color: @dark-blue;
+  box-sizing: border-box;
 
   .rate-border(@border-grey; @border-grey; @border-grey; @border-grey);
 }
@@ -79,6 +74,9 @@
 }
 
 .slides__rate-feature {
+  position: relative;
+  padding: 0;
+
   background-color: @white;
 
   .rate-border(@border-grey; @border-grey; @border-grey; @border-grey);
@@ -86,14 +84,35 @@
 
 .slides__rate-feature-name {
   margin: 0;
-  padding-top: 14px;
-  padding-bottom: 15px;
+
+  padding-top: 13px;
+  padding-bottom: 14px;
   padding-left: 22px;
 
   font-size: 14px;
   color: @dark-blue;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.slides__rate-feature-toggle--toggle-on {
+  &::before {
+    .rate-feature-toggle-on(27px; 47px; 15px; -45deg);
+  }
+
+  &::after {
+    .rate-feature-toggle-on(15px; 34px; 29px; 45deg);
+  }
+}
+
+.slides__rate-feature-toggle--toggle-off {
+  &::before {
+    .rate-feature-toggle-off(11px; 38px; 45deg);
+  }
+
+  &::after {
+    .rate-feature-toggle-off(11px; 38px; -45deg);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -152,7 +171,9 @@
   }
 
   .slides__rate-name-price {
-    padding: 8px 37px 8px;
+    width: 154px;
+    padding: 0;
+    text-align: center;
 
     .rate-border(@dark-blue; @dark-blue; @border-grey; @border-grey);
   }
@@ -174,7 +195,7 @@
 
   .slides__rate-feature--hidden {
     margin: 0;
-    padding: 8px 20px 7px 15px;
+    padding: 9px 15px 8px 15px;
 
     background-color: @white;
     .rate-border(@border-grey; @border-grey; @border-grey; @border-grey);
@@ -187,6 +208,26 @@
     color: @dark-blue;
     line-height: 30px;
   }
+
+  .slides__rate-feature-toggle--toggle-on {
+    &::before {
+      .rate-feature-toggle-on(21px; 84px; 15px; -45deg);
+    }
+
+    &::after {
+      .rate-feature-toggle-on(9px; 70px; 29px; 45deg);
+    }
+  }
+
+  .slides__rate-feature-toggle--toggle-off {
+    &::before {
+      .rate-feature-toggle-off(5px; 75px; 45deg);
+    }
+
+    &::after {
+      .rate-feature-toggle-off(5px; 75px; -45deg);
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -196,7 +237,36 @@
     padding: 0 30px;
   }
 
+  .slides__rate-feature--hidden {
+    padding: 17px 15px 16px 15px;
+  }
+
   .slides__rate-feature-name--hidden {
     font-size: 18px;
+  }
+
+  .slides__rate-name-price,
+  .slides__rate-name-price--hit-rate {
+    width: 234px;
+  }
+
+  .slides__rate-feature-toggle--toggle-on {
+    &::before {
+      .rate-feature-toggle-on(30px; 124px; 15px; -45deg);
+    }
+
+    &::after {
+      .rate-feature-toggle-on(18px; 110px; 29px; 45deg);
+    }
+  }
+
+  .slides__rate-feature-toggle--toggle-off {
+    &::before {
+      .rate-feature-toggle-off(14px; 114px; 45deg);
+    }
+
+    &::after {
+      .rate-feature-toggle-off(14px; 114px; -45deg);
+    }
   }
 }

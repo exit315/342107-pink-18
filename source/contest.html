@@ -10,25 +10,27 @@
     <header class="page-header">
       <div class="page-header__bg-wrapper">
         <div class="page-header__bg-inner-wrapper page-header__bg-inner-wrapper--mobile">
-          <div class="page-header__header-logo-wrapper">
-            <a class="page-header__header-logo" href="index.html">
-              <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Сайт приложения Pink">
-            </a>
+          <div class="page-header__desktop-menu-wrapper">
+            <div class="page-header__header-logo-wrapper">
+              <a class="page-header__header-logo" href="index.html">
+                <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Сайт приложения Pink">
+              </a>
+            </div>
+
+            <nav class="main-nav main-nav--closed">
+              <button class="main-nav__toggle" type="button">
+                <span class="visually-hidden">Открыть меню</span>
+                <span class="main-nav__toggle--burger"></span>
+              </button>
+
+              <ul class="main-nav__list site-list hidden">
+                <li class="site-list__item"><a href="index.html">Главная</a></li>
+                <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
+                <li class="site-list__item--active"><a>Конкурс</a></li>
+                <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+              </ul>
+            </nav>
           </div>
-
-          <nav class="main-nav main-nav--closed">
-            <button class="main-nav__toggle" type="button">
-              <span class="visually-hidden">Открыть меню</span>
-              <span class="main-nav__toggle--burger"></span>
-            </button>
-
-            <ul class="main-nav__list site-list hidden">
-              <li class="site-list__item"><a href="index.html">Главная</a></li>
-              <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
-              <li class="site-list__item--active"><a>Конкурс</a></li>
-              <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-            </ul>
-          </nav>
 
           <div class="inner-page-title">
             <h1 class="inner-page-title__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
@@ -42,44 +44,97 @@
         <p class="photo-contest__lead-in">Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту!</p>
         <form class="photo-contest photo-contest-form" action="https://echo.htmlacademy.ru" method="POST">
           <!--Здесь будет форма отправки истории-->
-          <label class="photo-contest-form__field-header" for="user-surname">Фамилия</label>
-          <input id="user-surname" type="text" required>
-          <label class="photo-contest-form__field-header" for="user-name">Имя</label class="photo-contest__field-header">
-          <input id="user-name" type="text" required>
-          <label class="photo-contest-form__field-header" for="user-patronymic">Отчество</label class="photo-contest__field-header">
-          <input id="user-patronymic" type="text">
-          <fieldset>
-            <p class="photo-contest-form__field-header">Ваши безбашенные достижения в путешествии</p class="photo-contest__field-header">
-            <label for="shark">Сделал селфи с акулой</label>
-            <input id="shark" type="checkbox">
-            <label for="beach">Обгорел на пляже</label>
-            <input id="beach" type="checkbox">
-            <label for="chuck">Видел Чака Норриса</label>
-            <input id="chuck" type="checkbox">
-            <label for="souvenirs">Накупил сувениров</label>
-            <input id="souvenirs" type="checkbox">
-            <label for="tower">Удержал башню</label>
-            <input id="tower" type="checkbox">
-            <label for="hotel">Разгромил отель</label>
-            <input id="hotel" type="checkbox">
+          <div class="photo-contest-form__user-info">
+            <label class="photo-contest-form__user-info-header" for="user-surname">Фамилия:</label>
+            <input class="photo-contest-form__user-info-input" id="user-surname" type="text" placeholder="Укажите фамилию" required>
+            <label class="photo-contest-form__user-info-header" for="user-name">Имя:</label>
+            <input class="photo-contest-form__user-info-input" id="user-name" type="text" placeholder="Введите ваше имя" required>
+            <label class="photo-contest-form__user-info-header" for="user-patronymic">Отчество:</label>
+            <input class="photo-contest-form__user-info-input" id="user-patronymic" type="text" placeholder="Ну и отчество тоже">
+          </div>
+
+          <fieldset class="photo-contest-form__fieldset">
+            <p class="photo-contest-form__field-header">Ваши безбашенные достижения в путешествии</p>
+
+            <label class="photo-contest-form__fieldset-feature-title">
+              <input type="checkbox" name="shark" class="visually-hidden" checked>
+              <span class="checkbox-indicator"></span>
+              Сделал селфи с акулой
+            </label>
+
+            <label class="photo-contest-form__fieldset-feature-title">
+              <input type="checkbox" name="beach" class="visually-hidden" checked>
+              <span class="checkbox-indicator"></span>
+              Обгорел на пляже
+            </label>
+
+            <label class="photo-contest-form__fieldset-feature-title">
+              <input type="checkbox" name="chuck" class="visually-hidden">
+              <span class="checkbox-indicator"></span>
+              Видел Чака Норриса
+            </label>
+
+            <label class="photo-contest-form__fieldset-feature-title">
+              <input type="checkbox" name="souvenir" class="visually-hidden">
+              <span class="checkbox-indicator"></span>
+              Накупил сувениров
+            </label>
+
+            <label class="photo-contest-form__fieldset-feature-title">
+              <input type="checkbox" name="tower" class="visually-hidden" checked>
+              <span class="checkbox-indicator"></span>
+              Удержал башню
+            </label>
+
+            <label class="photo-contest-form__fieldset-feature-title">
+              <input type="checkbox" name="hotel" class="visually-hidden">
+              <span class="checkbox-indicator"></span>
+              Разгромил отель
+            </label>
+
           </fieldset>
-          <label class="photo-contest-form__field-header" for="user-tel">Номер телефона</label>
-          <input id="user-tel" type="tel">
-          <label class="photo-contest-form__field-header" for="user-email">Адрес почты</label class="photo-contest__field-header">
-          <input id="user-email" type="email" required>
-          <fieldset>
+
+          <div class="photo-contest-form__user-info">
+            <label class="photo-contest-form__user-info-header" for="user-tel">Номер телефона</label>
+            <input class="photo-contest-form__user-info-input" id="user-tel" type="tel" placeholder="Номер, пожалуйста">
+            <label class="photo-contest-form__user-info-header" for="user-email">Адрес почты</label class="photo-contest__field-header">
+            <input class="photo-contest-form__user-info-input" id="user-email" type="email" placeholder="Введите почту" required>
+          </div>
+
+          <fieldset class="photo-contest-form__fieldset">
             <p class="photo-contest-form__field-header">С каким приложением путешествовали?</p>
-            <label for="user-app-ios">Pink для iOS</label>
-            <input id="user-app-ios" type="radio">
-            <label for="user-app-android">Pink на Android</label>
-            <input id="user-app-android" type="radio">
-            <label for="user-app-winphone">Windows Phone</label>
-            <input id="user-app-winphone" type="radio">
+
+            <label class="photo-contest-form__fieldset-feature-title">
+              <input type="radio" name="user-app" class="visually-hidden" checked>
+              <span class="radio-indicator"></span>
+              Pink для iOS
+            </label>
+
+            <label class="photo-contest-form__fieldset-feature-title">
+              <input type="radio" name="user-app" class="visually-hidden">
+              <span class="radio-indicator"></span>
+              Pink на Android
+            </label>
+
+            <label class="photo-contest-form__fieldset-feature-title">
+              <input type="radio" name="user-app" class="visually-hidden">
+              <span class="radio-indicator"></span>
+              Windows Phone
+            </label>
+
           </fieldset>
-          <label class="photo-contest-form__field-header" for="user-photo-comment">Опишите свои эмоции</label>
-          <textarea id="user-photo-comment"></textarea>
-          <input type="submit">Отправить форму
+
+          <div class="photo-contest-form__user-comment">
+            <label class="photo-contest-form__user-comment-header" for="user-photo-comment">Опишите свои эмоции</label>
+            <textarea class="photo-contest-form__comment-input" id="user-photo-comment"
+            placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </div>
+
+          <button class="photo-contest-form__submit-btn" type="submit">Отправить форму</button>
         </form>
+        <p class="photo-contest-form__required-note">
+          <span>*</span> — обязательные поля
+        </p>
       </section>
     </main>
 

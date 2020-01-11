@@ -5,17 +5,13 @@
   background-color: @nav-bg-transparent;
 }
 
-.page-header__header-logo {
-  cursor: pointer;
-}
-
 .page-header__bg-wrapper--mobile {
-  .bg-image(url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg"); left bottom, center bottom);
+  .bg-image(url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg"); 258px 286px, 320px 462px; left bottom, center bottom);
   background-color: @dark-blue;
 }
 
 .page-header__bg-inner-wrapper--mobile {
-  .bg-image(url("../img/bg-back-mobile@1x.jpg"); center top);
+  .bg-image(url("../img/bg-back-mobile@1x.jpg"); 320px 462px; center top);
   background-color: @dark-blue;
 }
 
@@ -40,7 +36,7 @@
     display: flex;
     flex-direction: column;
 
-    .bg-image(url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg"); -20px bottom, center bottom);
+    .bg-image(url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg"); 700px 545px, 1200px 729px; -20px bottom, center bottom);
     background-color: @dark-blue;
   }
 
@@ -49,7 +45,7 @@
   }
 
   .page-header__bg-inner-wrapper {
-    .bg-image(url("../img/bg-back-tablet@1x.jpg"); center top);
+    .bg-image(url("../img/bg-back-tablet@1x.jpg"); 1200px 729px; center top);
   }
 
   .page-header__header-logo-wrapper {
@@ -77,15 +73,27 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
+    position: relative;
     min-width: 1200px;
   }
 
+  .page-header__desktop-menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 45px 130px 47px 130px;
+
+    background-color: @nav-bg-transparent;
+  }
+
   .page-header__header-logo-wrapper {
-    padding: 40px 120px;
+    padding: 0;
+
+    background-color: transparent;
   }
 
   .page-header__bg-wrapper {
-    .bg-image(url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg"); right bottom, center bottom);
+    .bg-image(url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg"); 1050px 645px, 2560px 853px; right bottom, center bottom);
     background-color: @dark-blue;
   }
 
@@ -94,14 +102,14 @@
   }
 
   .page-header__bg-inner-wrapper {
-    .bg-image(url("../img/bg-back-desktop@1x.jpg"); center top);
+    .bg-image(url("../img/bg-back-desktop@1x.jpg"); 2560px 853px; center top);
   }
 
   .page-header__load-lead-in-wrapper {
     width: 300px;
     margin-right: auto;
     margin-bottom: 50px;
-    padding: 90px 120px 0;
+    padding: 90px 130px 0;
   }
 
   .page-header__load-lead-in {

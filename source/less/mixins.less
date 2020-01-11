@@ -1,6 +1,7 @@
-.bg-image(@img-source; @img-position) {
+.bg-image(@img-source; @img-size; @img-position) {
   background-image: @img-source;
   background-repeat: no-repeat;
+  background-size: @img-size;
   background-position: @img-position;
 }
 
@@ -48,7 +49,7 @@
   background-color: transparent;
 }
 
-.nav-toggle() {
+.nav-toggle(@bg-color) {
   position: absolute;
   left: 1px;
   top: 11px;
@@ -57,10 +58,10 @@
   height: 4px;
 
   border: none;
-  background-color: @white;
+  background-color: @bg-color;
 }
 
-.nav-toggle-x(@rotate) {
+.nav-toggle-x(@bg-color; @rotate) {
   content: "";
 
   position: absolute;
@@ -75,7 +76,7 @@
   transform: rotate(@rotate);
 }
 
-.nav-toggle-burger(@position-top; @position-shadow) {
+.nav-toggle-burger(@position-top; @bg-color) {
   content: "";
 
   position: absolute;
@@ -85,9 +86,52 @@
   width: 50px;
   height: 4px;
 
-  background-color: @white;
+  background-color: @bg-color;
+}
 
-  box-shadow: 0 @position-shadow 0 -1px rgba(255, 255, 255, 0.3);
+.advantages-item-bg(@img-source) {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 22px;
+
+  width: 292px;
+  height: 302px;
+
+  background-image: @img-source;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.rate-feature-toggle-on(@top; @right; @height; @rotate) {
+  content: "";
+
+  position: absolute;
+  top: @top;
+  right: @right;
+
+  width: 3px;
+  height: @height;
+
+  background-color: @green;
+
+  transform: rotate(@rotate);
+}
+
+.rate-feature-toggle-off(@top; @right; @rotate) {
+  content: "";
+
+  position: absolute;
+  top: @top;
+  right: @right;
+
+  width: 3px;
+  height: 35px;
+
+  background-color: @orange;
+
+  transform: rotate(@rotate);
 }
 
 .rate-border(@color-top; @color-bottom; @color-left; @color-right) {
@@ -102,4 +146,61 @@
   font-weight: 300;
   color: @pink;
   text-decoration: none;
+}
+
+.checkbox-indicator(@border-color) {
+  position: absolute;
+  top: -7px;
+  left: 0;
+
+  width: 35px;
+  height: 35px;
+
+  background-color: @white;
+  border: 2px solid @border-color;
+  border-radius: 2px;
+}
+
+.radio-indicator(@border-color) {
+  position: absolute;
+  top: -7px;
+  left: 0;
+
+  width: 35px;
+  height: 35px;
+
+  background-color: @white;
+  border: 2px solid @border-color;
+  border-radius: 50%;
+}
+
+.radio-indicator-checked(@top; @left) {
+  content: "";
+
+  position: absolute;
+  top: @top;
+  left: @left;
+
+  width: 15px;
+  height: 15px;
+
+  background-color: @pink;
+  border: 1px solid @pink;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.checkbox-indicator-checked(@top; @left) {
+  content: "";
+
+  position: absolute;
+  top: @top;
+  left: @left;
+
+  width: 22px;
+  height: 16px;
+
+  background-image: url("../img/icon-yes.svg");
+  background-repeat: no-repeat;
+  background-size: 22px 16px;
 }

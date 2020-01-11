@@ -51,7 +51,7 @@
 
 @media (min-width: @tablet-width) {
   .page-footer {
-    padding: 50px 20px 0;
+    padding-top: 50px;
   }
 
   .page-footer__lead-in {
@@ -70,8 +70,7 @@
     justify-content: space-between;
     align-items: baseline;
 
-    padding-top: 35px;
-    padding-bottom: 40px;
+    padding: 35px 20px 40px;
   }
 
   .page-footer__logo,
@@ -79,8 +78,9 @@
     margin: 0;
   }
 
-  .page-footer__map {
+  .page-footer__map iframe {
     width: @tablet-width;
+    height: @tablet-map;
   }
 }
 
@@ -95,7 +95,7 @@
     justify-content: space-between;
     align-items: baseline;
 
-    padding: 35px 100px 40px;
+    padding: 70px 100px;
   }
 
   .page-footer__logo,
@@ -110,7 +110,8 @@
     font-size: @font-size-title-desktop;
   }
 
-  .page-footer__map {
+  .page-footer__map iframe {
     width: @desktop-width;
+    height: @desktop-map;
   }
 }

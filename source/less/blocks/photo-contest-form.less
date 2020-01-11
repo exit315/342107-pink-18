@@ -1,0 +1,166 @@
+.photo-contest-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-contest-form__field-header,
+.photo-contest-form__user-comment-header {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: @font-normal;
+  color: @pink;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.photo-contest-form__field-header {
+  margin-bottom: 35px;
+}
+
+.photo-contest-form__user-info {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  margin-bottom: 42px;
+  padding: 0 20px;
+}
+
+.photo-contest-form__user-info-header {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  padding-left: 20px;
+
+  font-size: 14px;
+  font-weight: @font-normal;
+  color: @pink;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.photo-contest-form__user-comment {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 20px;
+}
+
+.photo-contest-form__user-comment-header {
+  margin-bottom: 17px;
+}
+
+.photo-contest-form__user-info-input,
+.photo-contest-form__comment-input {
+  padding: 15px 20px;
+
+  font-size: 18px;
+  line-height: 30px;
+  color: @dark-blue;
+
+  border: solid 2px @border-grey;
+  border-radius: 2px;
+}
+
+.photo-contest-form__comment-input {
+  min-width: 280px;
+  height: 197px;
+  margin-bottom: 48px;
+  box-sizing: border-box;
+}
+
+.photo-contest-form__user-info-input:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.photo-contest-form__fieldset {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 40px 20px 42px;
+
+  background-color: @bg-light-grey;
+  border: none;
+}
+
+.photo-contest-form__fieldset-feature-title {
+  position: relative;
+  padding-left: 68px;
+
+  font-size: 18px;
+  color: @dark-blue;
+  line-height: 30px;
+}
+
+.photo-contest-form__fieldset-feature-title:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.photo-contest-form__fieldset-feature-title [type="checkbox"] + .checkbox-indicator {
+  .checkbox-indicator(@border-grey);
+}
+
+.photo-contest-form__fieldset-feature-title [type="radio"] + .radio-indicator {
+  .radio-indicator(@border-grey);
+}
+
+.photo-contest-form__fieldset-feature-title [type="checkbox"]:hover + .checkbox-indicator,
+.photo-contest-form__fieldset-feature-title [type="checkbox"]:focus + .checkbox-indicator {
+  .checkbox-indicator(@black);
+}
+
+.photo-contest-form__fieldset-feature-title [type="radio"]:hover + .radio-indicator,
+.photo-contest-form__fieldset-feature-title [type="radio"]:focus + .radio-indicator {
+  .radio-indicator(@black);
+}
+
+.photo-contest-form__fieldset-feature-title [type="checkbox"]:active + .checkbox-indicator {
+  .checkbox-indicator(@pink);
+}
+
+.photo-contest-form__fieldset-feature-title [type="radio"]:active + .radio-indicator {
+  .radio-indicator(@pink);
+}
+
+.photo-contest-form__fieldset-feature-title [type="checkbox"]:checked + .checkbox-indicator::before {
+  .checkbox-indicator-checked(10px; 7px);
+}
+
+.photo-contest-form__fieldset-feature-title [type="radio"]:checked + .radio-indicator::before {
+  .radio-indicator-checked(10px; 10px);
+}
+
+.photo-contest-form__submit-btn {
+  width: 276px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 14px 20px 15px;
+
+  font-size: 18px;
+  font-weight: @font-bold;
+  color: @white;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  border: 2px solid @green-btn;
+  border-radius: 2px;
+  background-color: @green-btn;
+}
+
+.photo-contest-form__required-note {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 30px;
+  color: @black;
+  text-transform: uppercase;
+  text-align: center;
+
+  span {
+    color: @pink;
+  }
+}

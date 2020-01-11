@@ -39,6 +39,17 @@
   }
 }
 
+@media (max-width: @to-desktop-width-only) {
+  .main-nav--closed .site-list__item,
+  .main-nav--closed .site-list__item--active {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .main-nav__list {
     margin: 0;
@@ -55,6 +66,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .main-nav.main-nav--closed {
+    display: block;
+  }
+
   .main-nav__toggle {
     display: none;
   }
