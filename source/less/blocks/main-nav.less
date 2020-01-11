@@ -16,14 +16,14 @@
 }
 
 .main-nav--closed .main-nav__toggle--burger {
-  .nav-toggle();
+  .nav-toggle(@white);
 
   &::before {
-    .nav-toggle-burger(-10px; 2px);
+    .nav-toggle-burger(-10px; @white);
   }
 
   &::after {
-    .nav-toggle-burger(10px; -2px);
+    .nav-toggle-burger(10px; @white);
   }
 }
 
@@ -31,11 +31,11 @@
   .nav-toggle-opened-wrapper(-50px);
 
   &::before {
-    .nav-toggle-x(45deg);
+    .nav-toggle-x(@white; 45deg);
   }
 
   &::after {
-    .nav-toggle-x(-45deg);
+    .nav-toggle-x(@white; -45deg);
   }
 }
 
