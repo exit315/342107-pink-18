@@ -160,7 +160,16 @@
   }
 
   .advantages__list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     position: relative;
+
+    width: 250px;
+    padding: 350px 40px 40px;
+
+    text-align: center;
 
     &:nth-child(1)::before {
       .advantages-item-bg(url("../img/iphone-screen-1-desktop@1x.png"));
@@ -178,17 +187,6 @@
   .advantages__lead-in {
     font-size: @font-size-title-desktop;
     margin-bottom: 0;
-  }
-
-  .advantages__list-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 250px;
-    padding: 350px 40px 40px;
-
-    text-align: center;
   }
 
   .advantages__list-item-header,
