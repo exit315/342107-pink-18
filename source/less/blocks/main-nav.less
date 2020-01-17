@@ -16,15 +16,7 @@
 }
 
 .main-nav--closed .main-nav__toggle--burger {
-  .nav-toggle(@white);
-
-  &::before {
-    .nav-toggle-burger(-10px; @white);
-  }
-
-  &::after {
-    .nav-toggle-burger(10px; @white);
-  }
+  .nav-toggle();
 }
 
 .main-nav--opened .main-nav__toggle {

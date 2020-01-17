@@ -14,7 +14,19 @@
 .contacts__item-contact-phone,
 .contacts__item-contact-email,
 .contacts__item-contact-address {
-  .link-contact();
+  color: @pink;
+  text-decoration: none;
+  list-style: none;
+
+  &:hover,
+  &:focus {
+    color: @dark-blue;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: @dark-blue-translucent;
+  }
 }
 
 @media (min-width: @tablet-width) {
