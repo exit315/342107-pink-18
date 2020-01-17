@@ -5,10 +5,6 @@
   background-position: @img-position;
 }
 
-.no-list() {
-  list-style: none;
-}
-
 .load-icon(@logo-source; @logo-width; @logo-height; @logo-position-top; @logo-position-left) {
   content: "";
   position: absolute;
@@ -51,17 +47,17 @@
 
 .nav-toggle() {
   position: absolute;
-  left: 1px;
-  top: 11px;
+  right: 1px;
+  top: 1px;
 
   width: 50px;
-  height: 4px;
+  height: 24px;
 
-  border: none;
-  background-color: @white;
+  background-image: url("../img/icon-menu-burger.svg");
+  background-repeat: no-repeat;
 }
 
-.nav-toggle-x(@rotate) {
+.nav-toggle-x(@bg-color; @rotate) {
   content: "";
 
   position: absolute;
@@ -76,7 +72,7 @@
   transform: rotate(@rotate);
 }
 
-.nav-toggle-burger(@position-top; @position-shadow) {
+.nav-toggle-burger(@position-top; @bg-color) {
   content: "";
 
   position: absolute;
@@ -86,9 +82,7 @@
   width: 50px;
   height: 4px;
 
-  background-color: @white;
-
-  box-shadow: 0 @position-shadow 0 -1px rgba(255, 255, 255, 0.3);
+  background-color: @bg-color;
 }
 
 .advantages-item-bg(@img-source) {
@@ -148,4 +142,79 @@
   font-weight: 300;
   color: @pink;
   text-decoration: none;
+}
+
+.checkbox-indicator(@border-color) {
+  position: absolute;
+  top: -7px;
+  left: 0;
+
+  width: 35px;
+  height: 35px;
+
+  background-color: @white;
+  border: 2px solid @border-color;
+  border-radius: 2px;
+}
+
+.radio-indicator(@border-color) {
+  position: absolute;
+  top: -7px;
+  left: 0;
+
+  width: 35px;
+  height: 35px;
+
+  background-color: @white;
+  border: 2px solid @border-color;
+  border-radius: 50%;
+}
+
+.radio-indicator-checked(@top; @left) {
+  content: "";
+
+  position: absolute;
+  top: @top;
+  left: @left;
+
+  width: 15px;
+  height: 15px;
+
+  background-color: @pink;
+  border: 1px solid @pink;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.checkbox-indicator-checked(@top; @left) {
+  content: "";
+
+  position: absolute;
+  top: @top;
+  left: @left;
+
+  width: 22px;
+  height: 16px;
+
+  background-image: url("../img/icon-yes.svg");
+  background-repeat: no-repeat;
+  background-size: 22px 16px;
+}
+
+.filter-effects-icon(@icon-source; @top; @left; @icon-width; @icon-height) {
+  position: absolute;
+  top: @top;
+  left: @left;
+
+  width: 48px;
+  height: 44px;
+
+  font-size: 0;
+
+  background-image: @icon-source;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: @icon-width @icon-height;
+
+  cursor: pointer;
 }

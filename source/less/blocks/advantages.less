@@ -27,7 +27,7 @@
   padding-bottom: 300px;
 
   text-align: center;
-  .no-list();
+  list-style: none;
 
   .bg-image(url("../img/iphone-screen-mobile@1x.png"); 157px 320px; center 457px);
   background-color: @bg-light-grey;
@@ -160,10 +160,17 @@
   }
 
   .advantages__list-item {
-    position: relative;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  .advantages__list-item {
+    position: relative;
+
+    width: 250px;
+    padding: 350px 40px 40px;
+
+    text-align: center;
+
     &:nth-child(1)::before {
       .advantages-item-bg(url("../img/iphone-screen-1-desktop@1x.png"));
     }
@@ -180,17 +187,6 @@
   .advantages__lead-in {
     font-size: @font-size-title-desktop;
     margin-bottom: 0;
-  }
-
-  .advantages__list-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 250px;
-    padding: 350px 40px 40px;
-
-    text-align: center;
   }
 
   .advantages__list-item-header,

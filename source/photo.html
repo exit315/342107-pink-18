@@ -182,16 +182,56 @@
         </ul>
       </section>
 
-      <section class="upload-photo">
+      <section class="upload-user-photo">
         <h2 class="visually-hidden">Форма загрузки фотографии</h2>
 
-        <div class="upload-photo__lead-in-wrapper">
-          <p class="upload-photo__lead-in">Затмите их всех!</br>
+        <div class="upload-user-photo__lead-in-wrapper">
+          <p class="upload-user-photo__lead-in">Затмите их всех!</br>
             Выкладывайте все, что накопилось в телефоне!</p>
         </div>
 
-        <form class="upload-photo__form" action="https://echo.htmlacademy.ru" method="POST">
-          <!--Здесь будет форма для загрузки фото-->
+        <form class="upload-user-photo__form upload-photo-form" action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset class="upload-photo-form__load-img-fieldset">
+            <div class="upload-photo-form__load-img-wrapper">
+              <input class="upload-photo-form__load-img-input visually-hidden" type="file" id="upload-file" name="filename" required>
+              <label class="upload-photo-form__load-img-label" for="upload-file"></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="upload-photo-form__edit-img-fieldset">
+            <ul class="upload-photo-form__effects-list">
+              <li class="upload-photo-form__effects-item">
+                <input class="upload-photo-form__effects-item-input visually-hidden" id="crop" type="radio" name="img-effect">
+                <label class="upload-photo-form__effects-item-label upload-photo-form__effects-item-label--crop" for="crop">
+                </label>
+              </li>
+
+              <li class="upload-photo-form__effects-item">
+                <input class="upload-photo-form__effects-item-input visually-hidden" id="fill" type="radio" name="img-effect">
+                <label class="upload-photo-form__effects-item-label upload-photo-form__effects-item-label--fill" for="fill">
+                </label>
+              </li>
+
+              <li class="upload-photo-form__effects-item">
+                <input class="upload-photo-form__effects-item-input visually-hidden" id="contrast" type="radio" name="img-effect">
+                <label class="upload-photo-form__effects-item-label upload-photo-form__effects-item-label--contrast" for="contrast">
+                </label>
+              </li>
+            </ul>
+
+            <div class="upload-photo-form__edit-img-controls">
+              <div class="upload-photo-form__edit-img-scale">
+                <div class="upload-photo-form__edit-img-bar"></div>
+              </div>
+              <div class="upload-photo-form__edit-img-toggle"></div>
+            </div>
+          </fieldset>
+
+          <fieldset class="upload-photo-form__load-btn-fieldset">
+            <input class="upload-photo-form__load-btn" type="submit" name="load-img" value="Запостить">
+            <input class="upload-photo-form__cansel-btn" type="reset" name="cansel-load-img" value="Отмена">
+          </fieldset>
+
         </form>
       </section>
     </main>
