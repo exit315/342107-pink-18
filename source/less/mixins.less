@@ -218,3 +218,20 @@
 
   cursor: pointer;
 }
+
+.user-info-input-icon(@icon-src; @icon-width; @icon-height) {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  right: 2px;
+
+  width: 60px;
+  height: 60px;
+
+  background-color: @border-grey;
+  background-image: @icon-src;
+  background-repeat: no-repeat;
+  background-size: @icon-width @icon-height;
+  background-position: center;
+}

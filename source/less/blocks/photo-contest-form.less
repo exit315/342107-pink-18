@@ -3,10 +3,43 @@
   flex-direction: column;
 }
 
-.photo-contest-form__field-header,
-.photo-contest-form__user-comment-header {
+.photo-contest-form__fieldset-user-name,
+.photo-contest-form__fieldset-user-adventures,
+.photo-contest-form__fieldset-user-info,
+.photo-contest-form__fieldset-user-app,
+.photo-contest-form__fieldset-user-comment {
+  display: flex;
+  flex-direction: column;
   margin: 0;
+  padding: 0;
 
+  border: none;
+}
+
+.photo-contest-form__fieldset-user-adventures-mobile-wrapper,
+.photo-contest-form__fieldset-user-app-mobile-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-contest-form__fieldset-user-app,
+.photo-contest-form__fieldset-user-adventures {
+  padding: 40px 20px;
+  margin: 0 0 10px;
+
+  background-color: @bg-light-grey;
+}
+
+.photo-contest-form__fieldset-user-name,
+.photo-contest-form__fieldset-user-info,
+.photo-contest-form__fieldset-user-comment,
+.photo-contest-form__submit-wrapper {
+  padding: 20px;
+}
+
+.photo-contest-form__user-adventures-header,
+.photo-contest-form__user-app-header,
+.photo-contest-form__user-comment-header {
   font-size: 14px;
   font-weight: @font-normal;
   color: @pink;
@@ -15,24 +48,34 @@
   text-align: center;
 }
 
-.photo-contest-form__field-header {
-  margin-bottom: 35px;
+.photo-contest-form__user-comment-header {
+  margin: 0;
+  padding: 35px 20px 0;
 }
 
-.photo-contest-form__user-info {
+.photo-contest-form__user-adventures-header,
+.photo-contest-form__user-app-header {
+  width: 100%;
+  margin: 0;
+  padding: 35px 20px 0;
+
+  background-color: @bg-light-grey;
+}
+
+.photo-contest-form__user-info-header--mobile-hidden {
+  display: none;
+}
+
+.photo-contest-form__user-name-wrapper,
+.photo-contest-form__user-info-wrapper {
   display: flex;
   flex-direction: column;
-
-  margin: 0;
-  margin-bottom: 42px;
-  padding: 0 20px;
 }
 
-.photo-contest-form__user-info-header {
-  margin: 0;
-  margin-bottom: 5px;
-  padding: 0;
-  padding-left: 20px;
+.photo-contest-form__user-name-label,
+.photo-contest-form__user-info-label {
+  margin: 0 0 5px;
+  padding: 0 0 0 20px;
 
   font-size: 14px;
   font-weight: @font-normal;
@@ -41,19 +84,9 @@
   text-transform: uppercase;
 }
 
-.photo-contest-form__user-comment {
-  display: flex;
-  flex-direction: column;
-
-  padding: 0 20px;
-}
-
-.photo-contest-form__user-comment-header {
-  margin-bottom: 17px;
-}
-
+.photo-contest-form__user-name-input,
 .photo-contest-form__user-info-input,
-.photo-contest-form__comment-input {
+.photo-contest-form__user-comment-input {
   padding: 15px 20px;
 
   font-size: 18px;
@@ -74,27 +107,21 @@
   }
 }
 
-.photo-contest-form__comment-input {
-  min-width: 280px;
+.photo-contest-form__user-comment-input {
+  width: 100%;
   height: 197px;
-  margin-bottom: 48px;
+
   box-sizing: border-box;
 }
 
-.photo-contest-form__user-info-input:not(:last-child) {
+.photo-contest-form__user-name-input,
+.photo-contest-form__user-info-input {
   margin-bottom: 15px;
 }
 
-.photo-contest-form__fieldset {
-  display: flex;
-  flex-direction: column;
-
-  margin: 0;
-  margin-bottom: 35px;
-  padding: 40px 20px 42px;
-
-  background-color: @bg-light-grey;
-  border: none;
+.photo-contest-form__user-name-wrapper:last-of-type .photo-contest-form__user-name-input,
+.photo-contest-form__user-info-wrapper:last-of-type .photo-contest-form__user-info-input {
+  margin-bottom: 22px;
 }
 
 .photo-contest-form__fieldset-feature-title {
@@ -144,6 +171,10 @@
   .radio-indicator-checked(10px; 10px);
 }
 
+.photo-contest-form__submit-wrapper {
+  margin: 0 auto;
+}
+
 .photo-contest-form__submit-btn {
   width: 276px;
   margin: 0 auto;
@@ -187,5 +218,130 @@
 
   span {
     color: @pink;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .photo-contest-form__fieldset-user-app,
+  .photo-contest-form__fieldset-user-adventures,
+  .photo-contest-form__fieldset-user-info,
+  .photo-contest-form__fieldset-user-comment {
+    background-color: transparent;
+    border: 2px solid @bg-light-grey;
+  }
+
+  .photo-contest-form__fieldset-user-app,
+  .photo-contest-form__fieldset-user-adventures {
+    padding: 44px 58px 54px;
+  }
+
+  .photo-contest-form__fieldset-user-name {
+    order: -4;
+    margin-bottom: 40px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .photo-contest-form__user-name-wrapper {
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 0;
+  }
+
+  .photo-contest-form__user-name-wrapper:not(:last-of-type) {
+    margin-bottom: 37px;
+  }
+
+  .photo-contest-form__user-name-label {
+    padding-left: 0;
+    margin-right: 20px;
+  }
+
+  .photo-contest-form__user-name-input {
+    flex-grow: 1;
+  }
+
+  .photo-contest-form__user-info-header--mobile-hidden {
+    display: block;
+
+    margin: 0;
+    padding: 10px 30px;
+
+    font-size: 14px;
+    font-weight: @font-normal;
+    color: @pink;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .photo-contest-form__field-header {
+    margin: 0;
+    padding: 10px 30px;
+  }
+
+  .photo-contest-form__fieldset-user-info {
+    padding: 0 58px;
+  }
+
+  .photo-contest-form__user-info {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .photo-contest-form__user-info-wrapper {
+    flex-direction: column-reverse;
+    position: relative;
+  }
+
+  .photo-contest-form__user-info-input {
+    margin-bottom: 10px;
+  }
+
+  .photo-contest-form__user-info-label {
+    margin-bottom: 29px;
+  }
+
+  .photo-contest-form__user-info-label--phone::before {
+    .user-info-input-icon(url("../img/icon-phone.svg"); 20px; 19px);
+  }
+
+  .photo-contest-form__user-info-label--mail::before {
+    .user-info-input-icon(url("../img/icon-mail.svg"); 18px; 19px);
+  }
+
+  .photo-contest-form__fieldset--rearranged-first {
+    order: -2;
+  }
+
+  .photo-contest-form__fieldset--rearranged-second {
+    order: -1;
+  }
+
+  .photo-contest-form__fieldset-user-comment {
+    padding: 35px 58px 50px;
+    margin-bottom: 77px;
+  }
+
+  .photo-contest-form__user-comment-header {
+    margin: 0;
+  }
+
+  .photo-contest-form__user-comment {
+    padding: 0;
+  }
+
+  .photo-contest-form__comment-input {
+    margin: 0;
+  }
+
+  .photo-contest-form__submit-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .photo-contest-form__submit-btn {
+    margin: 0;
   }
 }

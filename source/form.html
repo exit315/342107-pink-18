@@ -41,20 +41,31 @@
 
     <main class="page-main">
       <section class="photo-contest">
-        <p class="photo-contest__lead-in">Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту!</p>
+        <p class="photo-contest__lead-in">
+          Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту!
+        </p>
+        <p class="photo-contest__form-lead-in">
+          Пожалуйста, заполните форму ниже:
+        </p>
         <form class="photo-contest photo-contest-form" action="https://echo.htmlacademy.ru" method="POST">
           <!--Здесь будет форма отправки истории-->
-          <div class="photo-contest-form__user-info">
-            <label class="photo-contest-form__user-info-header" for="user-surname">Фамилия:</label>
-            <input class="photo-contest-form__user-info-input" id="user-surname" type="text" placeholder="Укажите фамилию" required>
-            <label class="photo-contest-form__user-info-header" for="user-name">Имя:</label>
-            <input class="photo-contest-form__user-info-input" id="user-name" type="text" placeholder="Введите ваше имя" required>
-            <label class="photo-contest-form__user-info-header" for="user-patronymic">Отчество:</label>
-            <input class="photo-contest-form__user-info-input" id="user-patronymic" type="text" placeholder="Ну и отчество тоже">
+          <div class="photo-contest-form__fieldset-user-name">
+            <div class="photo-contest-form__user-name-wrapper">
+              <label class="photo-contest-form__user-name-label" for="user-surname">Фамилия:</label>
+              <input class="photo-contest-form__user-name-input" id="user-surname" type="text" placeholder="Укажите фамилию" required>
+            </div>
+            <div class="photo-contest-form__user-name-wrapper">
+              <label class="photo-contest-form__user-name-label" for="user-name">Имя:</label>
+              <input class="photo-contest-form__user-name-input" id="user-name" type="text" placeholder="Введите ваше имя" required>
+            </div>
+            <div class="photo-contest-form__user-name-wrapper">
+              <label class="photo-contest-form__user-name-label" for="user-patronymic">Отчество:</label>
+              <input class="photo-contest-form__user-name-input" id="user-patronymic" type="text" placeholder="Ну и отчество тоже">
+            </div>
           </div>
 
-          <fieldset class="photo-contest-form__fieldset">
-            <p class="photo-contest-form__field-header">Ваши безбашенные достижения в путешествии</p>
+          <fieldset class="photo-contest-form__fieldset-user-adventures">
+            <legend class="photo-contest-form__user-adventures-header">Ваши безбашенные достижения в путешествии</legend>
 
             <label class="photo-contest-form__fieldset-feature-title">
               <input type="checkbox" name="shark" class="visually-hidden" checked>
@@ -91,18 +102,26 @@
               <span class="checkbox-indicator"></span>
               Разгромил отель
             </label>
-
           </fieldset>
 
-          <div class="photo-contest-form__user-info">
-            <label class="photo-contest-form__user-info-header" for="user-tel">Номер телефона</label>
-            <input class="photo-contest-form__user-info-input" id="user-tel" type="tel" placeholder="Номер, пожалуйста">
-            <label class="photo-contest-form__user-info-header" for="user-email">Адрес почты</label class="photo-contest__field-header">
-            <input class="photo-contest-form__user-info-input" id="user-email" type="email" placeholder="Введите почту" required>
-          </div>
+          <fieldset class="photo-contest-form__fieldset-user-info photo-contest-form__fieldset--rearranged-second">
+            <legend class="photo-contest-form__user-info-header photo-contest-form__user-info-header--mobile-hidden">Контактная информация</legend>
 
-          <fieldset class="photo-contest-form__fieldset">
-            <p class="photo-contest-form__field-header">С каким приложением путешествовали?</p>
+            <div class="photo-contest-form__user-info">
+              <div class="photo-contest-form__user-info-wrapper">
+                <label class="photo-contest-form__user-info-label photo-contest-form__user-info-label--phone" for="user-tel">Номер телефона</label>
+                <input class="photo-contest-form__user-info-input" id="user-tel" type="tel" placeholder="Номер, пожалуйста">
+              </div>
+
+              <div class="photo-contest-form__user-info-wrapper">
+                <label class="photo-contest-form__user-info-label photo-contest-form__user-info-label--mail" for="user-email">Адрес почты</label>
+                <input class="photo-contest-form__user-info-input" id="user-email" type="email" placeholder="Введите почту" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="photo-contest-form__fieldset-user-app photo-contest-form__fieldset--rearranged-first">
+            <legend class="photo-contest-form__user-app-header">С каким приложением путешествовали?</legend>
 
             <label class="photo-contest-form__fieldset-feature-title">
               <input type="radio" name="user-app" class="visually-hidden" checked>
@@ -121,20 +140,27 @@
               <span class="radio-indicator"></span>
               Windows Phone
             </label>
-
           </fieldset>
 
-          <div class="photo-contest-form__user-comment">
-            <label class="photo-contest-form__user-comment-header" for="user-photo-comment">Опишите свои эмоции</label>
-            <textarea class="photo-contest-form__comment-input" id="user-photo-comment"
-            placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          <fieldset class="photo-contest-form__fieldset-user-comment photo-contest-form__fieldset--bg-transparent">
+            <legend class="photo-contest-form__user-comment-header">Опишите свои эмоции</legend>
+
+            <div class="photo-contest-form__user-comment-wrapper">
+              <textarea class="photo-contest-form__user-comment-input" id="user-photo-comment" wrap="soft"
+              placeholder="Можно прям в красках, не стесняясь в выражениях">
+              </textarea>
+            </div>
+          </fieldset>
+
+          <div class="photo-contest-form__submit-wrapper">
+            <button class="photo-contest-form__submit-btn" type="submit">Отправить форму</button>
+            <p class="photo-contest-form__required-note">
+              <span>*</span> — обязательные поля
+            </p>
           </div>
 
-          <button class="photo-contest-form__submit-btn" type="submit">Отправить форму</button>
         </form>
-        <p class="photo-contest-form__required-note">
-          <span>*</span> — обязательные поля
-        </p>
+
       </section>
     </main>
 
