@@ -43,10 +43,11 @@
       <section class="photo-contest">
         <p class="photo-contest__lead-in">
           Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту!
+          <span class="photo-contest__form-lead-in">
+            Пожалуйста, заполните форму ниже:
+          </span>
         </p>
-        <p class="photo-contest__form-lead-in">
-          Пожалуйста, заполните форму ниже:
-        </p>
+
         <form class="photo-contest photo-contest-form" action="https://echo.htmlacademy.ru" method="POST">
           <!--Здесь будет форма отправки истории-->
           <div class="photo-contest-form__fieldset-user-name">
@@ -65,43 +66,52 @@
           </div>
 
           <fieldset class="photo-contest-form__fieldset-user-adventures">
-            <legend class="photo-contest-form__user-adventures-header">Ваши безбашенные достижения в путешествии</legend>
+            <legend class="photo-contest-form__user-adventures-header">
+              Ваши безбашенные достижения в путешествии
+            </legend>
+            <div class="photo-contest-form__fieldset-user-adventures-wrapper">
+              <div class="photo-contest-form__fieldset-user-adventures-cols-wrapper">
+                <label class="photo-contest-form__fieldset-feature-title">
+                  <input type="checkbox" name="shark" class="visually-hidden" checked>
+                  <span class="checkbox-indicator"></span>
+                  Сделал селфи с акулой
+                </label>
 
-            <label class="photo-contest-form__fieldset-feature-title">
-              <input type="checkbox" name="shark" class="visually-hidden" checked>
-              <span class="checkbox-indicator"></span>
-              Сделал селфи с акулой
-            </label>
+                <label class="photo-contest-form__fieldset-feature-title">
+                  <input type="checkbox" name="beach" class="visually-hidden" checked>
+                  <span class="checkbox-indicator"></span>
+                  Обгорел на пляже
+                </label>
+              </div>
 
-            <label class="photo-contest-form__fieldset-feature-title">
-              <input type="checkbox" name="beach" class="visually-hidden" checked>
-              <span class="checkbox-indicator"></span>
-              Обгорел на пляже
-            </label>
+              <div class="photo-contest-form__fieldset-user-adventures-cols-wrapper">
+                <label class="photo-contest-form__fieldset-feature-title">
+                  <input type="checkbox" name="chuck" class="visually-hidden">
+                  <span class="checkbox-indicator"></span>
+                  Видел Чака Норриса
+                </label>
 
-            <label class="photo-contest-form__fieldset-feature-title">
-              <input type="checkbox" name="chuck" class="visually-hidden">
-              <span class="checkbox-indicator"></span>
-              Видел Чака Норриса
-            </label>
+                <label class="photo-contest-form__fieldset-feature-title">
+                  <input type="checkbox" name="souvenir" class="visually-hidden">
+                  <span class="checkbox-indicator"></span>
+                  Накупил сувениров
+                </label>
+              </div>
 
-            <label class="photo-contest-form__fieldset-feature-title">
-              <input type="checkbox" name="souvenir" class="visually-hidden">
-              <span class="checkbox-indicator"></span>
-              Накупил сувениров
-            </label>
+              <div class="photo-contest-form__fieldset-user-adventures-cols-wrapper">
+                <label class="photo-contest-form__fieldset-feature-title">
+                  <input type="checkbox" name="tower" class="visually-hidden" checked>
+                  <span class="checkbox-indicator"></span>
+                  Удержал башню
+                </label>
 
-            <label class="photo-contest-form__fieldset-feature-title">
-              <input type="checkbox" name="tower" class="visually-hidden" checked>
-              <span class="checkbox-indicator"></span>
-              Удержал башню
-            </label>
-
-            <label class="photo-contest-form__fieldset-feature-title">
-              <input type="checkbox" name="hotel" class="visually-hidden">
-              <span class="checkbox-indicator"></span>
-              Разгромил отель
-            </label>
+                <label class="photo-contest-form__fieldset-feature-title">
+                  <input type="checkbox" name="hotel" class="visually-hidden">
+                  <span class="checkbox-indicator"></span>
+                  Разгромил отель
+                </label>
+              </div>
+            </div>
           </fieldset>
 
           <fieldset class="photo-contest-form__fieldset-user-info photo-contest-form__fieldset--rearranged-second">
@@ -147,8 +157,7 @@
 
             <div class="photo-contest-form__user-comment-wrapper">
               <textarea class="photo-contest-form__user-comment-input" id="user-photo-comment" wrap="soft"
-              placeholder="Можно прям в красках, не стесняясь в выражениях">
-              </textarea>
+              placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </div>
           </fieldset>
 
@@ -160,7 +169,6 @@
           </div>
 
         </form>
-
       </section>
     </main>
 
