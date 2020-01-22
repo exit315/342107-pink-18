@@ -1,0 +1,77 @@
+.users-day-photo {
+  position: relative;
+}
+
+.users-day-photo__photo-info-wrapper {
+  margin: 0 20px;
+  padding: 18px 20px 20px;
+
+  background-color: @bg-light-grey;
+}
+
+.users-day-photo__user-picture {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.users-day-photo__day-photo-mark {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 20px;
+
+  margin: 0;
+  padding: 5px 20px 7px;
+
+  font-size: 12px;
+  font-weight: @font-bold;
+  color: @white;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  background-color: @pink;
+}
+
+.users-day-photo__user-name {
+  font-weight: @font-bold;
+}
+
+.users-day-photo__photo-upload-time {
+  font-size: 12px;
+  color: @dark-blue;
+}
+
+.users-day-photo__photo-description,
+.users-day-photo__user-name {
+  font-size: 14px;
+  line-height: 24px;
+  color: @dark-blue;
+}
+
+.users-day-photo__photo-description {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.users-day-photo__photo-likes {
+  position: relative;
+  padding-left: 30px;
+}
+
+.users-day-photo__photo-likes-number,
+.users-day-photo__photo-likes-count {
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 24px;
+  color: @pink;
+  text-transform: uppercase;
+}
+
+.users-day-photo__photo-like-btn {
+  .user-photo-like-icon();
+
+  cursor: pointer;
+}
