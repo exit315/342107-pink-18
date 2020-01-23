@@ -71,7 +71,50 @@
 }
 
 .users-day-photo__photo-like-btn {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 13px;
+  height: 12px;
   .user-photo-like-icon();
 
   cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .users-day-photo__photo-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    padding: 18px 25px 20px;
+  }
+
+  .users-day-photo__photo-description {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .users-day-photo__photo-likes-number {
+    padding-right: 35px;
+  }
+
+  .users-day-photo__photo-like-btn {
+    position: absolute;
+    top: 6px;
+    left: 137px;
+    width: 13px;
+    height: 12px;
+    .user-photo-like-icon();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .users-day-photo__photo-info-wrapper {
+    margin: 0 130px;
+    padding: 18px 20px 20px;
+
+    background-color: @bg-light-grey;
+  }
 }
