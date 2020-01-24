@@ -26,7 +26,7 @@
               <ul class="main-nav__list site-list hidden">
                 <li class="site-list__item"><a href="index.html">Главная</a></li>
                 <li class="site-list__item--active"><a>Фотографии</a></li>
-                <li class="site-list__item"><a href="contest.html">Конкурс</a></li>
+                <li class="site-list__item"><a href="form.html">Конкурс</a></li>
                 <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
               </ul>
             </nav>
@@ -45,28 +45,27 @@
           <p class="users-photos__lead-in">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         </div>
 
+        <div class="users-photos__day-photo users-day-photo">
+          <img class="users-day-photo__user-picture" src="img/panorama-mobile@1x.jpg" alt="Фото пользователя">
+          <span class="users-day-photo__day-photo-mark">Панорама дня</span>
+          <div class="users-day-photo__photo-info-wrapper">
+            <div class="users-day-photo__photo-info">
+              <span class="users-day-photo__user-name">Анна</span>
+              <span class="users-day-photo__photo-upload-time">(5 минут назад)</span>
+            </div>
+            <p class="users-day-photo__photo-description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои</p>
+            <div class="users-day-photo__photo-likes">
+              <a class="users-day-photo__photo-like-btn" href="#">
+                <span class="visually-hidden">Поставить лайк фотографии</span>
+              </a>
+              <p class="users-day-photo__photo-likes-number">Нравится: <span class="users-day-photo__photo-likes-count">215</span></p>
+            </div>
+          </div>
+        </div>
+
         <ul class="users-photos__catalog users-photos-catalog">
 
         <!-- ФОТО 1 -->
-
-          <li class="users-photos-catalog__item users-photos-catalog__item--day-photo">
-            <img class="users-photos-catalog__user-picture" src="img/panorama-mobile@1x.jpg" alt="Фото пользователя">
-            <div class="users-photos-catalog__item-wrapper">
-              <div class="users-photos-catalog__photo-info">
-                <span class="users-photos-catalog__user-name">Анна</span>
-                <span class="users-photos-catalog__photo-upload-time">(5 минут назад)</span>
-              </div>
-              <p class="users-photos-catalog__photo-description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои</p>
-              <div class="users-photos-catalog__photo-likes">
-                <a class="users-photos-catalog__photo-like-btn" href="#">
-                  <span class="visually-hidden">Поставить лайк фотографии</span>
-                </a>
-                <p class="users-photos-catalog__photo-likes-number">Нравится: <span class="users-photos-catalog__photo-likes-count">215</span></p>
-              </div>
-            </div>
-          </li>
-
-        <!-- ФОТО 2 -->
 
           <li class="users-photos-catalog__item">
             <img class="users-photos-catalog__user-picture" src="img/photo-car-mobile@1x.jpg" alt="Фото пользователя">
@@ -85,7 +84,7 @@
             </div>
           </li>
 
-        <!-- ФОТО 3 -->
+        <!-- ФОТО 2 -->
 
           <li class="users-photos-catalog__item">
             <img class="users-photos-catalog__user-picture" src="img/photo-drumset-mobile@1x.jpg" alt="Фото пользователя">
@@ -104,7 +103,7 @@
             </div>
           </li>
 
-        <!-- ФОТО 4 -->
+        <!-- ФОТО 3 -->
 
           <li class="users-photos-catalog__item">
             <img class="users-photos-catalog__user-picture" src="img/photo-window-mobile@1x.jpg" alt="Фото пользователя">
@@ -123,7 +122,7 @@
             </div>
           </li>
 
-        <!-- ФОТО 5 -->
+        <!-- ФОТО 4 -->
 
           <li class="users-photos-catalog__item">
             <img class="users-photos-catalog__user-picture" src="img/photo-fair-mobile@1x.jpg" alt="Фото пользователя">
@@ -142,7 +141,7 @@
             </div>
           </li>
 
-        <!-- ФОТО 6 -->
+        <!-- ФОТО 5 -->
 
           <li class="users-photos-catalog__item">
             <img class="users-photos-catalog__user-picture" src="img/photo-pov-mobile@1x.jpg" alt="Фото пользователя">
@@ -161,7 +160,7 @@
             </div>
           </li>
 
-        <!-- ФОТО 7 -->
+        <!-- ФОТО 6 -->
 
           <li class="users-photos-catalog__item">
             <img class="users-photos-catalog__user-picture" src="img/photo-wing-mobile@1x.jpg" alt="Фото пользователя">
@@ -182,16 +181,73 @@
         </ul>
       </section>
 
-      <section class="upload-photo">
+      <section class="upload-user-photo">
         <h2 class="visually-hidden">Форма загрузки фотографии</h2>
 
-        <div class="upload-photo__lead-in-wrapper">
-          <p class="upload-photo__lead-in">Затмите их всех!</br>
+        <div class="upload-user-photo__lead-in-wrapper">
+          <p class="upload-user-photo__lead-in">Затмите их всех!</br>
             Выкладывайте все, что накопилось в телефоне!</p>
         </div>
 
-        <form class="upload-photo__form" action="https://echo.htmlacademy.ru" method="POST">
-          <!--Здесь будет форма для загрузки фото-->
+        <form class="upload-user-photo__form upload-photo-form" action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset class="upload-photo-form__load-img-fieldset">
+            <div class="upload-photo-form__load-img-wrapper">
+              <input class="upload-photo-form__load-img-input visually-hidden" type="file" id="upload-file" name="filename" required>
+              <label class="upload-photo-form__load-img-label" for="upload-file"></label>
+            </div>
+          </fieldset>
+
+          <div class="upload-photo-form__edit-post-img-wrapper">
+            <fieldset class="upload-photo-form__edit-img-fieldset">
+              <ul class="upload-photo-form__effects-list">
+                <li class="upload-photo-form__effects-item">
+                  <input class="upload-photo-form__effects-item-input visually-hidden" id="crop" type="radio" name="img-effect">
+                  <label class="upload-photo-form__effects-item-label upload-photo-form__effects-item-label--crop" for="crop">
+                  </label>
+                </li>
+
+                <li class="upload-photo-form__effects-item">
+                  <input class="upload-photo-form__effects-item-input visually-hidden" id="fill" type="radio" name="img-effect">
+                  <label class="upload-photo-form__effects-item-label upload-photo-form__effects-item-label--fill" for="fill">
+                  </label>
+                </li>
+
+                <li class="upload-photo-form__effects-item">
+                  <input class="upload-photo-form__effects-item-input visually-hidden" id="contrast" type="radio" name="img-effect">
+                  <label class="upload-photo-form__effects-item-label upload-photo-form__effects-item-label--contrast" for="contrast">
+                  </label>
+                </li>
+              </ul>
+
+              <div class="upload-photo-form__edit-img-controls">
+                <div class="upload-photo-form__edit-img-scale">
+                  <div class="upload-photo-form__edit-img-bar"></div>
+                </div>
+                <div class="upload-photo-form__edit-img-toggle"></div>
+              </div>
+
+              <div class="upload-photo-form__edit-img-controls upload-photo-form__edit-img-controls--mobile-hidden">
+                <div class="upload-photo-form__edit-img-scale">
+                  <div class="upload-photo-form__edit-img-bar"></div>
+                </div>
+                <div class="upload-photo-form__edit-img-toggle"></div>
+              </div>
+
+              <div class="upload-photo-form__edit-img-controls upload-photo-form__edit-img-controls--mobile-hidden">
+                <div class="upload-photo-form__edit-img-scale">
+                  <div class="upload-photo-form__edit-img-bar"></div>
+                </div>
+                <div class="upload-photo-form__edit-img-toggle"></div>
+              </div>
+            </fieldset>
+
+            <fieldset class="upload-photo-form__load-btn-fieldset">
+              <input class="upload-photo-form__load-btn" type="submit" name="load-img" value="Запостить">
+              <input class="upload-photo-form__cansel-btn" type="reset" name="cansel-load-img" value="Отмена">
+            </fieldset>
+          </div>
+
+
         </form>
       </section>
     </main>

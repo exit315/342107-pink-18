@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__bg-wrapper">
+        <div class="page-header__bg-inner-wrapper page-header__bg-inner-wrapper--mobile">
+          <div class="page-header__desktop-menu-wrapper">
+            <div class="page-header__header-logo-wrapper">
+              <a class="page-header__header-logo" href="index.html">
+                <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Сайт приложения Pink">
+              </a>
+            </div>
+
+            <nav class="main-nav main-nav--closed">
+              <button class="main-nav__toggle" type="button">
+                <span class="visually-hidden">Открыть меню</span>
+                <span class="main-nav__toggle--burger"></span>
+              </button>
+
+              <ul class="main-nav__list site-list hidden">
+                <li class="site-list__item"><a href="index.html">Главная</a></li>
+                <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
+                <li class="site-list__item--active"><a>Конкурс</a></li>
+                <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="inner-page-title">
+            <h1 class="inner-page-title__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="photo-contest">
+        <p class="photo-contest__lead-in">
+          Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту!
+          <span class="photo-contest__form-lead-in">
+            Пожалуйста, заполните форму ниже:
+          </span>
+        </p>
+
+        <form class="photo-contest photo-contest-form" action="https://echo.htmlacademy.ru" method="POST">
+          <!--Здесь будет форма отправки истории-->
+          <div class="photo-contest-form__fieldset-user-name">
+            <div class="photo-contest-form__user-name-wrapper">
+              <label class="photo-contest-form__user-name-label" for="user-surname">Фамилия:</label>
+              <input class="photo-contest-form__user-name-input" id="user-surname" type="text" placeholder="Укажите фамилию" required>
+            </div>
+            <div class="photo-contest-form__user-name-wrapper">
+              <label class="photo-contest-form__user-name-label" for="user-name">Имя:</label>
+              <input class="photo-contest-form__user-name-input" id="user-name" type="text" placeholder="Введите ваше имя" required>
+            </div>
+            <div class="photo-contest-form__user-name-wrapper">
+              <label class="photo-contest-form__user-name-label" for="user-patronymic">Отчество:</label>
+              <input class="photo-contest-form__user-name-input" id="user-patronymic" type="text" placeholder="Ну и отчество тоже">
+            </div>
+          </div>
+
+          <fieldset class="photo-contest-form__fieldset-user-adventures">
+            <legend class="photo-contest-form__user-adventures-header">
+              Ваши безбашенные достижения в путешествии
+            </legend>
+            <div class="photo-contest-form__fieldset-user-adventures-wrapper">
+              <div class="photo-contest-form__fieldset-user-adventures-cols-wrapper">
+                <label class="photo-contest-form__fieldset-feature-title">
+                  <input type="checkbox" name="shark" class="visually-hidden" checked>
+                  <span class="checkbox-indicator"></span>
+                  Сделал селфи с акулой
+                </label>
+
+                <label class="photo-contest-form__fieldset-feature-title">
+                  <input type="checkbox" name="beach" class="visually-hidden" checked>
+                  <span class="checkbox-indicator"></span>
+                  Обгорел на пляже
+                </label>
+              </div>
+
+              <div class="photo-contest-form__fieldset-user-adventures-cols-wrapper">
+                <label class="photo-contest-form__fieldset-feature-title">
+                  <input type="checkbox" name="chuck" class="visually-hidden">
+                  <span class="checkbox-indicator"></span>
+                  Видел Чака Норриса
+                </label>
+
+                <label class="photo-contest-form__fieldset-feature-title">
+                  <input type="checkbox" name="souvenir" class="visually-hidden">
+                  <span class="checkbox-indicator"></span>
+                  Накупил сувениров
+                </label>
+              </div>
+
+              <div class="photo-contest-form__fieldset-user-adventures-cols-wrapper">
+                <label class="photo-contest-form__fieldset-feature-title">
+                  <input type="checkbox" name="tower" class="visually-hidden" checked>
+                  <span class="checkbox-indicator"></span>
+                  Удержал башню
+                </label>
+
+                <label class="photo-contest-form__fieldset-feature-title">
+                  <input type="checkbox" name="hotel" class="visually-hidden">
+                  <span class="checkbox-indicator"></span>
+                  Разгромил отель
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="photo-contest-form__fieldset-user-info photo-contest-form__fieldset--rearranged-second">
+            <legend class="photo-contest-form__user-info-header photo-contest-form__user-info-header--mobile-hidden">Контактная информация</legend>
+
+            <div class="photo-contest-form__user-info">
+              <div class="photo-contest-form__user-info-wrapper">
+                <label class="photo-contest-form__user-info-label photo-contest-form__user-info-label--phone" for="user-tel">Номер телефона</label>
+                <input class="photo-contest-form__user-info-input" id="user-tel" type="tel" placeholder="Номер, пожалуйста">
+              </div>
+
+              <div class="photo-contest-form__user-info-wrapper">
+                <label class="photo-contest-form__user-info-label photo-contest-form__user-info-label--mail" for="user-email">Адрес почты</label>
+                <input class="photo-contest-form__user-info-input" id="user-email" type="email" placeholder="Введите почту" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="photo-contest-form__fieldset-user-app photo-contest-form__fieldset--rearranged-first">
+            <legend class="photo-contest-form__user-app-header">С каким приложением путешествовали?</legend>
+
+            <label class="photo-contest-form__fieldset-feature-title">
+              <input type="radio" name="user-app" class="visually-hidden" checked>
+              <span class="radio-indicator"></span>
+              Pink для iOS
+            </label>
+
+            <label class="photo-contest-form__fieldset-feature-title">
+              <input type="radio" name="user-app" class="visually-hidden">
+              <span class="radio-indicator"></span>
+              Pink на Android
+            </label>
+
+            <label class="photo-contest-form__fieldset-feature-title">
+              <input type="radio" name="user-app" class="visually-hidden">
+              <span class="radio-indicator"></span>
+              Windows Phone
+            </label>
+          </fieldset>
+
+          <fieldset class="photo-contest-form__fieldset-user-comment photo-contest-form__fieldset--bg-transparent">
+            <legend class="photo-contest-form__user-comment-header">Опишите свои эмоции</legend>
+
+            <div class="photo-contest-form__user-comment-wrapper">
+              <textarea class="photo-contest-form__user-comment-input" id="user-photo-comment" wrap="soft"
+              placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </div>
+          </fieldset>
+
+          <div class="photo-contest-form__submit-wrapper">
+            <button class="photo-contest-form__submit-btn" type="submit">Отправить форму</button>
+            <p class="photo-contest-form__required-note">
+              <span>*</span> — Обязательные <span class="photo-contest-form__required-note photo-contest-form__required-note--mobile-hidden">для заполнения</span> поля
+            </p>
+          </div>
+
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer page-footer--inner">
+      <a class="page-footer__logo footer-logo" href="index.html">
+          <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Приложение Pink">
+      </a>
+
+      <ul class="page-footer__social social-list">
+        <li class="social-list__item">
+          <a href="#"><span class="visually-hidden">Перейти на страницу приложения Pink в социальной сети Твиттер</span></a>
+        </li>
+        <li class="social-list__item">
+          <a href="#"><span class="visually-hidden">Перейти на страницу приложения Pink в социальной сети Фейсбук</span></a>
+        </li>
+        <li class="social-list__item">
+          <a href="#"><span class="visually-hidden">Перейти на канал приложения Pink на сайте Ютьюб</span></a>
+        </li>
+      </ul>
+      <div class="page-footer__copyright">
+        <span>Разработано</span>
+        <a href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">Перейти на сайт разработчика "HTML Academy"</span>
+          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+        </a>
+      </div>
+    </footer>
+    <script src="js/util.js"></script>
+  </body>
+</html>

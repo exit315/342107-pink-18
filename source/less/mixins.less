@@ -5,10 +5,6 @@
   background-position: @img-position;
 }
 
-.no-list() {
-  list-style: none;
-}
-
 .load-icon(@logo-source; @logo-width; @logo-height; @logo-position-top; @logo-position-left) {
   content: "";
   position: absolute;
@@ -51,14 +47,14 @@
 
 .nav-toggle(@bg-color) {
   position: absolute;
-  left: 1px;
-  top: 11px;
+  right: 1px;
+  top: 1px;
 
   width: 50px;
-  height: 4px;
+  height: 24px;
 
-  border: none;
-  background-color: @bg-color;
+  background-image: url("../img/icon-menu-burger.svg");
+  background-repeat: no-repeat;
 }
 
 .nav-toggle-x(@bg-color; @rotate) {
@@ -203,4 +199,60 @@
   background-image: url("../img/icon-yes.svg");
   background-repeat: no-repeat;
   background-size: 22px 16px;
+}
+
+.filter-effects-icon(@icon-source; @top; @left; @icon-width; @icon-height) {
+  position: absolute;
+  top: @top;
+  left: @left;
+
+  width: 48px;
+  height: 44px;
+
+  font-size: 0;
+
+  background-image: @icon-source;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: @icon-width @icon-height;
+
+  cursor: pointer;
+}
+
+.user-info-input-icon(@icon-src; @icon-width; @icon-height) {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  right: 2px;
+
+  width: 60px;
+  height: 59px;
+
+  background-color: @border-grey;
+  background-image: @icon-src;
+  background-repeat: no-repeat;
+  background-size: @icon-width @icon-height;
+  background-position: center;
+}
+
+.user-photo-like-icon() {
+  background-image: url("../img/icon-heart.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.user-photo-edit-scale-toggle(@top; @left) {
+  position: absolute;
+  top: @top;
+  left: @left;
+
+  width: 14px;
+  height: 14px;
+
+  background-color: @white;
+  border: 2px solid @pink;
+  border-radius: 50%;
+  box-sizing: border-box;
 }
