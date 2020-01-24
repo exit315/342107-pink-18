@@ -197,39 +197,56 @@
             </div>
           </fieldset>
 
-          <fieldset class="upload-photo-form__edit-img-fieldset">
-            <ul class="upload-photo-form__effects-list">
-              <li class="upload-photo-form__effects-item">
-                <input class="upload-photo-form__effects-item-input visually-hidden" id="crop" type="radio" name="img-effect">
-                <label class="upload-photo-form__effects-item-label upload-photo-form__effects-item-label--crop" for="crop">
-                </label>
-              </li>
+          <div class="upload-photo-form__edit-post-img-wrapper">
+            <fieldset class="upload-photo-form__edit-img-fieldset">
+              <ul class="upload-photo-form__effects-list">
+                <li class="upload-photo-form__effects-item">
+                  <input class="upload-photo-form__effects-item-input visually-hidden" id="crop" type="radio" name="img-effect">
+                  <label class="upload-photo-form__effects-item-label upload-photo-form__effects-item-label--crop" for="crop">
+                  </label>
+                </li>
 
-              <li class="upload-photo-form__effects-item">
-                <input class="upload-photo-form__effects-item-input visually-hidden" id="fill" type="radio" name="img-effect">
-                <label class="upload-photo-form__effects-item-label upload-photo-form__effects-item-label--fill" for="fill">
-                </label>
-              </li>
+                <li class="upload-photo-form__effects-item">
+                  <input class="upload-photo-form__effects-item-input visually-hidden" id="fill" type="radio" name="img-effect">
+                  <label class="upload-photo-form__effects-item-label upload-photo-form__effects-item-label--fill" for="fill">
+                  </label>
+                </li>
 
-              <li class="upload-photo-form__effects-item">
-                <input class="upload-photo-form__effects-item-input visually-hidden" id="contrast" type="radio" name="img-effect">
-                <label class="upload-photo-form__effects-item-label upload-photo-form__effects-item-label--contrast" for="contrast">
-                </label>
-              </li>
-            </ul>
+                <li class="upload-photo-form__effects-item">
+                  <input class="upload-photo-form__effects-item-input visually-hidden" id="contrast" type="radio" name="img-effect">
+                  <label class="upload-photo-form__effects-item-label upload-photo-form__effects-item-label--contrast" for="contrast">
+                  </label>
+                </li>
+              </ul>
 
-            <div class="upload-photo-form__edit-img-controls">
-              <div class="upload-photo-form__edit-img-scale">
-                <div class="upload-photo-form__edit-img-bar"></div>
+              <div class="upload-photo-form__edit-img-controls">
+                <div class="upload-photo-form__edit-img-scale">
+                  <div class="upload-photo-form__edit-img-bar"></div>
+                </div>
+                <div class="upload-photo-form__edit-img-toggle"></div>
               </div>
-              <div class="upload-photo-form__edit-img-toggle"></div>
-            </div>
-          </fieldset>
 
-          <fieldset class="upload-photo-form__load-btn-fieldset">
-            <input class="upload-photo-form__load-btn" type="submit" name="load-img" value="Запостить">
-            <input class="upload-photo-form__cansel-btn" type="reset" name="cansel-load-img" value="Отмена">
-          </fieldset>
+              <div class="upload-photo-form__edit-img-controls upload-photo-form__edit-img-controls--mobile-hidden">
+                <div class="upload-photo-form__edit-img-scale">
+                  <div class="upload-photo-form__edit-img-bar"></div>
+                </div>
+                <div class="upload-photo-form__edit-img-toggle"></div>
+              </div>
+
+              <div class="upload-photo-form__edit-img-controls upload-photo-form__edit-img-controls--mobile-hidden">
+                <div class="upload-photo-form__edit-img-scale">
+                  <div class="upload-photo-form__edit-img-bar"></div>
+                </div>
+                <div class="upload-photo-form__edit-img-toggle"></div>
+              </div>
+            </fieldset>
+
+            <fieldset class="upload-photo-form__load-btn-fieldset">
+              <input class="upload-photo-form__load-btn" type="submit" name="load-img" value="Запостить">
+              <input class="upload-photo-form__cansel-btn" type="reset" name="cansel-load-img" value="Отмена">
+            </fieldset>
+          </div>
+
 
         </form>
       </section>
