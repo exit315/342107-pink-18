@@ -11,8 +11,8 @@
 
 .upload-photo-form__load-img-wrapper {
   position: relative;
-  min-height: 374px;
-  max-width: @mobile-wrapper-width;
+  height: 374px;
+  width: 280px;
   margin: 0 auto;
 }
 
@@ -110,23 +110,33 @@
   outline: auto 5px highlight;
 }
 
-.upload-photo-form__edit-img-controls {
-  position: relative;
-  margin-bottom: 14px;
-  padding: 0 20px;
+.upload-photo-form__edit-img-controls-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.upload-photo-form__edit-img-controls--mobile-hidden {
+.upload-photo-form__edit-img-controls {
   display: none;
 }
 
 .upload-photo-form__edit-img-scale {
-  height: 2px;
+  position: relative;
+}
 
-  background-color: #283645;
+#crop:checked ~ .upload-photo-form__edit-img-controls-list .upload-photo-form__edit-img-controls--crop,
+#fill:checked ~ .upload-photo-form__edit-img-controls-list .upload-photo-form__edit-img-controls--fill,
+#contrast:checked ~ .upload-photo-form__edit-img-controls-list .upload-photo-form__edit-img-controls--contrast {
+  display: block;
+  margin-bottom: 14px;
+  padding: 0 20px;
 }
 
 .upload-photo-form__edit-img-toggle {
+  cursor: pointer;
+}
+
+.upload-photo-form__edit-img-controls--crop .upload-photo-form__edit-img-toggle {
   .user-photo-edit-scale-toggle(-6px; 75%);
 
   &:active {
@@ -134,11 +144,32 @@
   }
 }
 
+.upload-photo-form__edit-img-controls--fill .upload-photo-form__edit-img-toggle {
+  .user-photo-edit-scale-toggle(-6px; 50%);
+
+  &:active {
+    background-color: @pink;
+  }
+}
+
+.upload-photo-form__edit-img-controls--contrast .upload-photo-form__edit-img-toggle {
+  .user-photo-edit-scale-toggle(-6px; 30%);
+
+  &:active {
+    background-color: @pink;
+  }
+}
+
+.upload-photo-form__edit-img-bar {
+  height: 2px;
+
+  background-color: #283645;
+}
+
 .upload-photo-form__load-btn-fieldset {
   display: flex;
   flex-direction: column;
 
-  width: @mobile-wrapper-width;
   margin: 0 auto;
   padding: 40px 0;
 
@@ -209,6 +240,9 @@
   }
 
   .upload-photo-form__load-img-label {
+    width: 300px;
+    height: 400px;
+
     background-image: url("../img/photo-road-tablet@1x.jpg");
 
     @media (min-resolution: @retina-dppx) {
@@ -217,50 +251,219 @@
   }
 
   .upload-photo-form__load-img-wrapper {
-    width: 400px;
-  }
-
-  .upload-photo-form__edit-img-fieldset {
-    border: none;
+    width: 300px;
+    height: 400px;
   }
 
   .upload-photo-form__edit-post-img-wrapper {
     margin: 0;
   }
 
-  .upload-photo-form__edit-img-controls--mobile-hidden {
-    display: block;
+  .upload-photo-form__edit-img-fieldset {
+    position: relative;
+    width: 275px;
+    margin-bottom: 25px;
+    padding: 0;
+
+    border: none;
+  }
+
+  .upload-photo-form__effects-list {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: -16px;
+    margin: 0;
+    padding: 0;
+
+    z-index: 10;
+    list-style: none;
+  }
+
+  .upload-photo-form__effects-item {
+    transform: scale(1/2);
+  }
+
+  .upload-photo-form__effects-item-label--crop,
+  .upload-photo-form__effects-item-label--fill,
+  .upload-photo-form__effects-item-label--contrast {
+    left: -27px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      left: -27px;
+    }
+  }
+
+  .upload-photo-form__effects-item-label--crop {
+    top: 30px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      top: 30px;
+    }
+  }
+
+  .upload-photo-form__effects-item-label--fill {
+    top: 89px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      top: 89px;
+    }
+  }
+
+  .upload-photo-form__effects-item-label--contrast {
+    top: 143px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      top: 143px;
+    }
   }
 
   .upload-photo-form__edit-img-controls,
-  .upload-photo-form__edit-img-controls--mobile-hidden {
-    position: relative;
+  #crop:checked ~ .upload-photo-form__edit-img-controls-list .upload-photo-form__edit-img-controls--crop,
+  #fill:checked ~ .upload-photo-form__edit-img-controls-list .upload-photo-form__edit-img-controls--fill,
+  #contrast:checked ~ .upload-photo-form__edit-img-controls-list .upload-photo-form__edit-img-controls--contrast {
+    display: block;
     margin: 0;
-    padding: 35px 18px 35px 60px;
+    padding: 34px 18px 34px 60px;
+
     border-bottom: 1px solid @dark-blue-translucent-btn;
   }
 
-  .upload-photo-form__edit-img-toggle {
-    .user-photo-edit-scale-toggle(29px; 75%);
+  .upload-photo-form__edit-img-controls--crop,
+  #crop:checked ~ .upload-photo-form__edit-img-controls-list .upload-photo-form__edit-img-controls--crop {
+    padding-top: 19px;
+  }
+
+  .upload-photo-form__edit-img-controls--crop .upload-photo-form__edit-img-toggle {
+    .user-photo-edit-scale-toggle(-6px; 75%);
+  }
+
+  .upload-photo-form__edit-img-controls--fill .upload-photo-form__edit-img-toggle {
+    .user-photo-edit-scale-toggle(-6px; 15%);
+  }
+
+  .upload-photo-form__edit-img-controls--contrast .upload-photo-form__edit-img-toggle {
+    .user-photo-edit-scale-toggle(-6px; 50%);
   }
 
   .upload-photo-form__load-btn-fieldset {
     margin: 0;
-    padding: 40px 0;
+    padding: 43px 0 0;
   }
 
   .upload-photo-form__load-btn,
   .upload-photo-form__cansel-btn {
-    width: @mobile-wrapper-width - @mobile-side-padding;
+    width: 260px;
+  }
+
+  .upload-photo-form__load-btn {
+    margin-bottom: 25px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .upload-photo-form {
+    padding: 57px 60px 57px 80px;
+  }
+
   .upload-photo-form__load-img-label {
     background-image: url("../img/photo-road-desktop@1x.jpg");
 
     @media (min-resolution: @retina-dppx) {
       background-image: url("../img/photo-road-desktop@2x.jpg");
     }
+  }
+
+  .upload-photo-form__edit-img-controls,
+  #crop:checked ~ .upload-photo-form__edit-img-controls-list .upload-photo-form__edit-img-controls--crop,
+  #fill:checked ~ .upload-photo-form__edit-img-controls-list .upload-photo-form__edit-img-controls--fill,
+  #contrast:checked ~ .upload-photo-form__edit-img-controls-list .upload-photo-form__edit-img-controls--contrast {
+    padding: 34px 30px 34px 92px;
+  }
+
+  .upload-photo-form__edit-img-controls--crop,
+  #crop:checked ~ .upload-photo-form__edit-img-controls-list .upload-photo-form__edit-img-controls--crop {
+    padding-top: 19px;
+  }
+
+  .upload-photo-form__effects-item {
+    transform: scale(1);
+  }
+
+  .upload-photo-form__effects-item-label--crop {
+    top: 14px;
+    left: -3px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      top: 14px;
+      left: -3px;
+    }
+  }
+
+  .upload-photo-form__effects-item-label--fill {
+    top: 43px;
+    left: -1px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      top: 43px;
+      left: -1px;
+    }
+  }
+
+  .upload-photo-form__effects-item-label--contrast {
+    top: 68px;
+    left: -3px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      top: 68px;
+      left: -3px;
+    }
+  }
+
+  .upload-photo-form__edit-img-fieldset {
+    width: 410px;
+  }
+
+  .upload-photo-form__edit-img-controls--crop .upload-photo-form__edit-img-toggle {
+    .user-photo-edit-scale-toggle(-6px; 30%);
+  }
+
+  .upload-photo-form__edit-img-controls--fill .upload-photo-form__edit-img-toggle {
+    .user-photo-edit-scale-toggle(-6px; 90%);
+  }
+
+  .upload-photo-form__edit-img-controls--contrast .upload-photo-form__edit-img-toggle {
+    .user-photo-edit-scale-toggle(-6px; 60%);
+  }
+
+  .upload-photo-form__load-btn-fieldset {
+    display: block;
+    margin: 0;
+    padding: 121px 0 0;
+  }
+
+  .upload-photo-form__load-btn,
+  .upload-photo-form__cansel-btn {
+    width: 183px;
+  }
+
+  .upload-photo-form__load-btn {
+    margin: 0;
+    margin-right: 44px;
   }
 }

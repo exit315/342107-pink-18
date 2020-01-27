@@ -232,46 +232,51 @@
 
           <div class="upload-photo-form__edit-post-img-wrapper">
             <fieldset class="upload-photo-form__edit-img-fieldset">
+              <input class="upload-photo-form__effects-item-input visually-hidden" id="crop" type="radio" name="img-effect" checked>
+              <input class="upload-photo-form__effects-item-input visually-hidden" id="fill" type="radio" name="img-effect">
+              <input class="upload-photo-form__effects-item-input visually-hidden" id="contrast" type="radio" name="img-effect">
+
               <ul class="upload-photo-form__effects-list">
                 <li class="upload-photo-form__effects-item">
-                  <input class="upload-photo-form__effects-item-input visually-hidden" id="crop" type="radio" name="img-effect">
                   <label class="upload-photo-form__effects-item-label upload-photo-form__effects-item-label--crop" for="crop">
                   </label>
                 </li>
 
                 <li class="upload-photo-form__effects-item">
-                  <input class="upload-photo-form__effects-item-input visually-hidden" id="fill" type="radio" name="img-effect">
                   <label class="upload-photo-form__effects-item-label upload-photo-form__effects-item-label--fill" for="fill">
                   </label>
                 </li>
 
                 <li class="upload-photo-form__effects-item">
-                  <input class="upload-photo-form__effects-item-input visually-hidden" id="contrast" type="radio" name="img-effect">
                   <label class="upload-photo-form__effects-item-label upload-photo-form__effects-item-label--contrast" for="contrast">
                   </label>
                 </li>
               </ul>
 
-              <div class="upload-photo-form__edit-img-controls">
-                <div class="upload-photo-form__edit-img-scale">
-                  <div class="upload-photo-form__edit-img-bar"></div>
-                </div>
-                <div class="upload-photo-form__edit-img-toggle"></div>
-              </div>
+              <ul class="upload-photo-form__edit-img-controls-list">
+                <li class="upload-photo-form__edit-img-controls upload-photo-form__edit-img-controls--crop">
+                  <div class="upload-photo-form__edit-img-scale">
+                    <div class="upload-photo-form__edit-img-bar"></div>
+                    <div class="upload-photo-form__edit-img-toggle"></div>
+                  </div>
+                </li>
 
-              <div class="upload-photo-form__edit-img-controls upload-photo-form__edit-img-controls--mobile-hidden">
-                <div class="upload-photo-form__edit-img-scale">
-                  <div class="upload-photo-form__edit-img-bar"></div>
-                </div>
-                <div class="upload-photo-form__edit-img-toggle"></div>
-              </div>
+                <li class="upload-photo-form__edit-img-controls upload-photo-form__edit-img-controls--fill">
+                  <div class="upload-photo-form__edit-img-scale">
+                    <div class="upload-photo-form__edit-img-bar"></div>
+                    <div class="upload-photo-form__edit-img-toggle"></div>
+                  </div>
 
-              <div class="upload-photo-form__edit-img-controls upload-photo-form__edit-img-controls--mobile-hidden">
-                <div class="upload-photo-form__edit-img-scale">
-                  <div class="upload-photo-form__edit-img-bar"></div>
-                </div>
-                <div class="upload-photo-form__edit-img-toggle"></div>
-              </div>
+                </li>
+
+                <li class="upload-photo-form__edit-img-controls upload-photo-form__edit-img-controls--contrast">
+                  <div class="upload-photo-form__edit-img-scale">
+                    <div class="upload-photo-form__edit-img-bar"></div>
+                    <div class="upload-photo-form__edit-img-toggle"></div>
+                  </div>
+
+                </li>
+              </ul>
             </fieldset>
 
             <fieldset class="upload-photo-form__load-btn-fieldset">
