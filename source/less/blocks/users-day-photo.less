@@ -2,6 +2,12 @@
   position: relative;
 }
 
+.users-day-photo-wrapper {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+}
+
 .users-day-photo__photo-info-wrapper {
   margin: 0 20px;
   padding: 18px 20px 20px;
@@ -16,21 +22,36 @@
 }
 
 .users-day-photo__day-photo-mark {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 20px;
+  position: relative;
 
-  margin: 0;
-  padding: 5px 20px 7px;
+  &::before {
+    content: "";
 
-  font-size: 12px;
-  font-weight: @font-bold;
-  color: @white;
-  line-height: 24px;
-  text-transform: uppercase;
+    position: absolute;
+    top: -137px;
+    left: 160px;
 
-  background-color: @pink;
+    width: 140px;
+    height: 36px;
+
+    background-color: @pink;
+  }
+
+  &::after {
+    content: "Панорама дня";
+
+    position: absolute;
+    top: -133px;
+    left: 179px;
+
+    width: 105px;
+
+    font-size: 12px;
+    font-weight: @font-bold;
+    color: @white;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
 }
 
 .users-day-photo__user-name {
@@ -83,8 +104,27 @@
 }
 
 @media (min-width: @tablet-width) {
+  .users-day-photo-wrapper {
+    position: relative;
+    width: 100%;
+    height: 509px;
+    margin: 0 auto;
+  }
+
+  .users-day-photo__user-picture {
+    height: 100%;
+  }
+
   .users-day-photo__day-photo-mark {
-    top: 57px;
+    &::before {
+      top: -452px;
+      left: 500px;
+    }
+
+    &::after {
+      top: -446px;
+      left: 520px;
+    }
   }
 
   .users-day-photo__photo-info-wrapper {
@@ -116,9 +156,24 @@
 }
 
 @media (min-width: @desktop-width) {
+  .users-day-photo-wrapper {
+    height: 506px;
+  }
+
+  .users-day-photo__user-picture {
+    height: 100%;
+  }
+
   .users-day-photo__day-photo-mark {
-    top: 54px;
-    right: 130px;
+    &::before {
+      top: -455px;
+      left: 930px;
+    }
+
+    &::after {
+      top: -449px;
+      left: 950px;
+    }
   }
 
   .users-day-photo__photo-info-wrapper {

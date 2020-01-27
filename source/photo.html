@@ -50,12 +50,14 @@
         </div>
 
         <div class="users-photos__day-photo users-day-photo">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
-            <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
-            <img class="users-day-photo__user-picture" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Фото пользователя">
-          </picture>
-          <span class="users-day-photo__day-photo-mark">Панорама дня</span>
+          <div class="users-photos__day-photo users-day-photo-wrapper">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+              <img class="users-day-photo__user-picture users-day-photo__user-picture--hit" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Фото пользователя">
+              <span class="users-day-photo__day-photo-mark"></span>
+            </picture>
+          </div>
           <div class="users-day-photo__photo-info-wrapper">
             <div class="users-day-photo__photo-info">
               <span class="users-day-photo__user-name">Анна</span>
