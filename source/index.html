@@ -142,84 +142,89 @@
 
         <div class="product-rates__list-wrapper">
           <table class="product-rates__list rates-slides">
+
             <tr class="rates-slides__rate-name-price-wrapper">
               <th class="rates-slides__rate-name-price rates-slides__rate-name-price--hidden"></th>
-              <th class="rates-slides__rate-name-price">
+              <th class="rates-slides__rate-name-price rates-slides__rate-basic">
                 <p class="rates-slides__rate-name"><b>База</b></p>
                 <p class="rates-slides__rate-price">1,99 USD</p>
               </th>
-              <th class="rates-slides__rate-name-price rates-slides__rate-name-price--hit-rate">
+              <th class="rates-slides__rate-name-price rates-slides__rate-regular rates-slides__rate-name-price--hit-rate">
                 <p class="rates-slides__rate-name"><b>Стандарт</b></p>
                 <p class="rates-slides__rate-price">3,99 USD</p>
               </th>
-              <th class="rates-slides__rate-name-price">
+              <th class="rates-slides__rate-name-price rates-slides__rate-unlim">
                 <p class="rates-slides__rate-name"><b>Анлим</b></p>
                 <p class="rates-slides__rate-price">9,99 USD</p>
               </th>
             </tr>
+
             <tr class="rates-slides__rate-wrapper">
               <td class="rates-slides__rate-feature--hidden">
                 <p class="rates-slides__rate-feature-name--hidden">Розовый фильтр</p>
               </td>
-              <td class="rates-slides__rate-feature">
+              <td class="rates-slides__rate-feature rates-slides__rate-basic">
                 <p class="rates-slides__rate-feature-name">Розовый фильтр</p>
                 <span class="rates-slides__rate-feature-toggle rates-slides__rate-feature-toggle--toggle-on"></span>
               </td>
-              <td class="rates-slides__rate-feature">
+              <td class="rates-slides__rate-feature rates-slides__rate-regular">
                 <p class="rates-slides__rate-feature-name">Розовый фильтр</p>
                 <span class="rates-slides__rate-feature-toggle rates-slides__rate-feature-toggle--toggle-on"></span>
               </td>
-              <td class="rates-slides__rate-feature">
+              <td class="rates-slides__rate-feature rates-slides__rate-unlim">
                 <p class="rates-slides__rate-feature-name">Розовый фильтр</p>
                 <span class="rates-slides__rate-feature-toggle rates-slides__rate-feature-toggle--toggle-on"></span>
               </td>
-            </tr class="rates-slides__rate-name-price-wrapper">
+            </tr>
+
             <tr class="rates-slides__rate-wrapper">
               <td class="rates-slides__rate-feature--hidden">
                 <p class="rates-slides__rate-feature-name--hidden">Смайлики</p>
               </td>
-              <td class="rates-slides__rate-feature">
+              <td class="rates-slides__rate-feature rates-slides__rate-basic">
                 <p class="rates-slides__rate-feature-name">Смайлики</p>
                 <span class="rates-slides__rate-feature-toggle rates-slides__rate-feature-toggle--toggle-off"></span>
               </td>
-              <td class="rates-slides__rate-feature">
+              <td class="rates-slides__rate-feature rates-slides__rate-regular">
                 <p class="rates-slides__rate-feature-name">Смайлики</p>
                 <span class="rates-slides__rate-feature-toggle rates-slides__rate-feature-toggle--toggle-on"></span>
               </td>
-              <td class="rates-slides__rate-feature">
+              <td class="rates-slides__rate-feature rates-slides__rate-unlim">
                 <p class="rates-slides__rate-feature-name">Смайлики</p>
                 <span class="rates-slides__rate-feature-toggle rates-slides__rate-feature-toggle--toggle-on"></span>
               </td>
             </tr>
+
             <tr class="rates-slides__rate-wrapper">
               <td class="rates-slides__rate-feature--hidden">
                 <p class="rates-slides__rate-feature-name--hidden">Комментарии</p>
               </td>
-              <td class="rates-slides__rate-feature">
+              <td class="rates-slides__rate-feature rates-slides__rate-basic">
                 <p class="rates-slides__rate-feature-name">Комментарии</p>
                 <span class="rates-slides__rate-feature-toggle rates-slides__rate-feature-toggle--toggle-off"></span>
               </td>
-              <td class="rates-slides__rate-feature">
+              <td class="rates-slides__rate-feature rates-slides__rate-regular">
                 <p class="rates-slides__rate-feature-name">Комментарии</p>
                 <span class="rates-slides__rate-feature-toggle rates-slides__rate-feature-toggle--toggle-off"></span>
               </td>
-              <td class="rates-slides__rate-feature">
+              <td class="rates-slides__rate-feature rates-slides__rate-unlim">
                 <p class="rates-slides__rate-feature-name">Комментарии</p>
                 <span class="rates-slides__rate-feature-toggle rates-slides__rate-feature-toggle--toggle-on"></span>
               </td>
-            </tr class="rates-slides__rate-name-price-wrapper">
+            </tr>
+
           </table>
 
           <div class="product-rates__slider slider">
             <div class="slider__toggles">
-              <input class="slider__toggle-input" type="radio" id="rates-btn-1" name="rates-toggle">
-              <input class="slider__toggle-input" type="radio" id="rates-btn-2" name="rates-toggle" checked>
-              <input class="slider__toggle-input" type="radio" id="rates-btn-3" name="rates-toggle">
+              <input class="visually-hidden" type="radio" id="rate-basic" name="rates-toggle">
+              <input class="visually-hidden" type="radio" id="rate-regular" name="rates-toggle" checked>
+              <input class="visually-hidden" type="radio" id="rate-unlim" name="rates-toggle">
 
               <div class="slider__controls">
-                <label class="slider__control-label" for="rates-btn-1"></label>
-                <label class="slider__control-label" for="rates-btn-2"></label>
-                <label class="slider__control-label" for="rates-btn-3"></label>
+                <label class="slider__control-label" for="rate-basic"></label>
+                <label class="slider__control-label" for="rate-regular"></label>
+                <label class="slider__control-label" for="rate-unlim"></label>
               </div>
             </div>
           </div>

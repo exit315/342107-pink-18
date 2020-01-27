@@ -13,9 +13,15 @@
   background-color: rgba(25, 37, 49, 0.3);
   border-radius: 50%;
   cursor: pointer;
+}
 
+#rate-basic:checked ~ .slider__controls label[for="rate-basic"],
+#rate-regular:checked ~ .slider__controls label[for="rate-regular"],
+#rate-unlim:checked ~ .slider__controls label[for="rate-unlim"] {
+  background-color: @white;
   box-shadow: 0 0 0 3px rgb(40, 54, 69);
 }
+
 
 .slider__toggle-input {
   display: none;
