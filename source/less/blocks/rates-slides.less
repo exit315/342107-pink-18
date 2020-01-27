@@ -1,57 +1,27 @@
-.slides__review-slide {
-  padding-left: 20px;
-  padding-right: 20px;
-
-  text-align: center;
-}
-
-.slides__reveiw-user-name,
-.slides__reveiw-text {
-  padding: 0;
-  margin: 0;
-}
-
-.slides__reveiw-user-name {
-  margin-bottom: 15px;
-
-  font-size: 18px;
-  font-weight: @font-bold;
-  line-height: 30px;
-}
-
-.slides__reveiw-user-info {
+.rates-slides__rate-feature--hidden,
+.rates-slides__rate-feature-name--hidden,
+.rates-slides__rate-name-price--hidden {
   display: none;
 }
 
-.slides__reveiw-text {
-  margin-bottom: 30px;
-
-  font-size: 14px;
-  font-weight: @font-normal;
-  color: @dark-blue;
-  line-height: 30px;
-}
-
-.slides__rate-feature--hidden,
-.slides__rate-feature-name--hidden,
-.slides__rate-name-price--hidden {
-  display: none;
-}
-
-.slides__rate-name-price,
-.slides__rate-name-price--hit-rate {
+.rates-slides__rate-name-price {
   margin: 0;
-  padding: 19px 90px;
+  padding: 17px 90px 21px;
 
   text-align: center;
 
   background-color: @dark-blue;
   box-sizing: border-box;
 
-  .rate-border(@border-grey; @border-grey; @border-grey; @border-grey);
+  .rate-border(@dark-blue; @border-grey; @border-grey; @border-grey);
 }
 
-.slides__rate-name {
+.rates-slides__rate-name-price--hit-rate {
+  .hit-rate-mark(url("../img/bg-hit.svg"); 0; 283px; 74px; 73px);
+  .hit-rate-note(12px; 293px);
+}
+
+.rates-slides__rate-name {
   margin: 0;
   padding: 0;
 
@@ -62,7 +32,7 @@
   text-transform: uppercase;
 }
 
-.slides__rate-price {
+.rates-slides__rate-price {
   margin: 0;
   padding: 0;
 
@@ -73,7 +43,7 @@
   white-space: nowrap;
 }
 
-.slides__rate-feature {
+.rates-slides__rate-feature {
   position: relative;
   padding: 0;
 
@@ -82,7 +52,7 @@
   .rate-border(@border-grey; @border-grey; @border-grey; @border-grey);
 }
 
-.slides__rate-feature-name {
+.rates-slides__rate-feature-name {
   margin: 0;
 
   padding-top: 13px;
@@ -95,7 +65,7 @@
   text-transform: uppercase;
 }
 
-.slides__rate-feature-toggle--toggle-on {
+.rates-slides__rate-feature-toggle--toggle-on {
   &::before {
     .rate-feature-toggle-on(27px; 47px; 15px; -45deg);
   }
@@ -105,7 +75,7 @@
   }
 }
 
-.slides__rate-feature-toggle--toggle-off {
+.rates-slides__rate-feature-toggle--toggle-off {
   &::before {
     .rate-feature-toggle-off(11px; 38px; 45deg);
   }
@@ -116,17 +86,17 @@
 }
 
 @media (min-width: @tablet-width) {
-  .slides__wrapper {
+  .rates-slides__wrapper {
     width: 620px;
   }
 
-  .slides__review-slide {
+  .rates-slides__review-slide {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
   }
 
-  .slides__reveiw-user-name {
+  .rates-slides__reveiw-user-name {
     margin-bottom: 5px;
 
     font-size: 20px;
@@ -134,7 +104,7 @@
     line-height: 30px;
   }
 
-  .slides__reveiw-user-info {
+  .rates-slides__reveiw-user-info {
     display: block;
     margin: 0;
     margin-bottom: 25px;
@@ -146,7 +116,7 @@
     line-height: 30px;
   }
 
-  .slides__reveiw-text {
+  .rates-slides__reveiw-text {
     order: -1;
 
     font-size: 18px;
@@ -155,45 +125,53 @@
     line-height: 30px;
   }
 
-  .slides__rate-feature--hidden,
-  .slides__rate-name-price--hidden,
-  .slides__rate-feature-name--hidden {
+  .rates-slides__rate-feature--hidden,
+  .rates-slides__rate-name-price--hidden,
+  .rates-slides__rate-feature-name--hidden {
     display: table-cell;
   }
 
-  .slides__rate-name-price--hidden {
+  .rates-slides__rate-name-price-wrapper .rates-slides__rate-name-price--hidden {
     margin: 0;
     padding: 0;
+
+    background-color: transparent;
+    border: none;
   }
 
-  .slides__rate-name-price-wrapper {
+  .rates-slides__rate-name-price-wrapper {
     border-right: 2px solid @dark-blue;
   }
 
-  .slides__rate-name-price {
+  .rates-slides__rate-name-price {
     width: 154px;
-    padding: 0;
+    padding: 9px 0 10px;
     text-align: center;
 
     .rate-border(@dark-blue; @dark-blue; @border-grey; @border-grey);
   }
 
-  .slides__rate-name {
+  .rates-slides__rate-name-price--hit-rate {
+    .hit-rate-mark(url("../img/bg-hit-tablet.svg"); 0; 310px; 61px; 61px);
+    .hit-rate-note(5px; 316px);
+  }
+
+  .rates-slides__rate-name {
     margin: 0;
     font-size: 16px;
     color: @white;
   }
 
-  .slides__rate-price {
+  .rates-slides__rate-price {
     font-size: 18px;
     font-weight: @font-light;
   }
 
-  .slides__rate-feature-name {
+  .rates-slides__rate-feature-name {
     display: none;
   }
 
-  .slides__rate-feature--hidden {
+  .rates-slides__rate-feature--hidden {
     margin: 0;
     padding: 9px 15px 8px 15px;
 
@@ -201,7 +179,7 @@
     .rate-border(@border-grey; @border-grey; @border-grey; @border-grey);
   }
 
-  .slides__rate-feature-name--hidden {
+  .rates-slides__rate-feature-name--hidden {
     margin: 0;
     padding: 0;
     font-size: 14px;
@@ -209,7 +187,7 @@
     line-height: 30px;
   }
 
-  .slides__rate-feature-toggle--toggle-on {
+  .rates-slides__rate-feature-toggle--toggle-on {
     &::before {
       .rate-feature-toggle-on(21px; 84px; 15px; -45deg);
     }
@@ -219,7 +197,7 @@
     }
   }
 
-  .slides__rate-feature-toggle--toggle-off {
+  .rates-slides__rate-feature-toggle--toggle-off {
     &::before {
       .rate-feature-toggle-off(5px; 75px; 45deg);
     }
@@ -231,26 +209,32 @@
 }
 
 @media (min-width: @desktop-width) {
-  .slides__review-slide {
+  .rates-slides__review-slide {
     width: 760px;
     margin: 0 auto;
     padding: 0 30px;
   }
 
-  .slides__rate-feature--hidden {
+  .rates-slides__rate-feature--hidden {
     padding: 17px 15px 16px 15px;
   }
 
-  .slides__rate-feature-name--hidden {
+  .rates-slides__rate-feature-name--hidden {
     font-size: 18px;
   }
 
-  .slides__rate-name-price,
-  .slides__rate-name-price--hit-rate {
-    width: 234px;
+  .rates-slides__rate-name-price,
+  .rates-slides__rate-name-price--hit-rate {
+    width: 235px;
+    padding: 19px 0 20px;
   }
 
-  .slides__rate-feature-toggle--toggle-on {
+  .rates-slides__rate-name-price--hit-rate {
+    .hit-rate-mark(url("../img/bg-hit-tablet.svg"); 0; 470px; 74px; 73px);
+    .hit-rate-note(10px; 480px);
+  }
+
+  .rates-slides__rate-feature-toggle--toggle-on {
     &::before {
       .rate-feature-toggle-on(30px; 124px; 15px; -45deg);
     }
@@ -260,7 +244,7 @@
     }
   }
 
-  .slides__rate-feature-toggle--toggle-off {
+  .rates-slides__rate-feature-toggle--toggle-off {
     &::before {
       .rate-feature-toggle-off(14px; 114px; 45deg);
     }
