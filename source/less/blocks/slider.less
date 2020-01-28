@@ -22,7 +22,9 @@
   box-shadow: 0 0 0 3px rgb(40, 54, 69);
 }
 
-
-.slider__toggle-input {
-  display: none;
+#review-btn-1:checked ~ .slider__controls label[for="review-btn-1"],
+#review-btn-2:checked ~ .slider__controls label[for="review-btn-2"],
+#review-btn-3:checked ~ .slider__controls label[for="review-btn-3"] {
+  background-color: @white;
+  box-shadow: 0 0 0 3px rgb(40, 54, 69);
 }

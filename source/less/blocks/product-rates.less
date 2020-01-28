@@ -30,7 +30,7 @@
     margin: 0;
     padding: 90px 20px 68px;
 
-    background-color: @bg-light-grey;
+    .bg-image(url("../img/bg-triangle-white.svg"); contain; -4px 0);
   }
 
   .product-rates__list {
@@ -44,6 +44,16 @@
 }
 
 @media (min-width: @desktop-width) {
+  .product-rates {
+    margin: 0;
+    padding: 150px 20px 68px;
+
+    background-image: url("../img/bg-triangle-white.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -1px top;
+  }
+
   .product-rates__list {
     width: 940px;
     margin: 0 auto;
