@@ -38,12 +38,18 @@
   }
 
   .contacts__item {
-    width: 245px;
-    margin-bottom: 40px;
+    width: 200px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .contacts {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
   .contacts__item--rearranged {
     order: -1;
   }
