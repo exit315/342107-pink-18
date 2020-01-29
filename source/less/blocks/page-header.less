@@ -1,5 +1,5 @@
 .page-header__header-logo-wrapper {
-  padding: 19px 20px;
+  padding: 20px 20px 18px;
 
   background-color: @nav-bg-transparent;
 }
@@ -73,10 +73,15 @@
     background-color: @nav-bg-transparent;
   }
 
-  .page-header__header-logo img {
+  .page-header__header-logo img,
+  .page-header__header-logo-inner img {
     display: block;
     width: 147px;
     height: 40px;
+  }
+
+  .page-header__header-logo:active img {
+    opacity: 0.3;
   }
 
   .page-header__load-lead-in-wrapper {
@@ -135,7 +140,8 @@
     background-color: transparent;
   }
 
-  .page-header__header-logo img {
+  .page-header__header-logo img,
+  .page-header__header-logo-inner img {
     display: block;
     width: 147px;
     height: 40px;
