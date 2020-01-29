@@ -31,12 +31,12 @@
 .photo-contest-form__fieldset-user-info,
 .photo-contest-form__fieldset-user-comment,
 .photo-contest-form__submit-wrapper {
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .photo-contest-form__fieldset-user-name,
 .photo-contest-form__fieldset-user-info {
-  margin-bottom: 7px;
+  margin-bottom: 25px;
 }
 
 .photo-contest-form__fieldset-user-adventures-wrapper,
@@ -86,8 +86,8 @@
 
 .photo-contest-form__user-name-label,
 .photo-contest-form__user-info-label {
-  margin: 0 0 5px;
-  padding: 0 0 0 20px;
+  margin: 0 0 7px;
+  padding: 0 0 0 23px;
 
   font-size: 14px;
   font-weight: @font-normal;
@@ -222,10 +222,10 @@
   color: @dark-blue;
   text-transform: uppercase;
   text-align: center;
+}
 
-  span {
-    color: @pink;
-  }
+.photo-contest-form__required-note--mobile-hidden {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -475,6 +475,7 @@
   }
 
   .photo-contest-form__required-note .photo-contest-form__required-note--mobile-hidden {
+    display: inline;
     color: @dark-blue;
   }
 }

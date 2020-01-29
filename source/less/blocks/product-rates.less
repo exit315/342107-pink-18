@@ -1,22 +1,37 @@
 .product-rates {
+  padding-top: 90px;
   margin-bottom: 40px;
+
+  background-color: @bg-light-grey;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center -33px;
 }
 
 .product-rates__list {
+  position: relative;
   width: 276px;
   margin: 0;
-  margin-bottom: 40px;
   padding: 0;
 
   border-collapse: collapse;
 }
 
+.product-rates__list-wrapper {
+  overflow: hidden;
+}
+
+.product-rates__slider {
+  padding: 36px 0 42px;
+}
+
 @media (min-width: @tablet-width) {
   .product-rates {
     margin: 0;
+    margin-bottom: 40px;
     padding: 90px 20px 68px;
 
-    background-color: @bg-light-grey;
+    .bg-image(url("../img/bg-triangle-white.svg"); contain; -4px 0);
   }
 
   .product-rates__list {
@@ -30,6 +45,17 @@
 }
 
 @media (min-width: @desktop-width) {
+  .product-rates {
+    margin: 0;
+    margin-bottom: 60px;
+    padding: 150px 20px 68px;
+
+    background-image: url("../img/bg-triangle-white.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+  }
+
   .product-rates__list {
     width: 940px;
     margin: 0 auto;

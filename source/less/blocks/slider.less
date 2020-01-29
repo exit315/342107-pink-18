@@ -14,9 +14,72 @@
   border-radius: 50%;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    background-color: rgba(25, 37, 49, 0.6);
+  }
+
+  &:active {
+    background-color: rgba(25, 37, 49, 0.1);
+  }
+}
+
+.slider__toggles-rate-basic:checked ~ .slider__controls label[for="rate-basic"],
+.slider__toggles-rate-regular:checked ~ .slider__controls label[for="rate-regular"],
+.slider__toggles-rate-unlim:checked ~ .slider__controls label[for="rate-unlim"] {
+  background-color: @white;
   box-shadow: 0 0 0 3px rgb(40, 54, 69);
 }
 
-.slider__toggle-input {
+.slider__toggles-review-btn-1:checked ~ .slider__controls label[for="review-btn-1"],
+.slider__toggles-review-btn-2:checked ~ .slider__controls label[for="review-btn-2"],
+.slider__toggles-review-btn-3:checked ~ .slider__controls label[for="review-btn-3"] {
+  background-color: @white;
+  box-shadow: 0 0 0 3px rgb(40, 54, 69);
+}
+
+.slider__control-arrow-left,
+.slider__control-arrow-right {
   display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .slider__toggles {
+    display: none;
+  }
+
+  .slider__control-arrow-left,
+  .slider__control-arrow-right {
+    display: block;
+    position: absolute;
+    top: 50%;
+
+    width: 22px;
+    height: 41px;
+
+    opacity: 0.3;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+
+    cursor: pointer;
+  }
+
+  .slider__control-arrow-left {
+    .bg-image(url("../img/icon-review-arrow-left.svg"); 22px 41px; center center);
+
+    left: 130px;
+  }
+
+  .slider__control-arrow-right {
+    .bg-image(url("../img/icon-review-arrow-right.svg"); 22px 41px; center center);
+
+    right: 130px;
+  }
 }

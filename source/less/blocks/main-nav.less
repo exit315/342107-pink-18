@@ -12,22 +12,37 @@
 }
 
 .main-nav--closed .main-nav__toggle {
-  .nav-toggle-closed-wrapper(-50px);
+  .nav-toggle-closed-wrapper(-47px);
+
+  .bg-image(url("../img/icon-menu-burger.svg"); 50px 24px; 1px 2px);
+
+  &:hover,
+  &:focus {
+    .bg-image(url("../img/icon-menu-burger-hover.svg"); 50px 24px; 1px 2px);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav--closed .main-nav__toggle--burger {
-  .nav-toggle();
+  width: 50px;
+  height: 24px;
 }
 
 .main-nav--opened .main-nav__toggle {
-  .nav-toggle-opened-wrapper(-50px);
+  .nav-toggle-opened-wrapper(-49px);
 
-  &::before {
-    .nav-toggle-x(@white; 45deg);
+  .bg-image(url("../img/icon-menu-cross.svg"); 24px 23px; 1px 1px);
+
+  &:hover,
+  &:focus {
+    .bg-image(url("../img/icon-menu-cross-hover.svg"); 24px 23px; 1px 1px);
   }
 
-  &::after {
-    .nav-toggle-x(@white; -45deg);
+  &:active {
+    opacity: 0.3;
   }
 }
 

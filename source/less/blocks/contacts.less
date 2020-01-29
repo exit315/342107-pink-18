@@ -1,5 +1,5 @@
 .contacts__item {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .contacts__item-header {
@@ -14,6 +14,8 @@
 .contacts__item-contact-phone,
 .contacts__item-contact-email,
 .contacts__item-contact-address {
+  font-size: 24px;
+  font-weight: @font-light;
   color: @pink;
   text-decoration: none;
   list-style: none;
@@ -38,13 +40,27 @@
   }
 
   .contacts__item {
-    width: 245px;
-    margin-bottom: 40px;
+    width: 250px;
+  }
+
+  .contacts__item:not(:last-of-type) {
+    margin-bottom: 45px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .contacts {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
   .contacts__item--rearranged {
     order: -1;
+  }
+
+  .contacts__item-header {
+    margin-bottom: 20px;
   }
 }
