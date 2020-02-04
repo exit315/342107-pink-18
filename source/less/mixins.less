@@ -22,10 +22,10 @@
 .nav-toggle-closed-wrapper(@position-top) {
   position: absolute;
   top: @position-top;
-  right: 20px;
+  right: 19px;
 
-  width: 53px;
-  height: 27px;
+  width: 52px;
+  height: 26px;
   padding: 0;
 
   border: none;
@@ -35,7 +35,7 @@
 .nav-toggle-opened-wrapper(@position-top) {
   position: absolute;
   top: @position-top;
-  right: 20px;
+  right: 19px;
 
   width: 26px;
   height: 26px;
@@ -60,7 +60,7 @@
   background-size: contain;
 }
 
-.rate-feature-toggle-on(@top; @right; @height; @rotate) {
+.rate-feature-toggle-on(@height; @top; @right; @rotate) {
   content: "";
 
   position: absolute;
@@ -97,7 +97,7 @@
   border-right: 2px solid @color-right;
 }
 
-.hit-rate-mark(@bg-img; @bg-top; @bg-left; @bg-width; @bg-height) {
+.hit-rate-mark(@bg-img; @bg-width; @bg-height; @bg-top; @bg-left) {
   &::before {
     content: "";
 
@@ -195,7 +195,7 @@
   background-size: 22px 16px;
 }
 
-.filter-effects-icon(@icon-source; @top; @left; @icon-width; @icon-height) {
+.filter-effects-icon(@icon-source; @icon-width; @icon-height; @top; @left) {
   position: absolute;
   top: @top;
   left: @left;
