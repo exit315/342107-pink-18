@@ -180,7 +180,7 @@
 .upload-photo-form__cansel-btn {
   width: @mobile-wrapper-width;
   margin: 0 auto;
-  padding: 15px 0 16px 0;
+  padding: 15px 5px 16px;
 
   font-size: 18px;
   font-weight: @font-bold;
@@ -231,7 +231,7 @@
   .upload-photo-form {
     display: flex;
     justify-content: space-between;
-    padding: 55px 20px;
+    padding: 57px 20px 55px;
   }
 
   .upload-photo-form__load-img-fieldset {
@@ -262,7 +262,7 @@
   .upload-photo-form__edit-img-fieldset {
     position: relative;
     width: 275px;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     padding: 0;
 
     border: none;
@@ -298,26 +298,26 @@
   }
 
   .upload-photo-form__effects-item--fill {
-    top: 86px;
-    left: -12px;
-
-    &:hover,
-    &:focus,
-    &:active {
-      top: 86px;
-      left: -12px;
-    }
-  }
-
-  .upload-photo-form__effects-item--contrast {
-    top: 156px;
+    top: 89px;
     left: -10px;
 
     &:hover,
     &:focus,
     &:active {
-      top: 156px;
+      top: 89px;
       left: -10px;
+    }
+  }
+
+  .upload-photo-form__effects-item--contrast {
+    top: 156px;
+    left: -8px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      top: 156px;
+      left: -8px;
     }
   }
 
@@ -327,7 +327,7 @@
   .upload-photo-form__effects-item-contrast:checked ~ .upload-photo-form__edit-img-controls-list .upload-photo-form__edit-img-controls--contrast {
     display: block;
     margin: 0;
-    padding: 34px 18px 34px 55px;
+    padding: 34px 18px 35px 55px;
 
     border-bottom: 1px solid @dark-blue-translucent-btn;
   }
@@ -350,13 +350,15 @@
   }
 
   .upload-photo-form__load-btn-fieldset {
+    align-items: flex-start;
     margin: 0;
-    padding: 43px 0 0;
+    padding: 43px 12px 0 0;
   }
 
   .upload-photo-form__load-btn,
   .upload-photo-form__cansel-btn {
     width: 260px;
+    padding: 15px 5px 16px;
   }
 
   .upload-photo-form__load-btn {
