@@ -102,15 +102,33 @@
     background-color: @nav-bg-transparent;
   }
 
-  .page-header__header-logo img,
-  .page-header__header-logo-inner img {
+  .page-header__header-logo {
     display: block;
     width: 147px;
     height: 40px;
+
+    .bg-image(url("../img/logo-pink-white-tablet.svg"); 147px 40px; center center);
   }
 
-  .page-header__header-logo:active img {
-    opacity: 0.3;
+  .page-header__header-logo-inner {
+    display: block;
+    width: 147px;
+    height: 40px;
+
+    .bg-image(url("../img/logo-pink-white-tablet.svg"); 147px 40px; center center);
+
+    &:hover,
+    &:focus {
+      .bg-image(url("../img/logo-pink-white-tablet-hover.svg"); 147px 40px; center center);
+    }
+
+    &:active {
+      .bg-image(url("../img/logo-pink-white-tablet-active.svg"); 147px 40px; center center);
+    }
+  }
+
+  .page-header__header-logo-inner {
+    cursor: pointer;
   }
 
   .page-header__load-lead-in-wrapper {
