@@ -101,41 +101,6 @@
     width: 620px;
   }
 
-  .rates-slides__review-slide {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-
-  .rates-slides__reveiw-user-name {
-    margin-bottom: 5px;
-
-    font-size: 20px;
-    font-weight: @font-bold;
-    line-height: 30px;
-  }
-
-  .rates-slides__reveiw-user-info {
-    display: block;
-    margin: 0;
-    margin-bottom: 25px;
-    padding: 0;
-
-    font-size: 14px;
-    font-weight: @font-normal;
-    color: @dark-blue;
-    line-height: 30px;
-  }
-
-  .rates-slides__reveiw-text {
-    order: -1;
-
-    font-size: 18px;
-    font-weight: @font-normal;
-    color: @dark-blue;
-    line-height: 30px;
-  }
-
   .rates-slides__rate-feature--hidden,
   .rates-slides__rate-name-price--hidden,
   .rates-slides__rate-feature-name--hidden {
@@ -156,7 +121,7 @@
 
   .rates-slides__rate-name-price {
     width: 154px;
-    padding: 9px 0 10px;
+    padding: 9px 0 6px;
     text-align: center;
 
     .rate-border(@dark-blue; @dark-blue; @border-grey; @border-grey);
@@ -164,7 +129,7 @@
 
   .rates-slides__rate-name-price--hit-rate {
     .hit-rate-mark(url("../img/bg-hit-tablet.svg"); 61px; 61px; 0; 310px);
-    .hit-rate-note(5px; 316px);
+    .hit-rate-note(5px; 317px);
   }
 
   .rates-slides__rate-name {
@@ -184,7 +149,7 @@
 
   .rates-slides__rate-feature--hidden {
     margin: 0;
-    padding: 9px 15px 8px 15px;
+    padding: 8px 15px 7px 15px;
 
     background-color: @white;
     .rate-border(@border-grey; @border-grey; @border-grey; @border-grey);
@@ -200,21 +165,21 @@
 
   .rates-slides__rate-feature-toggle--toggle-on {
     &::before {
-      .rate-feature-toggle-on(15px; 21px; 84px; -45deg);
+      .rate-feature-toggle-on(15px; 21px; 83px; -45deg);
     }
 
     &::after {
-      .rate-feature-toggle-on(29px; 9px; 70px; 45deg);
+      .rate-feature-toggle-on(29px; 9px; 69px; 45deg);
     }
   }
 
   .rates-slides__rate-feature-toggle--toggle-off {
     &::before {
-      .rate-feature-toggle-off(5px; 75px; 45deg);
+      .rate-feature-toggle-off(5px; 74px; 45deg);
     }
 
     &::after {
-      .rate-feature-toggle-off(5px; 75px; -45deg);
+      .rate-feature-toggle-off(5px; 74px; -45deg);
     }
   }
 }
