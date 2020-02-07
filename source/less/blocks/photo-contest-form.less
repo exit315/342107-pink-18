@@ -283,7 +283,7 @@
   width: 276px;
   margin: 0 auto;
   margin-bottom: 35px;
-  padding: 14px 20px 15px;
+  padding: 15px 20px 15px;
 
   font-size: 18px;
   font-weight: @font-bold;
@@ -400,8 +400,8 @@
     padding-left: 60px;
   }
 
-  .photo-contest-form__fieldset-adventures-feature-title {
-    padding-left: 60px;
+  .photo-contest-form__fieldset-adventures-feature-title:not(:last-child) {
+    margin-bottom: 52px;
   }
 
   .photo-contest-form__user-comment-header {
@@ -500,22 +500,25 @@
     padding: 0 130px;
   }
 
-  .photo-contest-form__fieldset-user-app,
-  .photo-contest-form__fieldset-user-name {
+  .photo-contest-form__fieldset-user-app {
     margin: 0;
     margin-bottom: 30px;
-    padding: 0;
+    padding: 57px 0 50px 74px;
+
+    width: 435px;
+    height: 310px;
 
     box-sizing: border-box;
   }
 
-  .photo-contest-form__fieldset-user-app {
+  .photo-contest-form__fieldset-user-name {
     width: 435px;
-    height: 310px;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 13px 0;
+    margin-right: auto;
 
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 74px;
+    box-sizing: border-box;
   }
 
   .photo-contest-form__user-app-header {
@@ -523,22 +526,20 @@
     padding: 0 5px;
   }
 
-  .photo-contest-form__fieldset-user-app .photo-contest-form__fieldset-feature-title {
-    padding-left: 68px;
+  .photo-contest-form__fieldset-app-feature-title {
+    padding-left: 60px;
+  }
+
+  .photo-contest-form__fieldset-adventures-feature-title {
+    padding-left: 60px;
   }
 
   .photo-contest-form__fieldset-user-app .photo-contest-form__fieldset-feature-title:not(:last-child) {
     margin-bottom: 45px;
   }
 
-  .photo-contest-form__fieldset-user-name {
-    width: 435px;
-    padding: 10px 0;
-    margin-right: auto;
-  }
-
   .photo-contest-form__user-name-wrapper:not(:last-of-type) {
-    margin-bottom: 56px;
+    margin-bottom: 55px;
   }
 
   .photo-contest-form__user-name-label {
@@ -551,6 +552,7 @@
 
   .photo-contest-form__fieldset-user-info {
     width: 100%;
+    margin-bottom: 48px;
   }
 
   .photo-contest-form__user-info {
@@ -559,14 +561,24 @@
     justify-content: space-between;
   }
 
+  .photo-contest-form__user-info-label {
+    margin-bottom: 14px;
+  }
+
+  .photo-contest-form__user-info-input {
+    margin-bottom: 7px;
+  }
+
   .photo-contest-form__user-info-wrapper {
     min-width: 375px;
   }
 
   .photo-contest-form__fieldset-user-adventures {
     width: 100%;
-    box-sizing: border-box;
+    margin-bottom: 58px;
     padding: 40px 0 0 60px;
+
+    box-sizing: border-box;
   }
 
   .photo-contest-form__fieldset-user-adventures-wrapper {
@@ -579,11 +591,11 @@
     display: flex;
     flex-direction: column;
     min-width: 210px;
-    margin-bottom: 50px;
+    margin-bottom: 59px;
   }
 
   .photo-contest-form__fieldset-user-adventures-cols-wrapper:not(:last-child) {
-    margin-right: 50px;
+    margin-right: 53px;
   }
 
   .photo-contest-form__fieldset-user-adventures-cols-wrapper .photo-contest-form__fieldset-feature-title {
@@ -592,8 +604,8 @@
 
   .photo-contest-form__fieldset-user-comment {
     width: 100%;
-    padding-top: 40px;
-    padding-bottom: 43px;
+    padding-top: 34px;
+    padding-bottom: 38px;
     margin-bottom: 65px;
   }
 
@@ -602,7 +614,7 @@
   }
 
   .photo-contest-form__user-comment-input {
-    height: 124px;
+    height: 128px;
   }
 
   .photo-contest-form__submit-wrapper {
