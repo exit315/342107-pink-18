@@ -168,20 +168,38 @@
 
   .users-day-photo__day-photo-mark {
     &::before {
-      top: -455px;
+      top: -451px;
       left: 930px;
     }
 
     &::after {
-      top: -449px;
+      top: -445px;
       left: 950px;
     }
   }
 
   .users-day-photo__photo-info-wrapper {
     margin: 0 130px;
-    padding: 18px 27px 20px;
+    padding: 25px 27px;
 
     background-color: @bg-light-grey;
+  }
+
+  .users-day-photo__photo-description {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .users-day-photo__photo-likes-number {
+    padding-right: 35px;
+  }
+
+  .users-day-photo__photo-like-btn {
+    position: absolute;
+    top: 6px;
+    left: 139px;
+    width: 13px;
+    height: 12px;
+    .user-photo-like-icon();
   }
 }

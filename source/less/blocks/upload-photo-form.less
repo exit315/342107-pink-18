@@ -379,11 +379,20 @@
     }
   }
 
+  .upload-photo-form__edit-img-fieldset {
+    position: relative;
+    width: 275px;
+    margin-bottom: 22px;
+    padding: 0;
+
+    border: none;
+  }
+
   .upload-photo-form__edit-img-controls,
   .upload-photo-form__effects-item-crop:checked ~ .upload-photo-form__edit-img-controls-list .upload-photo-form__edit-img-controls--crop,
   .upload-photo-form__effects-item-fill:checked ~ .upload-photo-form__edit-img-controls-list .upload-photo-form__edit-img-controls--fill,
   .upload-photo-form__effects-item-contrast:checked ~ .upload-photo-form__edit-img-controls-list .upload-photo-form__edit-img-controls--contrast {
-    padding: 34px 30px 34px 92px;
+    padding: 35px 28px 34px 94px;
   }
 
   .upload-photo-form__edit-img-controls--crop,
@@ -392,42 +401,42 @@
   }
 
   .upload-photo-form__effects-item {
-    transform: scale(1);
+    transform: scale(1.1);
   }
 
   .upload-photo-form__effects-item--crop {
     top: 15px;
-    left: -3px;
+    left: 0;
 
     &:hover,
     &:focus,
     &:active {
       top: 15px;
-      left: -3px;
+      left: 0;
     }
   }
 
   .upload-photo-form__effects-item--fill {
-    top: 86px;
+    top: 90px;
+    left: 2px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      top: 90px;
+      left: 2px;
+    }
+  }
+
+  .upload-photo-form__effects-item--contrast {
+    top: 156px;
     left: -1px;
 
     &:hover,
     &:focus,
     &:active {
-      top: 86px;
+      top: 156px;
       left: -1px;
-    }
-  }
-
-  .upload-photo-form__effects-item--contrast {
-    top: 155px;
-    left: -3px;
-
-    &:hover,
-    &:focus,
-    &:active {
-      top: 155px;
-      left: -3px;
     }
   }
 
@@ -436,26 +445,26 @@
   }
 
   .upload-photo-form__edit-img-controls--crop .upload-photo-form__edit-img-toggle {
-    .user-photo-edit-scale-toggle(-6px; 30%);
+    .user-photo-edit-scale-toggle(-6px; 27%);
   }
 
   .upload-photo-form__edit-img-controls--fill .upload-photo-form__edit-img-toggle {
-    .user-photo-edit-scale-toggle(-6px; 90%);
+    .user-photo-edit-scale-toggle(-6px; 88%);
   }
 
   .upload-photo-form__edit-img-controls--contrast .upload-photo-form__edit-img-toggle {
-    .user-photo-edit-scale-toggle(-6px; 60%);
+    .user-photo-edit-scale-toggle(-6px; 58%);
   }
 
   .upload-photo-form__load-btn-fieldset {
     display: block;
     margin: 0;
-    padding: 121px 0 0;
+    padding: 123px 0 0 0;
   }
 
   .upload-photo-form__load-btn,
   .upload-photo-form__cansel-btn {
-    width: 183px;
+    width: 181px;
   }
 
   .upload-photo-form__load-btn {
