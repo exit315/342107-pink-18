@@ -205,7 +205,8 @@
 
 @media (min-width: @desktop-width) {
   .advantages__lead-in-wrapper {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    padding: 65px 30px 32px;
   }
 
   .advantages__list {
@@ -230,34 +231,35 @@
 
     position: relative;
 
-    width: 250px;
-    padding: 350px 40px 40px;
+    width: 240px;
+    padding: 355px 40px 40px;
+    margin-bottom: 5px;
 
     text-align: center;
 
     &:nth-child(1)::before {
-      .advantages-item-bg(url("../img/iphone-screen-1-desktop@1x.png"));
+      .advantages-item-bg(url("../img/iphone-screen-1-desktop@1x.png"); 14px);
     }
 
     &:nth-child(2)::before {
-      .advantages-item-bg(url("../img/iphone-screen-2-desktop@1x.png"));
+      .advantages-item-bg(url("../img/iphone-screen-2-desktop@1x.png"); 17px);
     }
 
     &:nth-child(3)::before {
-      .advantages-item-bg(url("../img/iphone-screen-3-desktop@1x.png"));
+      .advantages-item-bg(url("../img/iphone-screen-3-desktop@1x.png"); 18px);
     }
 
     @media (min-resolution: @retina-dppx) {
       &:nth-child(1)::before {
-        .advantages-item-bg(url("../img/iphone-screen-1-desktop@2x.png"));
+        .advantages-item-bg(url("../img/iphone-screen-1-desktop@2x.png"); 14px);
       }
 
       &:nth-child(2)::before {
-        .advantages-item-bg(url("../img/iphone-screen-2-desktop@2x.png"));
+        .advantages-item-bg(url("../img/iphone-screen-2-desktop@2x.png"); 17px);
       }
 
       &:nth-child(3)::before {
-        .advantages-item-bg(url("../img/iphone-screen-3-desktop@2x.png"));
+        .advantages-item-bg(url("../img/iphone-screen-3-desktop@2x.png"); 18px);
       }
     }
   }
@@ -277,7 +279,7 @@
 
   .advantages__list-item-header {
     width: 230px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 
     font-size: 30px;
   }
@@ -292,8 +294,8 @@
     display: block;
     position: relative;
 
-    margin-bottom: 35px;
-    padding: 115px 20px 104px 495px;
+    margin-bottom: 34px;
+    padding: 115px 20px 112px 495px;
 
     text-align: left;
 
@@ -332,7 +334,7 @@
   }
 
   .advantages__feature-description {
-    margin-bottom: 35px;
+    margin-bottom: 32px;
     padding-right: 160px;
 
     font-size: 18px;

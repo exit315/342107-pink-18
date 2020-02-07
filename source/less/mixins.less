@@ -45,12 +45,12 @@
   background-color: transparent;
 }
 
-.advantages-item-bg(@img-source) {
+.advantages-item-bg(@img-source; @left) {
   content: "";
 
   position: absolute;
-  top: 0;
-  left: 22px;
+  top: -2px;
+  left: @left;
 
   width: 292px;
   height: 302px;
