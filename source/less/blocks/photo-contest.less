@@ -9,3 +9,39 @@
   font-weight: @font-normal;
   text-align: center;
 }
+
+.photo-contest__form-lead-in {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .photo-contest__lead-in {
+    margin: 0;
+    padding: 95px 80px 0;
+    font-size: 18px;
+  }
+
+  .photo-contest__form-lead-in {
+    display: block;
+    margin: 0;
+    margin-bottom: 68px;
+
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    font-weight: @font-normal;
+    text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-contest__lead-in {
+    padding-left: 210px;
+    padding-right: 210px;
+  }
+
+  .photo-contest__form-lead-in {
+    display: inline-block;
+    margin-bottom: 50px;
+  }
+}

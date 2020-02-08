@@ -3,10 +3,55 @@
   flex-direction: column;
 }
 
-.photo-contest-form__field-header,
-.photo-contest-form__user-comment-header {
+.photo-contest-form__fieldset-user-name,
+.photo-contest-form__fieldset-user-info,
+.photo-contest-form__fieldset-user-app,
+.photo-contest-form__fieldset-user-comment {
+  display: flex;
+  flex-direction: column;
   margin: 0;
+  padding: 0;
 
+  border: none;
+}
+
+.photo-contest-form__fieldset-user-adventures {
+  border: none;
+}
+
+.photo-contest-form__fieldset-user-app,
+.photo-contest-form__fieldset-user-adventures {
+  padding: 40px 20px;
+  margin: 0 0 10px;
+
+  background-color: @bg-light-grey;
+}
+
+.photo-contest-form__fieldset-user-name,
+.photo-contest-form__fieldset-user-info,
+.photo-contest-form__fieldset-user-comment,
+.photo-contest-form__submit-wrapper {
+  padding: 0 20px;
+}
+
+.photo-contest-form__fieldset-user-name,
+.photo-contest-form__fieldset-user-info {
+  margin-bottom: 25px;
+}
+
+.photo-contest-form__fieldset-user-adventures-wrapper,
+.photo-contest-form__fieldset-user-adventures-cols-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-contest-form__fieldset-user-adventures-cols-wrapper:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.photo-contest-form__user-adventures-header,
+.photo-contest-form__user-app-header,
+.photo-contest-form__user-comment-header {
   font-size: 14px;
   font-weight: @font-normal;
   color: @pink;
@@ -15,24 +60,34 @@
   text-align: center;
 }
 
-.photo-contest-form__field-header {
-  margin-bottom: 35px;
+.photo-contest-form__user-comment-header {
+  margin: 0;
+  padding: 35px 20px 0;
 }
 
-.photo-contest-form__user-info {
+.photo-contest-form__user-adventures-header,
+.photo-contest-form__user-app-header {
+  width: 100%;
+  margin: 0;
+  padding: 35px 20px 0;
+
+  background-color: @bg-light-grey;
+}
+
+.photo-contest-form__user-info-header--mobile-hidden {
+  display: none;
+}
+
+.photo-contest-form__user-name-wrapper,
+.photo-contest-form__user-info-wrapper {
   display: flex;
   flex-direction: column;
-
-  margin: 0;
-  margin-bottom: 42px;
-  padding: 0 20px;
 }
 
-.photo-contest-form__user-info-header {
-  margin: 0;
-  margin-bottom: 5px;
-  padding: 0;
-  padding-left: 20px;
+.photo-contest-form__user-name-label,
+.photo-contest-form__user-info-label {
+  margin: 0 0 7px;
+  padding: 0 0 0 23px;
 
   font-size: 14px;
   font-weight: @font-normal;
@@ -41,20 +96,10 @@
   text-transform: uppercase;
 }
 
-.photo-contest-form__user-comment {
-  display: flex;
-  flex-direction: column;
-
-  padding: 0 20px;
-}
-
-.photo-contest-form__user-comment-header {
-  margin-bottom: 17px;
-}
-
+.photo-contest-form__user-name-input,
 .photo-contest-form__user-info-input,
-.photo-contest-form__comment-input {
-  padding: 15px 20px;
+.photo-contest-form__user-comment-input {
+  padding: 14px 20px 15px;
 
   font-size: 18px;
   line-height: 30px;
@@ -74,27 +119,16 @@
   }
 }
 
-.photo-contest-form__comment-input {
-  min-width: 280px;
+.photo-contest-form__user-comment-input {
+  width: 100%;
   height: 197px;
-  margin-bottom: 48px;
+
   box-sizing: border-box;
 }
 
-.photo-contest-form__user-info-input:not(:last-child) {
+.photo-contest-form__user-name-input,
+.photo-contest-form__user-info-input {
   margin-bottom: 15px;
-}
-
-.photo-contest-form__fieldset {
-  display: flex;
-  flex-direction: column;
-
-  margin: 0;
-  margin-bottom: 35px;
-  padding: 40px 20px 42px;
-
-  background-color: @bg-light-grey;
-  border: none;
 }
 
 .photo-contest-form__fieldset-feature-title {
@@ -107,7 +141,7 @@
 }
 
 .photo-contest-form__fieldset-feature-title:not(:last-child) {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .photo-contest-form__fieldset-feature-title [type="checkbox"] + .checkbox-indicator {
@@ -142,6 +176,10 @@
 
 .photo-contest-form__fieldset-feature-title [type="radio"]:checked + .radio-indicator::before {
   .radio-indicator-checked(10px; 10px);
+}
+
+.photo-contest-form__submit-wrapper {
+  margin: 0 auto;
 }
 
 .photo-contest-form__submit-btn {
@@ -184,8 +222,260 @@
   color: @dark-blue;
   text-transform: uppercase;
   text-align: center;
+}
 
-  span {
+.photo-contest-form__required-note--mobile-hidden {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .photo-contest-form__fieldset-user-app,
+  .photo-contest-form__fieldset-user-adventures,
+  .photo-contest-form__fieldset-user-info,
+  .photo-contest-form__fieldset-user-comment {
+    background-color: transparent;
+    border: 2px solid @border-grey;
+  }
+
+  .photo-contest-form__fieldset-user-app,
+  .photo-contest-form__fieldset-user-adventures,
+  .photo-contest-form__fieldset-user-info {
+    margin-bottom: 55px;
+  }
+
+  .photo-contest-form__fieldset-user-app,
+  .photo-contest-form__fieldset-user-adventures {
+    padding: 44px 58px 54px;
+  }
+
+  .photo-contest-form__fieldset-user-info {
+    padding: 30px 58px 0;
+  }
+
+  .photo-contest-form__fieldset-user-name {
+    order: -4;
+
+    margin-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .photo-contest-form__fieldset-user-comment {
+    padding: 35px 58px 50px;
+    margin-bottom: 48px;
+  }
+
+  .photo-contest-form__user-adventures-header,
+  .photo-contest-form__user-app-header,
+  .photo-contest-form__user-comment-header {
+    width: auto;
+    margin: 0;
+    padding: 10px 30px;
+
+    background-color: transparent;
+  }
+
+  .photo-contest-form__user-info-header--mobile-hidden {
+    display: block;
+
+    margin: 0;
+    padding: 10px 30px;
+
+    font-size: 14px;
+    font-weight: @font-normal;
     color: @pink;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .photo-contest-form__user-name-wrapper {
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 0;
+  }
+
+  .photo-contest-form__user-name-wrapper:not(:last-of-type) {
+    margin-bottom: 37px;
+  }
+
+  .photo-contest-form__user-name-label {
+    padding-left: 0;
+    margin-right: 20px;
+  }
+
+  .photo-contest-form__user-name-input {
+    flex-grow: 1;
+  }
+
+  .photo-contest-form__user-info-wrapper {
+    flex-direction: column-reverse;
+    position: relative;
+  }
+
+  .photo-contest-form__user-info-input {
+    margin-bottom: 10px;
+  }
+
+  .photo-contest-form__user-info-label {
+    margin-bottom: 30px;
+  }
+
+  .photo-contest-form__user-info-label--phone::before {
+    .user-info-input-icon(url("../img/icon-phone.svg"); 20px; 19px);
+  }
+
+  .photo-contest-form__user-info-label--mail::before {
+    .user-info-input-icon(url("../img/icon-mail.svg"); 18px; 19px);
+  }
+
+  .photo-contest-form__fieldset--rearranged-first {
+    order: -2;
+  }
+
+  .photo-contest-form__fieldset--rearranged-second {
+    order: -1;
+  }
+
+  .photo-contest-form__submit-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  .photo-contest-form__submit-btn {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-contest-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 130px;
+  }
+
+  .photo-contest-form__fieldset-user-app,
+  .photo-contest-form__fieldset-user-name {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+
+    box-sizing: border-box;
+  }
+
+  .photo-contest-form__fieldset-user-app {
+    width: 435px;
+    height: 310px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 74px;
+  }
+
+  .photo-contest-form__user-app-header {
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .photo-contest-form__fieldset-user-app .photo-contest-form__fieldset-feature-title {
+    padding-left: 68px;
+  }
+
+  .photo-contest-form__fieldset-user-app .photo-contest-form__fieldset-feature-title:not(:last-child) {
+    margin-bottom: 45px;
+  }
+
+  .photo-contest-form__fieldset-user-name {
+    width: 435px;
+    padding: 10px 0;
+    margin-right: auto;
+  }
+
+  .photo-contest-form__user-name-wrapper:not(:last-of-type) {
+    margin-bottom: 56px;
+  }
+
+  .photo-contest-form__user-name-label {
+    margin-right: 20px;
+  }
+
+  .photo-contest-form__user-name-input {
+    margin: 0;
+  }
+
+  .photo-contest-form__fieldset-user-info {
+    width: 100%;
+  }
+
+  .photo-contest-form__user-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .photo-contest-form__user-info-wrapper {
+    min-width: 375px;
+  }
+
+  .photo-contest-form__fieldset-user-adventures {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 0 0 60px;
+  }
+
+  .photo-contest-form__fieldset-user-adventures-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .photo-contest-form__fieldset-user-adventures-cols-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 210px;
+    margin-bottom: 50px;
+  }
+
+  .photo-contest-form__fieldset-user-adventures-cols-wrapper:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .photo-contest-form__fieldset-user-adventures-cols-wrapper .photo-contest-form__fieldset-feature-title {
+    padding-left: 60px;
+  }
+
+  .photo-contest-form__fieldset-user-comment {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 43px;
+    margin-bottom: 65px;
+  }
+
+  .photo-contest-form__user-comment-header {
+    padding: 0 30px;
+  }
+
+  .photo-contest-form__user-comment-input {
+    height: 124px;
+  }
+
+  .photo-contest-form__submit-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+    width: 100%;
+    padding: 0;
+  }
+
+  .photo-contest-form__required-note .photo-contest-form__required-note--mobile-hidden {
+    display: inline;
+    color: @dark-blue;
   }
 }
